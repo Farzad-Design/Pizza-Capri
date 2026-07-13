@@ -1,9 +1,10 @@
 # Restaurant Pizzeria Capri — Bestell- & Reservierungs-App
 
 Web-App für **Restaurant Pizzeria Capri**, Kölner Str. 56, 51399 Burscheid-Hilgen.
-Basis: `E:\Web-App\Restaurant-App-Template` (wiederverwendbares Grundgerüst,
-ursprünglich für Pizza Charlot gebaut). Branding, Speisekarte und
-Geschäftsregeln wurden vollständig auf Restaurant Pizzeria Capri umgestellt.
+Basis: `E:\Web-App\Restaurant-App-Template` (wiederverwendbares Grundgerüst).
+Branding, Speisekarte und Geschäftsregeln wurden vollständig auf Restaurant
+Pizzeria Capri umgestellt; dieses Projekt ist eigenständig und unabhängig
+vom Ursprungskunden der Vorlage.
 
 ## Architektur
 
@@ -69,9 +70,9 @@ das so passt oder ob Groß einen anderen Preis erhalten soll.
 ### Zusatzstoffe & Allergene
 
 Die Legende (Zusatzstoffe 1–9, Allergene 10–18) entspricht exakt der auf der
-Original-Speisekarte gedruckten Legende (`ADDITIVES`/`ALLERGENS`). Anders als bei der
-Vorlage (Pizza Charlot) gibt es auf der Pizzeria-Capri-Karte **keine Allergen-Buchstaben
-direkt neben den Gerichten** — daher bleibt das Feld `al` bei allen Artikeln leer.
+Original-Speisekarte gedruckten Legende (`ADDITIVES`/`ALLERGENS`). Auf der
+Pizzeria-Capri-Karte gibt es **keine Allergen-Buchstaben direkt neben den
+Gerichten** — daher bleibt das Feld `al` bei allen Artikeln leer.
 Feinere Angaben laut Speisekarte telefonisch/vor Ort erfragen.
 
 ## Design
@@ -196,7 +197,7 @@ Dann `http://localhost:8000` im Browser öffnen. Beim Review wurden zusätzlich 
 JavaScript-Syntax (`node --check` auf den extrahierten `<script>`-Inhalt, fehlerfrei),
 HTML-Tag-Balance (`<div>`/`</div>`, `<section>`/`</section>` gleich oft), alle in
 `index.html` referenzierten Bilddateien vorhanden, sowie ein vollständiger
-Textsuche-Durchlauf auf verbliebene "Charlot"/"Wermelskirchen"/"Neuenhöhe"/"02196"-Reste
+Textsuche-Durchlauf auf verbliebene Fremd-Branding-Reste aus der Vorlage
 (keine Treffer mehr).
 
 ## Nächste Schritte

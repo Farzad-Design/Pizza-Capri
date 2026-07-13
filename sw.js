@@ -1,4 +1,4 @@
-const CACHE_VERSION = 'pizzeria-capri-v1';
+const CACHE_VERSION = 'pizzeria-capri-v2';
 const CACHE_NAMES = {
   static:  `${CACHE_VERSION}-static`,
   images:  `${CACHE_VERSION}-images`,
