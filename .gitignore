@@ -11,5 +11,8 @@ node_modules/
 # Interne Projekt-Quellen (nicht Teil der Website / nicht deployen)
 source/
 *.pdf
+images/PG 1 - *.jpg
+images/PG 2 - *.jpg
+images/info.jpg
 
 .vercel

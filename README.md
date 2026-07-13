@@ -17,63 +17,71 @@ vom Ursprungskunden der Vorlage.
   Domain ersetzen, sobald sie feststeht.
 - `images/` — Kategorie-Bannerfotos (aktuell aus der Vorlage übernommene Platzhalterbilder,
   siehe Abschnitt "Platzhalter" unten). `Image/Logo.png` — Platzhalter-Logo.
-- `menu-data.md` — die aus der gedruckten Speisekarte (gültig ab 05/2025) erfasste
-  Rohtextvorlage, aus der `CATS`/`ITEMS` in `index.html` übertragen wurden. Bleibt als
-  Referenz im Projektordner.
+- `menu-data.md` — Rohtextvorlage der ERSTEN erfassten Kartenversion (gültig ab
+  05/2025, ohne Allergen-Codes). Mittlerweile durch die schärferen Fotos
+  `images/PG 1 - 2024.jpg`, `images/PG 2 - 2024.jpg` und `images/info.jpg` ersetzt/
+  überholt (siehe unten) — `menu-data.md` bleibt nur als historische Referenz liegen,
+  nicht mehr aktuell.
 
 ## Speisekarte
 
-Vollständig aus `menu-data.md` übernommen (Preise, Artikelnummern und Beschreibungen
-1:1 von der gedruckten Karte, gültig ab 05/2025). **20 UI-Kategorien, 182 Positionen
-insgesamt** (Getränke und Pizzabrötchen hatten auf der Karte keine Artikelnummern und
-wurden daher mit neuen Nummern 901–906 bzw. 941–948 versehen):
+Die Preise, Artikelnummern, Beschreibungen UND Allergen-/Zusatzstoff-Codes in
+`CATS`/`ITEMS` wurden zuletzt komplett neu aus schärferen Foto-Vorlagen
+(`images/PG 1 - 2024.jpg` = Pizza-Seite, `images/PG 2 - 2024.jpg` = Auflauf-Seite)
+übertragen — diese Version zeigt niedrigere Preise als die erste Erfassung und pro
+Gericht echte Allergen-Zahlen (Feld `al`, z. B. `al:'5,11,15'`). **15 UI-Kategorien
+(Pasta- und Salat-Unterkategorien zusammengefasst), 179 Positionen insgesamt**
+(Getränke und Pizzabrötchen haben auf der Karte keine Artikelnummern und wurden daher
+mit neuen Nummern 901–906 bzw. 941–948 versehen):
 
 | Kategorie | Positionen |
 |---|---|
-| Pizza (inkl. Party-/Familienpizza) | 55 |
+| Pizza (inkl. Party-/Familienpizza) | 54 |
 | Calzone | 8 |
-| Salate | 10 |
-| Kleine Salate | 5 |
+| Salate (inkl. Kleine Salate als Unterabschnitt) | 14 |
 | Baguettes | 11 |
 | Pizzabrötchen | 8 |
-| Spaghetti | 12 |
-| Tortellini | 8 |
-| Penne Rigate | 8 |
-| Tagliatelle | 6 |
-| Nudelgerichte | 8 |
+| Pasta (Spaghetti/Tortellini/Penne Rigate/Tagliatelle/Nudelgerichte als Unterabschnitte) | 42 |
 | Auflauf | 11 |
 | Teigtaschen | 3 |
 | Reisgerichte | 6 |
-| Gyros | 4 |
+| Gyros | 3 |
 | Fleischgerichte | 4 |
 | Fischgerichte | 3 |
 | Beilagen | 4 |
 | Desserts | 2 |
 | Getränke | 6 |
-| **Summe** | **182** |
+| **Summe** | **179** |
 
-Die Menüdaten liegen als `CATS` / `ITEMS` im `<script>`-Block von `index.html`. Das
-🌱-Symbol markiert vegetarische Gerichte (aus den Beschreibungen abgeleitet, nicht
-explizit auf der Karte gekennzeichnet — bitte mit dem Inhaber gegenprüfen).
+Gegenüber der ersten Erfassung entfernt: Pizza "Pollo Delizia", Gyros "Gyros überbacken",
+Salate "Rucola Salat". Umbenannt/geändert: Salate 197 "Insalata di broccoli" → "Pollo"
+(jetzt mit Hähnchen), Pasta 95 "Penne Primavera Rosé" → "Penne Al Forno" (mit
+Champignons). Die Menüdaten liegen als `CATS` / `ITEMS` im `<script>`-Block von
+`index.html`. Das 🌱-Symbol markiert vegetarische Gerichte (aus den Beschreibungen
+abgeleitet, nicht explizit auf der Karte gekennzeichnet — bitte mit dem Inhaber
+gegenprüfen).
 
 ### Individuelle Pizza-Zutaten (2 Preisstufen: Klein/Groß)
 
 Restaurant Pizzeria Capri hat 2 Pizzagrößen (Klein ca. 24 cm / Groß ca. 28 cm), anders
 als die Vorlage (3 Stufen). Die Extrazutat-Auswahl A–E von der Original-Speisekarte
 wurde in `EXTRAS_TOPPINGS` übernommen und nach Preiskategorie sortiert (`extraPriceFor()`
-richtet sich nach der Größen-Bezeichnung `Klein`/`Groß`). **Vereinfachung/TODO:** Die
-Kategorien D (Tzatziki, nur Klein 1,50 €) und E (Mayo/Ketchup, nur Klein 0,50 €) sind
-auf der echten Karte NUR für die kleine Größe bepreist — hier wurde vereinfachend
-derselbe Preis für Klein und Groß hinterlegt. Vor Live-Gang mit dem Inhaber klären, ob
-das so passt oder ob Groß einen anderen Preis erhalten soll.
+richtet sich nach der Größen-Bezeichnung `Klein`/`Groß`): A) Meeresfrüchte-Extras
+2,00/2,50 €, B) Käse 1,50/2,50 €, C) alle übrigen Zutaten 1,00/2,00 €. **Vereinfachung/
+TODO:** Kategorie D (Tzatziki) ist auf der echten Karte NUR für Groß bepreist (1,50 €) —
+hier wurde vereinfachend derselbe Preis für Klein und Groß hinterlegt. Kategorie E
+(Mayo/Ketchup, nur Klein 0,50 €) ist unverändert. Vor Live-Gang mit dem Inhaber klären,
+ob das so passt.
 
 ### Zusatzstoffe & Allergene
 
 Die Legende (Zusatzstoffe 1–9, Allergene 10–18) entspricht exakt der auf der
-Original-Speisekarte gedruckten Legende (`ADDITIVES`/`ALLERGENS`). Auf der
-Pizzeria-Capri-Karte gibt es **keine Allergen-Buchstaben direkt neben den
-Gerichten** — daher bleibt das Feld `al` bei allen Artikeln leer.
-Feinere Angaben laut Speisekarte telefonisch/vor Ort erfragen.
+Speisekarte gedruckten Legende (`ADDITIVES`/`ALLERGENS`). Anders als in der ersten
+Erfassung angenommen, druckt die Karte SEHR WOHL Allergen-/Zusatzstoff-Zahlen direkt
+neben den Gerichten (z. B. `Salami¹·³·⁴`) — diese stehen jetzt korrekt im Feld `al` pro
+Artikel (94 von 179 Artikeln haben einen nicht-leeren `al`-Wert; die übrigen haben laut
+Karte tatsächlich keine Kennzeichnung). Feinere Angaben laut Speisekarte telefonisch/
+vor Ort erfragen.
 
 ## Design
 
@@ -103,17 +111,17 @@ Zentral als benannte Konstanten am Anfang des `<script>`-Blocks in `index.html`:
   `NEUKUNDE_RABATT_AKTIV = false`) — ebenfalls nicht von der Speisekarte gestützt.
   Komplette Rabattlogik aus der Vorlage bleibt erhalten, nur deaktiviert, falls der
   Inhaber später ein Rabattprogramm einführen möchte.
-- **Öffnungszeiten** (`openingHours()`):
-  - Mo, Di, Do: 11:30–14:00 **und** 16:00–22:00 Uhr (zwei getrennte Zeitfenster mit
-    Mittagspause 14:00–16:00, in der das Lokal laut Speisekarte schlicht geschlossen ist).
+- **Öffnungszeiten** (`openingHours()`) — laut `images/info.jpg`, aktualisiert und
+  OHNE Mittagslücke (anders als in der ersten Erfassung angenommen):
+  - Mo, Di–Do, Fr, Sa: durchgehend 11:30–22:00 Uhr (ein einziges Zeitfenster).
   - Mittwoch: Ruhetag (komplett geschlossen).
-  - Fr, Sa, So, Feiertage: durchgehend 12:00–22:00 Uhr.
-  - `openingHours()` liefert jetzt zusätzlich ein `windows`-Array (ein oder zwei
-    `[open,close]`-Paare je Tag), damit die geteilten Öffnungszeiten an Mo/Di/Do korrekt
-    geprüft werden können (Abholzeit-Validierung, Lieferfenster, Tischreservierung).
-- **Lieferfenster** (`deliveryWindowStatus()`): Lieferung ist innerhalb der jeweiligen
-  Öffnungsfenster bis 15 Minuten vor Fensterende möglich; in der Mittagspause (Mo/Di/Do,
-  14:00–16:00) sowie am Ruhetag (Mittwoch) ist keine Bestellung möglich.
+  - So, Feiertage: durchgehend 12:00–22:00 Uhr.
+  - `openingHours()` liefert weiterhin ein `windows`-Array (aktuell mit genau einem
+    `[open,close]`-Paar je Öffnungstag), damit die Logik unverändert mehrere Fenster pro
+    Tag unterstützen würde, falls sich die Zeiten künftig wieder ändern.
+- **Lieferfenster** (`deliveryWindowStatus()`): Lieferung ist innerhalb des jeweiligen
+  Öffnungsfensters bis 15 Minuten vor Fensterende möglich; am Ruhetag (Mittwoch) ist
+  keine Bestellung möglich.
 - Feiertagslogik ist **nicht implementiert** (nur TODO-Kommentar in `openingHours()`).
 
 ## Tischreservierung (neu — nicht Teil der Vorlage)
@@ -148,16 +156,15 @@ Hero-Button und Footer-Link (`openReservation()`).
 
 ## Platzhalter — vor Live-Gang mit dem Inhaber klären
 
-- **Fotos & Logo sind noch Platzhalter aus der Vorlage.** Betroffen: `images/logo.png`,
-  `images/hero.jpg`, `images/about.jpg` sowie alle Kategorie-Bannerfotos (`pizza.jpg`,
-  `calzone.jpg`, `salate.jpg`, `brote.jpg`, `pasta.jpg`, `auflauf.jpg`, `gyros.jpg`,
-  `schnitzel.jpg` [für Fleischgerichte], `burger.jpg` [für Beilagen/Pommes],
-  `dessert.jpg`, `getraenke.jpg`). Für Kategorien ohne passendes Vorlagenbild
-  (Fischgerichte, Reisgerichte, Kleine Salate, Beilagen, Teigtaschen, Pizzabrötchen,
-  Nudelgerichte) wurde das jeweils naheliegendste vorhandene Bild wiederverwendet
-  (z. B. `pasta.jpg` für Fischgerichte/Reisgerichte, `salate.jpg` für Kleine Salate,
-  `auflauf.jpg` für Teigtaschen/Nudelgerichte, `brote.jpg` für Pizzabrötchen). Sobald der
-  Inhaber echte Fotos liefert, `images/*` und `Image/Logo.png` ersetzen.
+- **Logo ist bereits echt, Kategoriefotos noch nicht.** `images/logo.png` ist das
+  echte Pizza-Capri-Logo (Steuerrad + Schriftzug); `icon-192.png`/`icon-512.png`
+  wurden daraus generiert. Weiterhin Platzhalter aus der Vorlage: `images/hero.jpg`,
+  `images/about.jpg` sowie alle Kategorie-Bannerfotos (`pizza.jpg`, `calzone.jpg`,
+  `salate.jpg`, `brote.jpg`, `pasta.jpg`, `auflauf.jpg`, `gyros.jpg`, `schnitzel.jpg`
+  [für Fleischgerichte/Fischgerichte]). Für Kategorien ohne passendes Vorlagenbild
+  wurde das jeweils naheliegendste vorhandene Bild wiederverwendet (z. B. `auflauf.jpg`
+  für Reisgerichte/Teigtaschen, `gyros.jpg` für Beilagen). Sobald der Inhaber echte
+  Fotos liefert, die jeweilige Datei in `images/` ersetzen (Dateiname beibehalten).
 - **Liefergebühr/Zonen:** Die "über 6 km"-Unterscheidung (höherer Mindestbestellwert
   20 € + zusätzliche Liefergebühr) ist NICHT abgebildet — aktuell gilt für jede Lieferung
   pauschal 15 € Mindestbestellwert und 2 € Liefergebühr (`DELIVERY_ZONES`). Klären: Soll
@@ -169,8 +176,8 @@ Hero-Button und Footer-Link (`openReservation()`).
   Benachrichtigungsweg (E-Mail/Webhook) folgen soll.
 - **Domain** in `robots.txt`/`sitemap.xml` (`pizzeria-capri-burscheid.de`) ist ein
   Platzhalter — durch die echte Domain ersetzen, sobald sie feststeht.
-- **Extrazutat-Preise D/E** (Tzatziki/Mayo/Ketchup nur "Klein" laut Karte) wurden
-  vereinfacht auf beide Größen gleich hinterlegt — siehe Abschnitt "Speisekarte" oben.
+- **Extrazutat-Preis D** (Tzatziki, nur "Groß" laut Karte) wurde vereinfacht auf beide
+  Größen gleich hinterlegt — siehe Abschnitt "Speisekarte" oben.
 - **Feiertagslogik** ist nicht implementiert (nur TODO-Kommentar in `openingHours()`).
 - **Rechtliche Seiten** (Impressum, Datenschutz, AGB, Cookies) sind bewusst noch
   **nicht** mit echten Rechtstexten befüllt — nur Platzhalter ("Diese Seite wird in Kürze
@@ -202,8 +209,9 @@ Textsuche-Durchlauf auf verbliebene Fremd-Branding-Reste aus der Vorlage
 
 ## Nächste Schritte
 
-- Eigenes Vercel-Projekt anlegen und deployen (Vercel-Zugangsdaten des Betreibers nötig).
-- Echte Fotos & Logo vom Inhaber einholen und `images/`/`Image/Logo.png` ersetzen.
+- Live auf Vercel (`pizza-capri.vercel.app`, mit GitHub verbunden für Auto-Deploy).
+- Echte Kategorie-/Hero-Fotos vom Inhaber einholen und die verbliebenen Platzhalter in
+  `images/` ersetzen (Logo ist bereits echt).
 - Mit dem Inhaber die Liefergebühr-/6-km-Regelung final klären und ggf. eine echte
   Zonentabelle nachrüsten.
 - Mit dem Inhaber klären, ob die Tischreservierung so (ohne Benachrichtigung) launch-fähig
