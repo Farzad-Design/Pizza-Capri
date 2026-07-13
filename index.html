@@ -270,6 +270,9 @@ a{text-decoration:none;color:inherit}
 .cart-empty{display:flex;flex-direction:column;align-items:center;justify-content:center;height:200px;gap:12px;color:var(--t3)}
 .cart-empty svg{opacity:.3}
 .cart-item{display:flex;gap:12px;padding:14px 0;border-bottom:1px solid var(--border);align-items:center}
+.cart-addon{padding:8px 0 8px 32px;border-bottom:1px dashed var(--border)}
+.cart-addon .ci-name{font-size:12px;font-weight:500;color:var(--t2)}
+.cart-addon .ci-price{font-size:12.5px}
 .ci-emoji{width:52px;height:52px;border-radius:10px;flex-shrink:0;display:flex;align-items:center;justify-content:center;font-size:24px;background:var(--card2)}
 .ci-info{flex:1}
 .ci-name-row{display:flex;align-items:flex-start;justify-content:space-between;gap:6px;margin-bottom:3px}
@@ -882,7 +885,6 @@ const CATS = [
  {id:'fleisch',       title:'Fleischgerichte', emoji:'🥩', accent:'#7A3B1D', img:'images/schnitzel.jpg'},
  {id:'fisch',         title:'Fischgerichte',   emoji:'🐟', accent:'#2E6F8E', img:'images/schnitzel.jpg'},
  {id:'salate',        title:'Salate',          emoji:'🥗', accent:'#5C8A34', img:'images/salate.jpg'},
- {id:'kleinesalate',  title:'Kleine Salate',   emoji:'🥬', accent:'#7FA655', img:'images/salate.jpg'},
  {id:'beilagen',      title:'Beilagen',        emoji:'🍟', accent:'#E0651C', img:'images/gyros.jpg'},
  {id:'dessert',       title:'Desserts',        emoji:'🍰', accent:'#5C2A20', img:'images/dessert.jpg'},
  {id:'getraenke',     title:'Getränke',        emoji:'🥤', accent:'#4A2418', img:'images/getraenke.jpg'},
@@ -890,11 +892,7 @@ const CATS = [
  {id:'calzone',       title:'Calzone',         emoji:'🥟', accent:'#4F7A2E', img:'images/calzone.jpg'},
  {id:'teigtaschen',   title:'Teigtaschen',     emoji:'🥙', accent:'#D9631E', img:'images/auflauf.jpg'},
  {id:'brotchen',      title:'Pizzabrötchen',   emoji:'🥐', accent:'#6FA23A', img:'images/brote.jpg'},
- {id:'spaghetti',     title:'Spaghetti',       emoji:'🍝', accent:'#C0392B', img:'images/pasta.jpg'},
- {id:'tortellini',    title:'Tortellini',      emoji:'🥟', accent:'#C0392B', img:'images/pasta.jpg'},
- {id:'penne',         title:'Penne Rigate',    emoji:'🍝', accent:'#B8412E', img:'images/pasta.jpg'},
- {id:'tagliatelle',   title:'Tagliatelle',     emoji:'🍝', accent:'#A83A28', img:'images/pasta.jpg'},
- {id:'nudelgerichte', title:'Nudelgerichte',   emoji:'🧀', accent:'#D9631E', img:'images/auflauf.jpg'},
+ {id:'pasta',         title:'Pasta',           emoji:'🍝', accent:'#C0392B', img:'images/pasta.jpg'},
 ];
 
 /* ══════════════════════════════════════════════════════════════
@@ -977,7 +975,7 @@ const ITEMS = {
   ]},
  ],
  salate: [
-  {sub:'Salate', note:'Mittel / Groß · 🌱 = ohne Fleisch und Fisch', list:[
+  {sub:'Salate (Mittel / Groß)', note:'🌱 = ohne Fleisch und Fisch', list:[
    {nr:'191', name:'Mista', desc:'Salat, Tomaten, Gurken, Mais, Thunfisch, Schinken, Mozzarella, Artischocken, Ei, Zwiebeln', al:'', sizes:['Mittel','Groß'], prices:[10.50,12.00]},
    {nr:'192', name:'Capriciosa', desc:'Salat, Tomaten, Gurken, Thunfisch, Ei, Schinken, Käse, Zwiebeln, frische Paprika, Mais', al:'', sizes:['Mittel','Groß'], prices:[10.50,12.00]},
    {nr:'193', name:'Paesana', desc:'Salat, Tomaten, Gurken, Mais, Zwiebeln, frische Paprika, Thunfisch', al:'', sizes:['Mittel','Groß'], prices:[9.50,11.00]},
@@ -989,8 +987,6 @@ const ITEMS = {
    {nr:'199', name:'Caprese', desc:'Tomaten, Mozzarella, fr. Basilikum (nur eine Größe)', veg:true, al:'', price:10.50},
    {nr:'200', name:'Rucola Salat', desc:'Rucola, Tomaten, Weißkäse (nur eine Größe)', veg:true, al:'', price:10.50},
   ]},
- ],
- kleinesalate: [
   {sub:'Kleine Salate', note:'Alle mit Eisbergsalat · Dressing: Joghurt, Joghurt mit Kräutern, Essig/Öl mit Kräutern oder Cocktail', list:[
    {nr:'201', name:'Perschiler', desc:'gewürfelte Gurken, Tomaten, Zwiebeln, mit Petersilie', veg:true, al:'', price:7.00},
    {nr:'202', name:'Grüner Salat', desc:'', veg:true, al:'', price:5.00},
@@ -1026,7 +1022,7 @@ const ITEMS = {
    {nr:'948', name:'Pizzabrot mit Kräuterbutter', desc:'', veg:true, al:'', price:5.00},
   ]},
  ],
- spaghetti: [
+ pasta: [
   {sub:'Spaghetti', note:'Jedes Nudelgericht auf Wunsch mit Käse überbacken, +1,50 € · 🌱 = ohne Fleisch und Fisch', list:[
    {nr:'61', name:'Spaghetti Napoli', desc:'Tomatensauce, Knoblauch, Basilikum', veg:true, al:'', price:9.00},
    {nr:'62', name:'Spaghetti Bolognese', desc:'Hackfleischsauce', al:'', price:10.50},
@@ -1041,8 +1037,6 @@ const ITEMS = {
    {nr:'71', name:'Spaghetti Broccoli', desc:'Broccoli, Sahnesauce, Knoblauch', veg:true, al:'', price:11.00},
    {nr:'72', name:'Spaghetti Capri', desc:'Hähnchenbruststreifen, Champignons, Spinat, Broccoli, Sahnesauce und Tomatensauce', al:'', price:12.50},
   ]},
- ],
- tortellini: [
   {sub:'Tortellini', note:'🌱 = ohne Fleisch und Fisch', list:[
    {nr:'81', name:'Tortellini Alla Panna', desc:'Schinken, Sahnesauce', al:'', price:10.50},
    {nr:'82', name:'Tortellini Carbonara', desc:'Schinken, Sahnesauce, Ei', al:'', price:11.00},
@@ -1053,8 +1047,6 @@ const ITEMS = {
    {nr:'87', name:'Tortellini agli Scampi', desc:'Broccoli, Scampi, Knoblauch, Sahnesauce', al:'', price:12.00},
    {nr:'88', name:'Tortellini Pepu', desc:'Broccoli, Schinken, Sahnesauce, Knoblauch', al:'', price:11.50},
   ]},
- ],
- penne: [
   {sub:'Penne Rigate', note:'🌱 = ohne Fleisch und Fisch', list:[
    {nr:'91', name:'Penne Napoli', desc:'Tomatensauce, Knoblauch, frisches Basilikum', veg:true, al:'', price:9.50},
    {nr:'92', name:'Penne ai porcini', desc:'fr. Champignons, Sahnesauce', veg:true, al:'', price:10.50},
@@ -1065,8 +1057,6 @@ const ITEMS = {
    {nr:'97', name:'Penne Gorgonzola', desc:'Gorgonzola, Sahnesauce', veg:true, al:'', price:11.00},
    {nr:'98', name:'Penne del Pescatore', desc:'Lachs, Tomatensauce, Knoblauch', al:'', price:12.00},
   ]},
- ],
- tagliatelle: [
   {sub:'Tagliatelle', note:'🌱 = ohne Fleisch und Fisch', list:[
    {nr:'101', name:'Tagliatelle Napoli', desc:'Bandnudeln, Knoblauch, Basilikum, Tomatensauce', veg:true, al:'', price:9.50},
    {nr:'102', name:'Tagliatelle Bolognese', desc:'Bandnudeln, Hackfleischsauce', al:'', price:10.50},
@@ -1075,8 +1065,6 @@ const ITEMS = {
    {nr:'105', name:'Tagliatelle Capri', desc:'Bandnudeln, Hähnchenbruststreifen, fr. Champignons, Spinat, Broccoli, Sahnesauce', al:'', price:12.50},
    {nr:'106', name:'Tagliatelle Boscaiola', desc:'Bandnudeln, Lachs, fr. Champignons, Knoblauch, Sahnesauce', al:'', price:13.00},
   ]},
- ],
- nudelgerichte: [
   {sub:'Nudelgerichte', note:'Mit Käse überbacken · 🌱 = ohne Fleisch und Fisch', list:[
    {nr:'111', name:'Cannelloni A', desc:'Hackfleisch, Bolognese', al:'', price:11.50},
    {nr:'112', name:'Cannelloni B', desc:'Hackfleisch, Sahnesauce', al:'', price:11.50},
@@ -1351,9 +1339,10 @@ function addToCart(catId, nr, sizeIdx){
   const hasSizes = !!item.sizes;
   const key = catId + '-' + nr + (hasSizes ? '-' + sizeIdx : '');
   const price = hasSizes ? item.prices[sizeIdx] : item.price;
-  const name = hasSizes ? `${item.name} (${item.sizes[sizeIdx]})` : item.name;
+  const sizeLabel = hasSizes ? item.sizes[sizeIdx] : null;
+  const name = hasSizes ? `${item.name} (${sizeLabel})` : item.name;
   const isDrink = isDrinkGroup(catId);
-  addRawToCart({key, name, price, cat: catId, isDrink, emoji: catEmoji(catId), nr});
+  addRawToCart({key, name, price, cat: catId, isDrink, emoji: catEmoji(catId), nr, sizeIdx, baseName: item.name, basePrice: price, sizeLabel, extras: [], sauces: []});
   updateCart();
   showToast(name);
   bounceCart();
@@ -1489,23 +1478,49 @@ function renderItemModal(){
   document.getElementById('item-modal-cta-label').textContent = m.editKey ? 'Aktualisieren' : 'In den Warenkorb';
 }
 
+/* Baut Name, Preis und eindeutigen Schlüssel für einen Warenkorb-Eintrag mit Extras/Sauce.
+   Zentral genutzt beim ersten Hinzufügen UND beim Entfernen einzelner Extras im Warenkorb. */
+function buildCartEntryFields(baseName, sizeLabel, basePrice, extraIds, sauceIds, catId, nr, sizeIdx){
+  const extraNames = extraIds.map(id => ALL_EXTRAS.find(e => e.id === id).name);
+  const sauceNames = sauceIds.map(id => SAUCE_OPTIONS.find(s => s.id === id).name);
+  const addOnNames = [...extraNames, ...sauceNames];
+  const name = baseName + (sizeLabel ? ` (${sizeLabel})` : '') + (addOnNames.length ? ` + ${addOnNames.join(', ')}` : '');
+  const key = catId + '-' + nr + (sizeIdx != null ? '-' + sizeIdx : '') +
+    (extraIds.length ? '-ex:' + [...extraIds].sort().join(',') : '') +
+    (sauceIds.length ? '-sa:' + [...sauceIds].sort().join(',') : '');
+  let price = basePrice;
+  for(const id of extraIds) price += extraPriceFor(ALL_EXTRAS.find(e => e.id === id), sizeLabel);
+  for(const id of sauceIds) price += SAUCE_OPTIONS.find(s => s.id === id).price;
+  return {name, key, price: round2(price)};
+}
+
+/* Entfernt genau ein Extra/eine Sauce aus einem bestehenden Warenkorb-Eintrag,
+   ohne den ganzen Artikel zu löschen (Warenkorb-Zeile bleibt, Preis/Name werden neu berechnet). */
+function removeCartAddon(key, kind, id){
+  const i = cart.findIndex(c => c.key === key);
+  if(i < 0) return;
+  const entry = cart[i];
+  const extras = kind === 'extra' ? entry.extras.filter(e => e !== id) : [...entry.extras];
+  const sauces = kind === 'sauce' ? entry.sauces.filter(s => s !== id) : [...entry.sauces];
+  const fields = buildCartEntryFields(entry.baseName, entry.sizeLabel, entry.basePrice, extras, sauces, entry.cat, entry.nr, entry.sizeIdx);
+  cart[i] = {...entry, ...fields, extras, sauces};
+  updateCart();
+}
+
 function confirmItemModal(){
   const m = itemModal;
   if(!m) return;
-  const extraNames = [...m.extras].map(id => ALL_EXTRAS.find(e => e.id === id).name);
-  const sauceNames = [...m.sauces].map(id => SAUCE_OPTIONS.find(s => s.id === id).name);
-  const addOnNames = [...extraNames, ...sauceNames];
-  const name = m.baseName + (m.sizeLabel ? ` (${m.sizeLabel})` : '') + (addOnNames.length ? ` + ${addOnNames.join(', ')}` : '');
-  const key = m.catId + '-' + m.nr + (m.sizeIdx != null ? '-' + m.sizeIdx : '') +
-    (m.extras.size ? '-ex:' + [...m.extras].sort().join(',') : '') +
-    (m.sauces.size ? '-sa:' + [...m.sauces].sort().join(',') : '');
+  const extraIds = [...m.extras], sauceIds = [...m.sauces];
+  const fields = buildCartEntryFields(m.baseName, m.sizeLabel, m.basePrice, extraIds, sauceIds, m.catId, m.nr, m.sizeIdx);
+  const { name } = fields;
   const isDrink = isDrinkGroup(m.catId);
 
   if(m.editKey) cart = cart.filter(c => c.key !== m.editKey);
 
   addRawToCart({
-    key, name, price: itemModalUnitPrice(), cat: m.catId, isDrink, emoji: catEmoji(m.catId),
-    nr: m.nr, sizeIdx: m.sizeIdx, extras: [...m.extras], sauces: [...m.sauces],
+    ...fields, cat: m.catId, isDrink, emoji: catEmoji(m.catId),
+    nr: m.nr, sizeIdx: m.sizeIdx, baseName: m.baseName, basePrice: m.basePrice, sizeLabel: m.sizeLabel,
+    extras: extraIds, sauces: sauceIds,
   }, m.qty);
 
   const drinkList = quickDrinkList();
@@ -1921,14 +1936,16 @@ function updateCart(){
   } else {
     footer.style.display = 'block';
     cart.forEach(item => {
+      const extras = item.extras || [], sauces = item.sauces || [];
+      const isEditable = extras.length || sauces.length;
+      const baseName = item.baseName ? (item.baseName + (item.sizeLabel ? ` (${item.sizeLabel})` : '')) : item.name;
       const row = document.createElement('div');
       row.className = 'cart-item';
-      const isEditable = (item.extras && item.extras.length) || (item.sauces && item.sauces.length);
       row.innerHTML = `
         <div class="ci-emoji">${item.emoji}</div>
         <div class="ci-info">
           <div class="ci-name-row">
-            <div class="ci-name">${item.name}</div>
+            <div class="ci-name">${baseName}</div>
             <div class="ci-name-actions">
               ${isEditable ? `<button class="ci-edit" title="Extras ändern"><svg width="13" height="13" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M12 20h9M16.5 3.5a2.12 2.12 0 013 3L7 19l-4 1 1-4L16.5 3.5z"/></svg></button>` : ''}
               <button class="ci-del" title="Entfernen"><svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path d="M18 6L6 18M6 6l12 12"/></svg></button>
@@ -1941,6 +1958,44 @@ function updateCart(){
       if(isEditable) row.querySelector('.ci-edit').addEventListener('click', () => editCartItem(item.key));
       row.querySelectorAll('.cqb').forEach(btn => btn.addEventListener('click', () => chgQty(item.key, parseInt(btn.dataset.d))));
       itemsEl.appendChild(row);
+
+      extras.forEach(id => {
+        const extra = ALL_EXTRAS.find(e => e.id === id);
+        if(!extra) return;
+        const arow = document.createElement('div');
+        arow.className = 'cart-item cart-addon';
+        arow.innerHTML = `
+          <div class="ci-info">
+            <div class="ci-name-row">
+              <div class="ci-name">＋ ${extra.name}</div>
+              <div class="ci-name-actions">
+                <button class="ci-del" title="Entfernen"><svg width="13" height="13" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path d="M18 6L6 18M6 6l12 12"/></svg></button>
+              </div>
+            </div>
+            <div class="ci-price">€${(extraPriceFor(extra, item.sizeLabel)*item.qty).toFixed(2)}</div>
+          </div>`;
+        arow.querySelector('.ci-del').addEventListener('click', () => removeCartAddon(item.key, 'extra', id));
+        itemsEl.appendChild(arow);
+      });
+
+      sauces.forEach(id => {
+        const sauce = SAUCE_OPTIONS.find(s => s.id === id);
+        if(!sauce) return;
+        const arow = document.createElement('div');
+        arow.className = 'cart-item cart-addon';
+        arow.innerHTML = `
+          <div class="ci-info">
+            <div class="ci-name-row">
+              <div class="ci-name">＋ ${sauce.name}</div>
+              <div class="ci-name-actions">
+                <button class="ci-del" title="Entfernen"><svg width="13" height="13" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path d="M18 6L6 18M6 6l12 12"/></svg></button>
+              </div>
+            </div>
+            <div class="ci-price">€${(sauce.price*item.qty).toFixed(2)}</div>
+          </div>`;
+        arow.querySelector('.ci-del').addEventListener('click', () => removeCartAddon(item.key, 'sauce', id));
+        itemsEl.appendChild(arow);
+      });
     });
   }
 }
