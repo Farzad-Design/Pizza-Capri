@@ -1,0 +1,9 @@
+# Normalisiere Zeilenenden auf LF im Repo
+* text=auto eol=lf
+
+# Binärdateien nicht anfassen
+*.png binary
+*.jpeg binary
+*.jpg binary
+*.pdf binary
+*.ico binary

@@ -1,0 +1,2380 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Restaurant Pizzeria Capri Burscheid-Hilgen – Pizza, Pasta, Gyros, Fisch</title>
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#C8102E">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Pizzeria Capri">
+<meta name="description" content="Restaurant Pizzeria Capri in Burscheid-Hilgen – Pizza, Pasta, Gyros, Fleisch- und Fischgerichte, Salate und mehr. Online bestellen, liefern lassen oder abholen.">
+<link rel="manifest" href="manifest.json">
+<link rel="icon" type="image/png" sizes="192x192" href="images/icon-192.png">
+<link rel="icon" type="image/png" sizes="512x512" href="images/icon-512.png">
+<link rel="apple-touch-icon" href="images/icon-192.png">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Restaurant Pizzeria Capri">
+<meta property="og:title" content="Restaurant Pizzeria Capri – Pizza, Pasta, Gyros in Burscheid-Hilgen">
+<meta property="og:description" content="Frisch zubereitet – online bestellen, liefern lassen oder abholen.">
+<meta property="og:locale" content="de_DE">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Restaurant Pizzeria Capri – Burscheid-Hilgen">
+<meta name="twitter:description" content="Pizza, Pasta, Gyros, Fleisch- und Fischgerichte, Salate – jetzt online bestellen.">
+<!-- SEO: Schema.org LocalBusiness (Restaurant) -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Restaurant",
+  "name": "Restaurant Pizzeria Capri",
+  "description": "Pizza, Pasta, Gyros, Fleisch- und Fischgerichte, Salate und mehr in Burscheid-Hilgen – online bestellen, liefern lassen oder abholen.",
+  "servesCuisine": ["Pizza", "Italienisch", "Griechisch"],
+  "priceRange": "€€",
+  "telephone": "+4921747646 80",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Kölner Str. 56",
+    "postalCode": "51399",
+    "addressLocality": "Burscheid",
+    "addressCountry": "DE"
+  },
+  "openingHoursSpecification": [
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Thursday"], "opens": "11:30", "closes": "14:00" },
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Thursday"], "opens": "16:00", "closes": "22:00" },
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Friday","Saturday","Sunday"], "opens": "12:00", "closes": "22:00" }
+  ],
+  "acceptsReservations": "True",
+  "hasDeliveryMethod": ["http://purl.org/goodrelations/v1#DeliveryModeOwnFleet", "http://purl.org/goodrelations/v1#DeliveryModePickUp"],
+  "areaServed": { "@type": "City", "name": "Burscheid" }
+}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700;800&family=Birthstone&display=swap" rel="stylesheet">
+<style>
+/* ── Reset & Tokens ──────────────────────────────────────────── */
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+:root{
+  --bg:       #F6EFE1;
+  --bg2:      #EFE6D3;
+  --card:     #FFFFFF;
+  --card2:    #F4ECDA;
+  --brand:    #C8102E;
+  --brand2:   #A50D24;
+  --brand3:   #B0122A;
+  --brand-bg: rgba(200,16,46,.07);
+  --brand-b:  rgba(200,16,46,.22);
+  --white:    #2A1E16;
+  --ink:      #2A1E16;
+  --t1:       #3A2A1E;
+  --t2:       #6E5C48;
+  --t3:       #9A876E;
+  --border:   rgba(70,45,20,.14);
+  --shadow:   0 6px 24px rgba(90,60,30,.12);
+  --r:        14px;
+  --rs:       10px;
+  --tr:       .3s ease;
+  /* Nur lateinische/deutsche Schriften – keine persischen Fonts. Fallback = System-Sans. */
+  --display:  'Roboto', system-ui, -apple-system, 'Segoe UI', Arial, sans-serif;
+  --body:     'Roboto', system-ui, -apple-system, 'Segoe UI', Arial, sans-serif;
+}
+html{scroll-behavior:smooth}
+body{font-family:var(--body);background:var(--bg);color:var(--white);overflow-x:hidden;-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+button{font-family:inherit;cursor:pointer;border:none;outline:none}
+a{text-decoration:none;color:inherit}
+::selection{background:rgba(200,16,46,.3);color:#fff}
+::-webkit-scrollbar{width:5px}
+::-webkit-scrollbar-track{background:var(--bg)}
+::-webkit-scrollbar-thumb{background:var(--brand);border-radius:3px}
+
+.container{width:100%;max-width:1280px;margin:0 auto;padding:0 20px}
+@media(min-width:768px){.container{padding:0 32px}}
+@media(min-width:1024px){.container{padding:0 48px}}
+
+/* ── Buttons ─────────────────────────────────────────*/
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;font-family:var(--body);font-size:11px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;padding:12px 28px;border-radius:6px;transition:all var(--tr);cursor:pointer;white-space:nowrap;border:none;touch-action:manipulation}
+.btn-primary{background:var(--brand);color:#fff}
+.btn-primary:hover{background:var(--brand2);box-shadow:0 0 28px rgba(200,16,46,.4)}
+.btn-outline{background:rgba(255,255,255,.85);backdrop-filter:blur(6px);color:var(--ink);border:1.5px solid var(--brand-b)}
+.btn-outline:hover{border-color:var(--brand);background:var(--brand-bg)}
+.btn:active{transform:scale(.97)}
+
+.mode-btn{background:var(--card);color:var(--t2);border:1.5px solid var(--border);transition:all var(--tr)}
+.mode-btn:hover{border-color:var(--brand);color:var(--brand)}
+.mode-btn.active{background:var(--brand);color:#fff;border-color:var(--brand);box-shadow:0 0 24px rgba(200,16,46,.35)}
+.mode-btn:disabled{opacity:.35;cursor:not-allowed}
+
+/* ── Navbar ─────────────────────────────────────────── */
+#navbar{position:fixed;top:0;left:0;right:0;z-index:200;transition:all .4s ease;background:rgba(246,239,225,.92);backdrop-filter:blur(20px);border-bottom:1px solid var(--border)}
+#navbar.scrolled{background:rgba(246,239,225,.97);box-shadow:0 4px 24px rgba(90,60,30,.12)}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;height:72px}
+.nav-logo{display:flex;align-items:center;gap:10px;cursor:pointer}
+.nav-logo-img{height:40px;width:auto;display:block}
+@media(max-width:1023px){.nav-logo-img{height:32px}}
+.logo-emoji{font-size:30px;line-height:1}
+.logo-text{display:flex;flex-direction:column;line-height:1}
+.logo-text span:first-child{font-family:var(--display);font-size:17px;font-weight:800;letter-spacing:.1em;text-transform:uppercase}
+.logo-text span:last-child{font-size:9px;font-weight:500;letter-spacing:.2em;text-transform:uppercase;color:var(--brand);margin-top:2px}
+.nav-links{display:none}
+@media(min-width:1024px){.nav-links{display:flex;align-items:center;gap:2px}}
+.nav-link{padding:8px 16px;font-size:11px;font-weight:500;letter-spacing:.08em;text-transform:uppercase;color:var(--t2);transition:color var(--tr);background:none;border:none;cursor:pointer;position:relative}
+.nav-link:hover,.nav-link.active{color:var(--brand)}
+.nav-link.active::after{content:'';position:absolute;bottom:0;left:16px;right:16px;height:1.5px;background:var(--brand);border-radius:1px}
+.nav-right{display:flex;align-items:center;gap:12px}
+@media(max-width:1023px){.nav-inner{height:60px;gap:6px}.nav-right{gap:6px}.nav-right .cart-btn{padding:6px 10px;font-size:11px;gap:5px}}
+.cart-btn{display:flex;align-items:center;gap:8px;padding:8px 16px;border-radius:8px;background:var(--card);border:1px solid var(--brand-b);font-size:12px;font-weight:600;color:var(--ink);transition:all var(--tr);cursor:pointer}
+.cart-btn:hover{border-color:var(--brand);background:var(--brand-bg)}
+@keyframes cartBounce{0%{transform:scale(1)}25%{transform:scale(1.18)}50%{transform:scale(.92)}70%{transform:scale(1.08)}100%{transform:scale(1)}}
+.cart-bounce{animation:cartBounce .45s ease;border-color:var(--brand) !important;background:var(--brand-bg) !important}
+.cart-count{background:var(--brand);color:#fff;font-size:9px;font-weight:700;min-width:18px;height:18px;border-radius:9px;display:flex;align-items:center;justify-content:center;padding:0 4px}
+.burger{display:flex;flex-direction:column;gap:5px;cursor:pointer;padding:6px}
+.burger span{display:block;width:22px;height:1.5px;background:var(--ink);border-radius:2px;transition:all .3s}
+@media(min-width:1024px){.burger{display:none}}
+
+#mobile-menu{display:none;position:fixed;top:72px;left:0;right:0;z-index:199;background:rgba(246,239,225,.98);backdrop-filter:blur(20px);border-bottom:1px solid var(--border);padding:20px 24px 28px}
+#mobile-menu.open{display:block}
+.mobile-links{display:flex;flex-direction:column;gap:4px}
+.mobile-link{padding:12px 8px;font-size:13px;font-weight:500;letter-spacing:.06em;text-transform:uppercase;color:var(--t2);border-bottom:1px solid var(--border);cursor:pointer;transition:color var(--tr);background:none;text-align:left}
+.mobile-link:hover{color:var(--brand)}
+
+/* ── Hero ─────────────────────────────────────────── */
+#hero{min-height:100vh;display:flex;align-items:center;overflow:hidden;position:relative;background:var(--bg)}
+.hero-slides{position:absolute;inset:0;z-index:0;overflow:hidden;background:radial-gradient(ellipse at 50% 26%,#FFFDF7,#F6EFE1 60%,#EAD9C6 100%)}
+.hero-overlay{position:absolute;inset:0;z-index:1;pointer-events:none;
+  background:
+    radial-gradient(ellipse 92% 82% at 50% 42%, rgba(246,239,225,.24), rgba(246,239,225,.4) 76%, rgba(234,217,198,.62)),
+    linear-gradient(to bottom, rgba(255,253,247,.36) 0%, rgba(246,239,225,.2) 42%, rgba(234,217,198,.5) 100%)}
+.hero-glow-1{position:absolute;top:-80px;right:-80px;width:600px;height:600px;border-radius:50%;background:rgba(200,16,46,.12);filter:blur(120px);animation:glow-pulse 4s ease-in-out infinite;z-index:2;pointer-events:none}
+.hero-glow-2{position:absolute;bottom:0;left:0;width:400px;height:400px;border-radius:50%;background:rgba(200,16,46,.08);filter:blur(100px);z-index:2;pointer-events:none}
+.hero-grid{position:absolute;inset:0;pointer-events:none;opacity:.04;background-image:linear-gradient(rgba(90,60,30,.5) 1px,transparent 1px),linear-gradient(90deg,rgba(90,60,30,.5) 1px,transparent 1px);background-size:80px 80px;z-index:2}
+.hero-inner{position:relative;z-index:10;padding:120px 0 80px;width:100%;text-align:center}
+.hero-layout{display:grid;gap:24px;align-items:center;max-width:720px;justify-items:center;margin:0 auto}
+.hero-eyebrow{display:flex;align-items:center;justify-content:center;gap:12px;margin-bottom:20px;opacity:0;animation:fadeUp .6s .2s ease forwards}
+.eyebrow-line{width:32px;height:1.5px;background:var(--brand)}
+.eyebrow-text{font-size:10px;font-weight:700;letter-spacing:.28em;text-transform:uppercase;color:var(--brand3);text-shadow:0 1px 4px rgba(40,20,10,.35)}
+.hero-h1{font-family:'Birthstone',cursive;font-size:clamp(52px,7vw,96px);font-weight:400;line-height:1.1;margin-bottom:24px;text-align:center;color:var(--ink)}
+.hero-h1 .line1{display:block;opacity:0;animation:fadeUp .9s .3s ease forwards}
+.hero-h1 .line2{display:block;color:var(--brand);opacity:0;animation:fadeUp .9s .45s ease forwards}
+.hero-content-panel{text-align:center;width:100%}
+.hero-promo{display:none;align-items:center;gap:8px;margin:0 auto 18px;padding:8px 16px;border-radius:20px;background:var(--brand-bg);border:1px solid var(--brand-b);color:var(--brand);font-size:12px;font-weight:700;letter-spacing:.02em;cursor:pointer;width:fit-content;transition:all .2s}
+.hero-promo:hover{background:var(--brand);color:#fff;border-color:var(--brand)}
+.hero-h1-logo{margin:0 0 20px}
+.hero-logo{width:100%;max-width:min(580px,88vw);height:auto;margin:0 auto;filter:drop-shadow(0 12px 30px rgba(120,60,20,.16));opacity:0;animation:fadeUp .9s .3s ease forwards}
+.hero-body{font-size:14px;line-height:1.8;color:var(--ink);max-width:460px;margin-bottom:12px;margin-left:auto;margin-right:auto;opacity:0;animation:fadeUp .7s .6s ease forwards;text-align:center;font-weight:600;text-shadow:0 1px 6px rgba(40,20,10,.3)}
+.hero-ctas{display:flex;flex-wrap:wrap;gap:12px;opacity:0;animation:fadeUp .6s .75s ease forwards;justify-content:center;align-items:center}
+.hero-ctas-col{flex-direction:column;align-items:center;gap:10px}
+.hero-btns-row{display:flex;gap:10px;flex-wrap:wrap;justify-content:center}
+
+/* ── Section headers ─────────────────────────────────── */
+.section-header{text-align:center;max-width:580px;margin:0 auto 40px}
+.section-eye{display:flex;align-items:center;justify-content:center;gap:12px;margin-bottom:16px}
+.eye-line{width:32px;height:1.5px;background:var(--brand)}
+.eye-txt{font-size:10px;font-weight:600;letter-spacing:.28em;text-transform:uppercase;color:var(--brand3)}
+.section-title{font-family:var(--display);font-size:clamp(32px,4vw,48px);font-weight:600;line-height:1.1;margin-bottom:14px}
+.section-sub{font-size:13px;line-height:1.8;color:var(--t2)}
+
+/* ── Kategorien Grid ──────────────────────────────────── */
+#categories{padding:80px 0 60px;background:var(--bg2)}
+.cats-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+@media(min-width:640px){.cats-grid{grid-template-columns:repeat(3,1fr);gap:18px}}
+@media(min-width:1000px){.cats-grid{grid-template-columns:repeat(4,1fr)}}
+@media(min-width:1300px){.cats-grid{grid-template-columns:repeat(5,1fr)}}
+.cat-tile{background:var(--card);border:1px solid var(--border);border-radius:18px;overflow:hidden;cursor:pointer;transition:transform .35s ease,border-color .3s,box-shadow .4s}
+.cat-tile:hover{transform:translateY(-6px);border-color:rgba(200,16,46,.3);box-shadow:0 14px 40px rgba(0,0,0,.5)}
+.cat-tile-img{aspect-ratio:4/3;display:flex;align-items:center;justify-content:center;font-size:52px;position:relative;overflow:hidden}
+.cat-tile-img-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(20,20,20,.35),transparent);z-index:1}
+.cat-tile-body{padding:14px 16px 16px}
+.cat-tile-name{font-family:var(--display);font-size:16px;font-weight:700;margin-bottom:4px}
+.cat-tile-count{font-size:11px;color:var(--t2)}
+
+/* ── Kategorie Detailansicht ──────────────────────────── */
+#category-detail{padding:120px 0 60px;background:var(--bg2);display:none}
+.cat-detail-header{display:flex;align-items:center;gap:16px;margin-bottom:36px;flex-wrap:wrap}
+.back-btn{display:flex;align-items:center;gap:8px;padding:10px 18px;border-radius:10px;background:var(--card);border:1px solid var(--border);color:var(--ink);font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;cursor:pointer;transition:all .2s;flex-shrink:0}
+.back-btn:hover{border-color:var(--brand);color:var(--brand3)}
+.cat-detail-title-wrap{display:flex;align-items:center;gap:12px}
+.cat-detail-emoji{font-size:34px}
+.cat-detail-title{font-family:var(--display);font-size:clamp(26px,3.4vw,38px);font-weight:700}
+.subcat-title{font-family:var(--display);font-size:18px;font-weight:700;margin:36px 0 16px;padding-bottom:10px;border-bottom:1px solid var(--border);color:var(--brand3)}
+.subcat-title:first-of-type{margin-top:0}
+.subcat-note{font-size:11px;color:var(--t3);margin:-10px 0 18px;line-height:1.6}
+
+/* ── Food grid & card ──────────────── */
+.food-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+@media(min-width:640px){.food-grid{grid-template-columns:repeat(2,1fr);gap:20px}}
+@media(min-width:900px){.food-grid{grid-template-columns:repeat(3,1fr)}}
+@media(min-width:1200px){.food-grid{grid-template-columns:repeat(4,1fr)}}
+.food-card{background:var(--card);border:1px solid var(--border);border-radius:16px;overflow:hidden;cursor:default;transition:transform .4s ease,border-color .3s,box-shadow .4s;position:relative}
+.food-card:hover{transform:translateY(-4px);border-color:rgba(200,16,46,.25);box-shadow:0 12px 40px rgba(0,0,0,.5),0 0 0 1px rgba(200,16,46,.12)}
+.food-card-img{width:100%;aspect-ratio:4/3;overflow:hidden;display:flex;align-items:center;justify-content:center;font-size:46px;position:relative;background:linear-gradient(135deg,#F4ECDA,#EAD9C6)}
+.food-card-img-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(20,20,20,.3),transparent);pointer-events:none}
+.food-card-badges{position:absolute;top:10px;left:10px;display:flex;gap:6px;z-index:2}
+.badge-tag{font-size:9px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:3px 9px;border-radius:20px}
+.badge-veggie{background:rgba(76,175,125,.15);color:#4CAF7D;border:1px solid rgba(76,175,125,.3)}
+.food-card-body{padding:14px 16px 16px}
+.food-card-name{font-family:var(--display);font-size:15px;font-weight:700;line-height:1.25;margin-bottom:5px}
+.al-codes{font-size:9.5px;font-weight:700;color:var(--t2);font-family:var(--body);letter-spacing:.04em;vertical-align:super;margin-left:4px;line-height:1}
+.food-card-desc{font-size:11px;line-height:1.6;color:var(--t2);margin-bottom:12px;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.food-card-foot{display:flex;align-items:center;justify-content:space-between}
+.food-price{font-family:var(--display);font-size:20px;font-weight:700;color:var(--brand3)}
+.add-btn{width:36px;height:36px;border-radius:8px;background:var(--brand);color:#fff;touch-action:manipulation;display:flex;align-items:center;justify-content:center;font-size:19px;font-weight:700;line-height:1;transition:all .2s;flex-shrink:0}
+.add-btn:hover{background:var(--brand2);transform:scale(1.1)}
+.add-btn:active{transform:scale(.9)}
+.size-row{display:flex;gap:8px}
+.size-opt{flex:1;display:flex;flex-direction:column;align-items:center;gap:6px;background:var(--card2);border:1px solid var(--border);border-radius:10px;padding:9px 6px}
+.size-lbl{font-size:9px;color:var(--t2);font-weight:700;letter-spacing:.06em;text-transform:uppercase}
+.size-opt .food-price{font-size:14px}
+.size-opt .add-btn{width:28px;height:28px;font-size:15px}
+.extra-note{font-size:10px;color:var(--t3);margin-top:8px;line-height:1.5;border-top:1px dashed var(--border);padding-top:8px}
+
+/* ── Kategorie-Banner ────────────── */
+.cat-banner{width:100%;margin:0 0 32px;border-radius:20px;overflow:hidden;position:relative;border:1px solid var(--border);aspect-ratio:16/9;display:flex;align-items:center;justify-content:center}
+.cat-banner-emoji{font-size:clamp(64px,10vw,120px);position:relative;z-index:1;filter:drop-shadow(0 8px 24px rgba(0,0,0,.5))}
+.cat-banner-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(8,8,8,.28),transparent 65%);z-index:1;pointer-events:none}
+
+/* ── Speisen-Liste (ohne Bild) ────────────────────────── */
+.food-list{display:flex;flex-direction:column;gap:12px}
+.food-row{display:flex;align-items:center;gap:18px;background:var(--card);border:1px solid var(--border);border-radius:14px;padding:16px 20px;transition:border-color .3s,background .3s}
+.food-row:hover{border-color:rgba(200,16,46,.25);background:var(--card2)}
+.food-row-info{flex:1;min-width:0}
+.food-row-name{font-family:var(--display);font-size:15px;font-weight:700;line-height:1.25;margin-bottom:4px}
+.food-row-nr{color:var(--t3);font-weight:600;margin-right:6px;font-size:13px}
+.food-row-veg{display:inline-block;font-size:9px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;padding:2px 8px;border-radius:20px;background:rgba(76,175,125,.15);color:#4CAF7D;border:1px solid rgba(76,175,125,.3);margin-left:6px;vertical-align:middle}
+.food-row-desc{font-size:12px;line-height:1.6;color:var(--t2)}
+.food-row-right{display:flex;align-items:center;gap:10px;flex-shrink:0}
+.food-row-price{font-family:var(--display);font-size:20px;font-weight:700;color:var(--brand3);white-space:nowrap}
+.food-row-size{display:flex;flex-direction:column;align-items:center;gap:5px;background:var(--card2);border:1px solid var(--border);border-radius:10px;padding:8px 10px}
+.food-row-size .size-lbl{font-size:9px;color:var(--t2);font-weight:700;letter-spacing:.04em;text-transform:uppercase}
+.food-row-size .food-row-price{font-size:14px}
+@media(max-width:560px){
+  .food-row{flex-wrap:wrap;gap:12px}
+  .food-row-info{flex:1 1 100%}
+  .food-row-right{flex:1 1 100%}
+  .food-row-right .food-row-size{flex:1}
+}
+
+/* ── Cart sidebar ──────────────────────────────────── */
+#cart-overlay{position:fixed;inset:0;background:rgba(0,0,0,.6);z-index:300;opacity:0;pointer-events:none;transition:opacity .3s;backdrop-filter:blur(4px)}
+#cart-overlay.open{opacity:1;pointer-events:all}
+#cart{position:fixed;top:0;right:0;bottom:0;width:100%;max-width:420px;background:var(--bg);border-left:1px solid var(--border);z-index:400;display:flex;flex-direction:column;transform:translateX(100%);transition:transform .4s cubic-bezier(.25,.46,.45,.94)}
+#cart.open{transform:translateX(0)}
+.cart-header{padding:24px 20px;border-bottom:1px solid var(--border);display:flex;align-items:center;justify-content:space-between;flex-shrink:0}
+.cart-title{font-family:var(--display);font-size:22px;font-weight:700}
+.cart-close{width:36px;height:36px;border-radius:10px;background:var(--card);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;color:var(--t2);cursor:pointer;font-size:16px;transition:all var(--tr)}
+.cart-close:hover{color:var(--ink);border-color:var(--brand-b)}
+.cart-items{flex:1;overflow-y:auto;padding:16px 20px}
+.cart-items::-webkit-scrollbar{width:3px}
+.cart-items::-webkit-scrollbar-thumb{background:var(--brand-b);border-radius:2px}
+.cart-empty{display:flex;flex-direction:column;align-items:center;justify-content:center;height:200px;gap:12px;color:var(--t3)}
+.cart-empty svg{opacity:.3}
+.cart-item{display:flex;gap:12px;padding:14px 0;border-bottom:1px solid var(--border);align-items:center}
+.ci-emoji{width:52px;height:52px;border-radius:10px;flex-shrink:0;display:flex;align-items:center;justify-content:center;font-size:24px;background:var(--card2)}
+.ci-info{flex:1}
+.ci-name-row{display:flex;align-items:flex-start;justify-content:space-between;gap:6px;margin-bottom:3px}
+.ci-name{font-size:13px;font-weight:600}
+.ci-name-actions{display:flex;align-items:center;gap:4px;flex-shrink:0}
+.ci-del,.ci-edit{background:none;border:none;cursor:pointer;color:var(--t3);padding:2px;display:flex;align-items:center;justify-content:center;border-radius:4px;transition:color .15s;flex-shrink:0}
+.ci-del:hover{color:#f44}
+.ci-edit:hover{color:var(--brand3)}
+.ci-price{font-family:var(--display);font-size:15px;font-weight:700;color:var(--brand3)}
+.ci-qty{display:flex;align-items:center;gap:8px}
+.cqb{width:34px;height:34px;border-radius:7px;background:var(--card2);border:1px solid var(--border);color:var(--brand3);font-size:15px;font-weight:700;display:flex;align-items:center;justify-content:center;cursor:pointer;transition:all .2s;touch-action:manipulation}
+.cqb:hover{border-color:var(--brand);background:var(--brand-bg)}
+.cqn{font-size:13px;font-weight:700;min-width:20px;text-align:center}
+.cart-footer{padding:16px 20px 24px;border-top:1px solid var(--border);flex-shrink:0}
+.cart-summary-row{display:flex;justify-content:space-between;font-size:13px;padding:5px 0;color:var(--t2)}
+.cart-summary-row.total{padding-top:12px;margin-top:6px;border-top:1px solid var(--border)}
+.cart-summary-row.total span:first-child{font-size:15px;font-weight:700;color:var(--ink)}
+.cart-summary-row.total span:last-child{font-family:var(--display);font-size:24px;font-weight:700;color:var(--brand3)}
+.cart-order-btn{width:100%;margin-top:16px}
+.cart-order-btn.btn-disabled{opacity:.4;cursor:not-allowed;box-shadow:none}
+.free-drink-note{display:flex;align-items:center;gap:8px;padding:8px 12px;border-radius:8px;background:rgba(76,175,125,.1);border:1px solid rgba(76,175,125,.3);font-size:11px;font-weight:600;color:#4CAF7D;margin-bottom:10px}
+
+/* ── About ─────────────────────────────────────────── */
+#about{padding:80px 0;background:var(--bg)}
+.about-grid{display:grid;gap:48px;align-items:center}
+@media(min-width:1024px){.about-grid{grid-template-columns:1fr 1fr}}
+.about-img{border-radius:20px;overflow:hidden;aspect-ratio:4/3;background:radial-gradient(ellipse at 50% 50%,rgba(200,16,46,.10),#F4ECDA);display:flex;align-items:center;justify-content:center;font-size:110px;border:1px solid var(--brand-b)}
+.about-tags{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:20px}
+.about-tag{padding:5px 14px;border-radius:20px;font-size:10px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;background:var(--brand-bg);border:1px solid var(--brand-b);color:var(--brand3)}
+.about-title{font-family:var(--display);font-size:clamp(28px,3.5vw,44px);font-weight:600;line-height:1.15;margin-bottom:16px}
+.about-body{font-size:13px;line-height:1.9;color:var(--t2);margin-bottom:28px}
+.about-stats{display:flex;gap:32px;flex-wrap:wrap}
+.stat-num{font-family:var(--display);font-size:34px;font-weight:700;color:var(--brand3);line-height:1}
+.stat-lbl{font-size:10px;font-weight:500;letter-spacing:.08em;text-transform:uppercase;color:var(--t3);margin-top:3px}
+
+/* ── Contact ────────────────────────────────────────── */
+#contact{padding:80px 0;background:var(--bg2)}
+.contact-grid{display:grid;gap:48px}
+@media(min-width:1024px){.contact-grid{grid-template-columns:1fr 1fr}}
+.info-card{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:28px}
+.info-item{display:flex;align-items:flex-start;gap:14px;padding:14px 0;border-bottom:1px solid var(--border)}
+.info-item:last-child{border-bottom:none}
+.info-icon{width:38px;height:38px;border-radius:10px;background:var(--brand-bg);border:1px solid var(--brand-b);display:flex;align-items:center;justify-content:center;flex-shrink:0;color:var(--brand3)}
+.info-label{font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--t3);margin-bottom:3px}
+.info-val{font-size:14px;font-weight:500}
+
+/* ── Checkout & Konto Modal ─────────────────────────── */
+#checkout-overlay,#account-overlay,#item-overlay,#legal-overlay,#reservation-overlay{position:fixed;inset:0;background:rgba(0,0,0,.7);z-index:500;display:none;align-items:center;justify-content:center;padding:16px;backdrop-filter:blur(6px)}
+#checkout-overlay.open,#account-overlay.open,#item-overlay.open,#legal-overlay.open,#reservation-overlay.open{display:flex}
+#checkout-modal,#account-modal,#item-modal,#legal-modal,#reservation-modal{background:var(--bg2);border:1px solid var(--border);border-radius:20px;width:100%;max-width:600px;max-height:90vh;overflow-y:auto;display:flex;flex-direction:column}
+#account-modal{max-width:480px}
+#reservation-modal{max-width:560px}
+/* Tischreservierung – Gästezahl-Stepper und Hinweisbox, im gleichen Stil wie item-modal-qty-stepper / al-legend-disclaimer */
+.res-guest-stepper{display:flex;align-items:center;gap:10px;background:var(--card);border:1px solid var(--border);border-radius:9px;padding:6px 10px;width:fit-content}
+.res-guest-stepper button{width:28px;height:28px;border-radius:7px;background:none;border:none;color:var(--ink);font-size:16px;cursor:pointer}
+.res-guest-stepper span{min-width:24px;text-align:center;font-size:14px;font-weight:700}
+.res-notice{font-size:11.5px;line-height:1.7;color:var(--t3);background:var(--card2);border:1px solid var(--border);border-radius:10px;padding:12px 14px}
+.res-notice b{color:var(--t1)}
+.res-confirm-box{display:flex;flex-direction:column;gap:6px;align-items:center;text-align:center;padding:8px 4px}
+.res-confirm-emoji{font-size:40px}
+.res-confirm-title{font-family:var(--display);font-size:20px;font-weight:700}
+.res-error{font-size:12px;font-weight:600;color:#D9631E;padding:0 2px}
+.legal-body{font-size:13px;line-height:1.85;color:var(--t2)}
+.legal-body h3{font-size:13px;font-weight:700;color:var(--ink);margin:18px 0 6px}
+.legal-body h3:first-child{margin-top:0}
+.legal-body p{margin-bottom:10px}
+.legal-body a{color:var(--brand3)}
+
+/* Artikel-Optionen-Modal */
+.extra-grid{display:grid;grid-template-columns:1fr;gap:8px}
+@media(min-width:480px){.extra-grid{grid-template-columns:1fr 1fr}}
+.extra-opt{display:flex;align-items:center;gap:10px;padding:11px 14px;border:1.5px solid var(--border);border-radius:10px;cursor:pointer;transition:all .2s;background:var(--bg2)}
+.extra-opt:hover{border-color:var(--brand)}
+.extra-opt.selected{border-color:var(--brand);background:var(--brand-bg)}
+.extra-opt input{accent-color:var(--brand);width:15px;height:15px;flex-shrink:0}
+.extra-opt-name{flex:1;font-size:12.5px;font-weight:500}
+.extra-opt-price{font-size:11.5px;font-weight:600;color:var(--t1);white-space:nowrap}
+.extra-opt.selected .extra-opt-price{color:var(--brand3)}
+.co-section-title .co-section-hint{text-transform:none;letter-spacing:0;font-weight:500;color:var(--t3);margin-left:6px;font-size:10px}
+.extra-free-divider{display:flex;align-items:center;gap:10px;margin:0 0 10px;font-size:10px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#4CAF7D}
+.extra-free-divider::after{content:'';flex:1;height:1px;background:var(--border)}
+.extra-paid-divider{margin:16px 0 10px;color:var(--brand3)}
+.extra-opt-free.selected{border-color:#4CAF7D;background:rgba(76,175,125,.1)}
+.extra-opt-free .extra-opt-gratis{color:#4CAF7D;font-weight:700}
+.extra-opt-free.selected .extra-opt-gratis{color:#4CAF7D}
+.drink-list{display:flex;flex-direction:column;gap:8px}
+.drink-row{display:flex;align-items:center;gap:10px;padding:9px 0;border-bottom:1px solid var(--border)}
+.drink-row:last-child{border-bottom:none}
+.drink-row-name{flex:1;font-size:12.5px;font-weight:500}
+.drink-row-price{font-size:11.5px;font-weight:600;color:var(--t1)}
+.drink-row-stepper{display:flex;align-items:center;gap:8px}
+.drink-row-stepper button{width:26px;height:26px;border-radius:7px;background:var(--card);border:1px solid var(--border);color:var(--ink);font-size:14px;cursor:pointer}
+.drink-row-stepper button:hover{border-color:var(--brand)}
+.drink-row-stepper span{min-width:16px;text-align:center;font-size:13px;font-weight:600}
+.item-modal-footer{align-items:center}
+.item-modal-qty-stepper{display:flex;align-items:center;gap:10px;background:var(--card);border:1px solid var(--border);border-radius:9px;padding:6px 10px}
+.item-modal-qty-stepper button{width:26px;height:26px;border-radius:7px;background:none;border:none;color:var(--ink);font-size:16px;cursor:pointer}
+.item-modal-qty-stepper span{min-width:18px;text-align:center;font-size:14px;font-weight:700}
+/* Konto */
+.acc-hero{background:linear-gradient(135deg,rgba(200,16,46,.16),rgba(200,16,46,.03));border:1px solid var(--brand-b);border-radius:14px;padding:16px 18px;display:flex;align-items:center;gap:14px}
+.acc-hero-emoji{font-size:34px;line-height:1}
+.acc-hero-t{font-size:15px;font-weight:800;color:var(--brand3)}
+.acc-hero-s{font-size:12px;color:var(--t2);margin-top:2px;line-height:1.5}
+.acc-greet{font-family:var(--display);font-size:24px;font-weight:700;margin-bottom:4px}
+.acc-badge{display:inline-flex;align-items:center;gap:6px;padding:7px 14px;border-radius:20px;font-size:12px;font-weight:700;background:rgba(76,175,125,.15);color:#4CAF7D;border:1px solid rgba(76,175,125,.3)}
+.acc-rows{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:4px 16px}
+.acc-row{display:flex;justify-content:space-between;gap:12px;padding:11px 0;border-bottom:1px solid var(--border);font-size:13px}
+.acc-row:last-child{border-bottom:none}
+.acc-row span:first-child{color:var(--t3);flex-shrink:0}
+.acc-row span:last-child{text-align:right;font-weight:500}
+.acc-note{font-size:11px;color:var(--t3);line-height:1.6;text-align:center}
+.co-header{padding:20px 24px;border-bottom:1px solid var(--border);display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;background:var(--bg2);z-index:2;border-radius:20px 20px 0 0}
+.co-title{font-size:18px;font-weight:700}
+.co-close{width:34px;height:34px;border-radius:9px;background:var(--card);border:1px solid var(--border);color:var(--t2);display:flex;align-items:center;justify-content:center;cursor:pointer;font-size:16px;transition:all .2s}
+.co-close:hover{color:var(--ink)}
+.co-body{padding:20px 24px;display:flex;flex-direction:column;gap:20px}
+.co-section{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:16px 18px}
+.co-section-title{font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--brand);margin-bottom:14px}
+.co-table{width:100%;border-collapse:collapse}
+.co-table th{font-size:10px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--t3);padding:0 0 10px;text-align:left}
+.co-table th:last-child,.co-table td:last-child{text-align:right}
+.co-table td{font-size:13px;padding:8px 0;border-top:1px solid var(--border);color:var(--t2)}
+.co-table td:first-child{color:var(--t1);font-weight:500}
+.co-table .co-total-row td{font-size:15px;font-weight:700;color:var(--ink);border-top:2px solid var(--border);padding-top:12px}
+.co-table .co-total-row td:last-child{color:var(--brand3);font-size:18px}
+.co-table .co-discount-row td{color:#4CAF7D;font-size:12px}
+.co-form-grid{display:grid;gap:12px}
+@media(min-width:480px){.co-form-grid{grid-template-columns:1fr 1fr}}
+.co-field{display:flex;flex-direction:column;gap:6px}
+.co-field.full{grid-column:1/-1}
+.co-label{font-size:11px;font-weight:600;color:var(--t2);letter-spacing:.04em}
+.co-input,.co-select{background:var(--card);border:1px solid var(--border);border-radius:9px;padding:10px 14px;font-family:var(--body);font-size:13px;color:var(--ink);outline:none;transition:border-color .2s;width:100%}
+.co-input:focus,.co-select:focus{border-color:var(--brand)}
+.co-input::placeholder{color:var(--t3)}
+.pay-opts{display:flex;gap:10px;flex-wrap:wrap}
+.pay-opt{flex:1;min-width:120px;display:flex;align-items:center;gap:10px;padding:12px 14px;border:1.5px solid var(--border);border-radius:10px;cursor:pointer;transition:all .2s;background:var(--bg2)}
+.pay-opt:hover{border-color:var(--brand)}
+.pay-opt.selected{border-color:var(--brand);background:var(--brand-bg)}
+.pay-opt input{accent-color:var(--brand);width:15px;height:15px;flex-shrink:0}
+.pay-opt-label{font-size:12px;font-weight:600}
+.pay-opt-icon{font-size:20px}
+.co-time-wrap{display:none}
+.co-time-wrap.show{display:block}
+.co-footer{padding:16px 24px 20px;border-top:1px solid var(--border);display:flex;gap:10px;position:sticky;bottom:0;background:var(--bg2);border-radius:0 0 20px 20px}
+.co-footer .btn{flex:1}
+.btn-print{background:var(--card);border:1px solid var(--border);color:var(--ink)}
+.btn-print:hover{background:var(--card2);border-color:var(--brand-b)}
+
+/* Druck-Layout optimiert für 80 mm Thermo-Bondrucker. Für A4 im Druckdialog A4 wählen. */
+@page{ size:80mm auto; margin:3mm }
+@media print{
+  html,body{background:#fff !important}
+  body *{visibility:hidden}
+  #print-receipt,#print-receipt *{visibility:visible}
+  #print-receipt{position:absolute;left:0;top:0;width:74mm;background:#fff;color:#000;font-family:'Courier New',ui-monospace,monospace;font-size:12px;line-height:1.35;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  .pr-logo{font-size:19px;font-weight:800;text-align:center;margin-bottom:2px;letter-spacing:.02em}
+  .pr-address{font-size:10px;text-align:center;margin-bottom:8px}
+  .pr-mode{text-align:center;font-size:15px;font-weight:800;border:2px solid #000;padding:4px 0;margin:6px 0}
+  .pr-divider{border:none;border-top:2px dashed #000;margin:6px 0}
+  .pr-divider-thin{border:none;border-top:1px dashed #999;margin:5px 0}
+  .pr-title{font-size:13px;font-weight:800;text-align:center;margin-bottom:2px}
+  .pr-meta{font-size:11px;text-align:center;margin-bottom:6px}
+  .pr-table{width:100%;border-collapse:collapse;margin-bottom:4px}
+  .pr-table th{font-size:10px;font-weight:700;border-bottom:1px solid #000;padding:2px 0;text-align:left}
+  .pr-table th:last-child,.pr-table td:last-child{text-align:right}
+  .pr-table th:nth-child(2),.pr-table td:nth-child(2){text-align:center}
+  .pr-table td{padding:3px 0;font-size:13px;vertical-align:top;font-weight:700}
+  .pr-summary-row{display:flex;justify-content:space-between;padding:2px 0;font-size:12px}
+  .pr-summary-row.total{font-weight:800;font-size:15px;border-top:2px solid #000;padding-top:4px;margin-top:3px}
+  .pr-customer{margin-top:8px}
+  .pr-customer h3{font-size:12px;font-weight:800;margin-bottom:3px}
+  .pr-customer p{font-size:12px;margin:2px 0}
+  .pr-payment{margin-top:6px;padding:5px 0;border-top:1px dashed #000;border-bottom:1px dashed #000;font-size:13px;font-weight:800;text-align:center}
+  .pr-footer{margin-top:10px;text-align:center;font-size:10px}
+}
+
+/* ── Allergen legend ──────────────────────────────────── */
+.al-legend{margin-top:0;padding:24px 28px;background:var(--card);border:1px solid var(--border);border-radius:16px}
+.al-legend-title{font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--brand);margin-bottom:16px}
+.al-legend-cols{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+@media(max-width:600px){.al-legend-cols{grid-template-columns:1fr}}
+.al-legend-group{font-size:10px;font-weight:600;color:var(--t2);letter-spacing:.06em;text-transform:uppercase;margin-bottom:8px}
+.al-legend-items{display:flex;flex-wrap:wrap;gap:6px 16px}
+.al-legend-items span{font-size:11.5px;color:var(--t2);white-space:nowrap}
+.al-legend-items b{color:var(--t1);font-weight:600;margin-right:3px}
+.al-legend-disclaimer{margin-top:16px;padding-top:16px;border-top:1px solid var(--border);font-size:11px;line-height:1.7;color:var(--t3)}
+
+/* ── Footer ─────────────────────────────────────────── */
+footer{background:var(--bg2);border-top:1px solid var(--border);padding:20px 0}
+.footer-inner{display:flex;flex-wrap:wrap;gap:16px;align-items:center;justify-content:space-between}
+@media(max-width:767px){.footer-inner{flex-direction:column;align-items:center;text-align:center;gap:12px}}
+.footer-link{font-size:11px;font-weight:500;letter-spacing:.06em;text-transform:uppercase;color:var(--t3);transition:color var(--tr);cursor:pointer;background:none;border:none;text-decoration:none;padding:4px 6px}
+.footer-link:hover{color:var(--brand)}
+.footer-social{display:flex;gap:10px}
+.footer-social a{width:34px;height:34px;border-radius:9px;background:var(--card);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;color:var(--t2);transition:all .2s}
+.footer-social a:hover{color:var(--brand);border-color:var(--brand);background:var(--brand-bg)}
+.footer-legal{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:14px}
+.footer-legal a{font-size:11.5px;color:var(--t2);text-decoration:underline;text-underline-offset:3px;transition:color .2s;white-space:nowrap}
+.footer-legal a:hover{color:var(--brand)}
+@media(max-width:767px){.footer-legal{width:100%;flex-direction:column;gap:6px;margin-top:14px;padding-top:14px;border-top:1px solid var(--border)}}
+.footer-copy{font-size:11px;color:var(--t3)}
+.footer-logo{display:flex;align-items:center;gap:8px;font-family:var(--display);font-weight:800;font-size:16px;letter-spacing:.06em}
+.footer-logo-img{height:34px;width:auto;display:block}
+
+@media(max-width:767px){
+  .hero-inner{text-align:center}
+  .hero-layout{justify-items:center}
+  .section-header{text-align:center}
+  .about-tags{justify-content:center}
+  .about-title,.about-body{text-align:center}
+  .about-stats{justify-content:center}
+  .info-card{text-align:center}
+  .info-item{flex-direction:column;align-items:center;text-align:center}
+  .footer-inner{text-align:center;align-items:center}
+  .cat-detail-header{justify-content:center}
+}
+
+@keyframes fadeUp{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:translateY(0)}}
+@keyframes glow-pulse{0%,100%{opacity:.45}50%{opacity:.75}}
+.reveal{opacity:0;transform:translateY(32px);transition:opacity .7s ease,transform .7s ease}
+.reveal.visible{opacity:1;transform:translateY(0)}
+
+#toast{position:fixed;bottom:24px;left:50%;transform:translateX(-50%) translateY(80px);background:var(--card2);border:1px solid var(--brand-b);border-radius:12px;padding:12px 20px;font-size:13px;font-weight:600;display:flex;align-items:center;gap:10px;z-index:999;opacity:0;transition:all .35s cubic-bezier(.34,1.56,.64,1);white-space:nowrap}
+#toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+#toast .t-icon{font-size:16px}
+</style>
+</head>
+<body>
+
+<!-- ═══ NAVBAR ══════════════════════════════════════════ -->
+<header id="navbar">
+ <div class="container">
+  <div class="nav-inner">
+   <div class="nav-logo" onclick="goHome()">
+    <img src="images/logo.png" alt="Restaurant Pizzeria Capri Burscheid-Hilgen" class="nav-logo-img">
+   </div>
+   <nav class="nav-links">
+    <button class="nav-link active" id="nl-hero" onclick="goHome()">Home</button>
+    <button class="nav-link" id="nl-categories" onclick="goHome();scrollSec('categories')">Speisekarte</button>
+    <button class="nav-link" id="nl-reservieren" onclick="openReservation()">Tisch reservieren</button>
+    <button class="nav-link" id="nl-about" onclick="scrollSec('about')">Über uns</button>
+    <button class="nav-link" id="nl-contact" onclick="scrollSec('contact')">Kontakt</button>
+   </nav>
+   <div class="nav-right">
+    <div class="cart-btn" id="nav-account-btn" onclick="openAccount()" title="Mein Konto">
+     <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg>
+     <span id="nav-account-name">Konto</span>
+    </div>
+    <div class="cart-btn" id="nav-cart-btn" onclick="toggleCart()">
+     <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 002 1.61h9.72a2 2 0 002-1.61L23 6H6"/></svg>
+     Warenkorb
+     <span class="cart-count" id="cart-count">0</span>
+    </div>
+    <div class="burger" onclick="toggleMobile()" id="burger"><span></span><span></span><span></span></div>
+   </div>
+  </div>
+ </div>
+</header>
+
+<div id="mobile-menu">
+ <div class="mobile-links">
+  <button class="mobile-link" onclick="goHome();closeMobile()">Home</button>
+  <button class="mobile-link" onclick="goHome();scrollSec('categories');closeMobile()">Speisekarte</button>
+  <button class="mobile-link" onclick="openReservation();closeMobile()">🍽️ Tisch reservieren</button>
+  <button class="mobile-link" onclick="scrollSec('about');closeMobile()">Über uns</button>
+  <button class="mobile-link" onclick="scrollSec('contact');closeMobile()">Kontakt</button>
+  <button class="mobile-link" onclick="openAccount();closeMobile()">👤 Mein Konto / Registrieren</button>
+  <button class="btn btn-primary" style="margin-top:16px;width:100%" onclick="goHome();scrollSec('categories');closeMobile()">Jetzt bestellen</button>
+ </div>
+</div>
+
+<!-- ═══ HERO ════════════════════════════════════════════ -->
+<section id="hero">
+ <div class="hero-slides"><img src="images/hero.jpg" alt="Familie genießt gemeinsam Pizza bei Restaurant Pizzeria Capri" style="width:100%;height:100%;object-fit:cover"></div>
+ <div class="hero-overlay"></div>
+ <div class="hero-glow-1"></div>
+ <div class="hero-glow-2"></div>
+ <div class="hero-grid"></div>
+ <div class="container">
+  <div class="hero-inner">
+   <div class="hero-layout">
+    <div class="hero-content-panel">
+     <div class="hero-eyebrow">
+      <div class="eyebrow-line"></div>
+      <span class="eyebrow-text">Burscheid-Hilgen · Qualität, die man schmeckt</span>
+      <div class="eyebrow-line"></div>
+     </div>
+     <h1 class="hero-h1-logo"><img src="images/logo.png" alt="Restaurant Pizzeria Capri Burscheid-Hilgen" class="hero-logo"></h1>
+     <div class="hero-promo" id="hero-promo" onclick="openAccount()"></div>
+     <p class="hero-body">
+      Pizza, Pasta, Gyros, Fleisch- und Fischgerichte, Salate – frisch zubereitet
+      mit besten Zutaten. Bestellen Sie jetzt online, wir liefern
+      nach Burscheid-Hilgen und Umgebung oder Sie holen ab.
+     </p>
+     <div class="hero-ctas hero-ctas-col" id="hero-ctas">
+      <div class="hero-btns-row" id="hero-btns">
+       <button class="btn mode-btn" id="btn-liefern" onclick="setMode('liefern')" style="min-width:160px">
+        <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        Liefern
+       </button>
+       <button class="btn mode-btn" id="btn-abholen" onclick="setMode('abholen')" style="min-width:160px">
+        <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"/></svg>
+        Abholen
+       </button>
+      </div>
+      <div id="delivery-restricted-note" style="display:none;align-items:center;gap:8px;padding:8px 14px;border-radius:8px;background:var(--brand-bg);border:1px solid var(--brand-b);font-size:12px;font-weight:600;color:var(--brand3);max-width:420px;text-align:center">
+       <svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5" style="flex-shrink:0"><circle cx="12" cy="12" r="10"/><path d="M12 8v4M12 16h.01"/></svg>
+       <span id="delivery-restricted-text">Wir haben gerade Mittagspause (14:00–16:00 Uhr).</span>
+      </div>
+      <button class="btn btn-outline" style="margin-top:8px" onclick="scrollSec('categories')">Speisekarte ansehen ↓</button>
+      <button class="btn btn-outline" style="margin-top:8px" onclick="openReservation()">🍽️ Tisch reservieren</button>
+     </div>
+    </div>
+   </div>
+  </div>
+ </div>
+</section>
+
+<!-- ═══ KATEGORIEN ═══════════════════════════════════════ -->
+<section id="categories">
+ <div class="container">
+  <div class="section-header reveal">
+   <div class="section-eye"><div class="eye-line"></div><span class="eye-txt">Unsere Speisekarte</span><div class="eye-line"></div></div>
+   <h2 class="section-title">Wählen Sie eine Kategorie</h2>
+   <p class="section-sub">Von knuspriger Pizza bis hausgemachtem Tiramisu — alles frisch zubereitet.</p>
+  </div>
+  <div class="cats-grid reveal" id="cats-grid"></div>
+ </div>
+</section>
+
+<!-- ═══ KATEGORIE-DETAIL ═════════════════════════════════ -->
+<section id="category-detail">
+ <div class="container">
+  <div class="cat-detail-header">
+   <button class="back-btn" onclick="backFromCategory()">
+    <svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+    Zurück
+   </button>
+   <div class="cat-detail-title-wrap">
+    <span class="cat-detail-emoji" id="cd-emoji"></span>
+    <h2 class="cat-detail-title" id="cd-title"></h2>
+   </div>
+  </div>
+  <div id="cd-content"></div>
+ </div>
+</section>
+
+<!-- ═══ ÜBER UNS ═════════════════════════════════════════ -->
+<section id="about">
+ <div class="container">
+  <div class="about-grid">
+   <div class="about-img reveal"><img src="images/about.jpg" alt="Restaurant Pizzeria Capri Burscheid-Hilgen" style="width:100%;height:100%;object-fit:cover"></div>
+   <div class="reveal">
+    <div class="about-tags">
+     <span class="about-tag">Frisch zubereitet</span>
+     <span class="about-tag">Original Rezepte</span>
+     <span class="about-tag">Burscheid-Hilgen</span>
+    </div>
+    <h2 class="about-title">Restaurant Pizzeria Capri — Qualität, die man schmeckt!</h2>
+    <p class="about-body">
+     Bei Restaurant Pizzeria Capri kochen wir mit Leidenschaft: knusprige Pizza aus dem Ofen,
+     hausgemachte Saucen, frische Zutaten und ein Menü, das von klassischer italienischer
+     Pizza über Pasta, Gyros und Fischgerichte bis hin zu Fleischgerichten und Salaten
+     reicht. Für jeden ist etwas dabei.
+    </p>
+    <div class="about-stats">
+     <div><div class="stat-num">180+</div><div class="stat-lbl">Gerichte</div></div>
+     <div><div class="stat-num">20</div><div class="stat-lbl">Speisekarten-Kategorien</div></div>
+     <div><div class="stat-num">100%</div><div class="stat-lbl">Frisch zubereitet</div></div>
+    </div>
+   </div>
+  </div>
+ </div>
+</section>
+
+<!-- ═══ KONTAKT ═══════════════════════════════════════════ -->
+<section id="contact">
+ <div class="container">
+  <div class="section-header reveal">
+   <div class="section-eye"><div class="eye-line"></div><span class="eye-txt">Kontakt</span><div class="eye-line"></div></div>
+   <h2 class="section-title">Kommen Sie vorbei</h2>
+  </div>
+  <div class="reveal" style="border-radius:16px;overflow:hidden;height:260px;margin-bottom:40px;border:1px solid var(--border)">
+   <iframe src="https://www.google.com/maps?q=K%C3%B6lner%20Str.%2056%2C%2051399%20Burscheid&output=embed"
+    width="100%" height="260" style="border:0;filter:grayscale(30%) contrast(1.1)" allowfullscreen loading="lazy"
+    referrerpolicy="no-referrer-when-downgrade"></iframe>
+  </div>
+  <div class="contact-grid">
+   <div class="info-card reveal">
+    <div class="info-item">
+     <div class="info-icon"><svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+     <div><div class="info-label">Adresse</div><div class="info-val">Kölner Str. 56, 51399 Burscheid-Hilgen</div></div>
+    </div>
+    <div class="info-item">
+     <div class="info-icon"><svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 10.8a19.79 19.79 0 01-3.07-8.63A2 2 0 012 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 7.91a16 16 0 006.18 6.18l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 14.92z"/></svg></div>
+     <div><div class="info-label">Telefon</div><div class="info-val"><a href="tel:+4921747646 80" style="color:inherit;text-decoration:none">02174 76 46 80</a><br><span style="font-size:11px;color:var(--t3)">auch 76 46 81 / 76 46 82</span></div></div>
+    </div>
+    <div class="info-item">
+     <div class="info-icon"><svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8"><path d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l1.3-1.3a16 16 0 006 6l-1.3 1.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l1.3-1.3c1-1 1-2.6-.1-3.5-4.7-4-8.4-7.7-12.4-12.4-.9-1.1-2.5-1.1-3.5-.1z"/></svg></div>
+     <div><div class="info-label">Bei Festnetzstörungen</div><div class="info-val"><a href="tel:+4915733298222" style="color:inherit;text-decoration:none">0157 332 98 222</a></div></div>
+    </div>
+    <div class="info-item">
+     <div class="info-icon"><svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg></div>
+     <div><div class="info-label">Öffnungszeiten</div><div class="info-val">Mo, Di, Do: 11:30–14:00 &amp; 16:00–22:00 Uhr<br>Mittwoch: Ruhetag<br>Fr/Sa/So/Feiertag: 12:00–22:00 Uhr</div></div>
+    </div>
+    <div class="info-item">
+     <div class="info-icon"><svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
+     <div><div class="info-label">Lieferung</div><div class="info-val">Ab €15 Bestellwert (ohne Getränke)<br><span style="color:var(--brand3);font-size:12px">Über 6 km: höherer Mindestbestellwert (€20) + Liefergebühr laut Speisekarte — Details bitte telefonisch erfragen</span></div></div>
+    </div>
+   </div>
+   <div class="reveal al-legend" style="margin-top:0">
+    <div class="al-legend-title">Zusatzstoffe &amp; Allergene</div>
+    <div class="al-legend-cols">
+     <div>
+      <div class="al-legend-group">Zusatzstoffe</div>
+      <div class="al-legend-items" id="al-additives"></div>
+     </div>
+     <div>
+      <div class="al-legend-group">Allergene</div>
+      <div class="al-legend-items" id="al-allergens"></div>
+     </div>
+    </div>
+    <div class="al-legend-disclaimer">Informationen zu den Allergenen erhalten Sie telefonisch oder im Lokal von unserem Service-Personal. Mit Erscheinen einer neuen Speisekarte verlieren alle vorherigen ihre Gültigkeit. Abbildungen sind symbolisch. Druckfehler und Irrtümer vorbehalten.</div>
+   </div>
+  </div>
+ </div>
+</section>
+
+<!-- ═══ FOOTER ════════════════════════════════════════════ -->
+<footer>
+ <div class="container">
+  <div class="footer-inner">
+   <div class="footer-logo"><img src="images/logo.png" alt="Restaurant Pizzeria Capri" class="footer-logo-img"></div>
+   <div style="display:flex;align-items:center;gap:4px;flex-wrap:wrap;justify-content:center">
+    <button class="footer-link" onclick="goHome();scrollSec('categories')">Speisekarte</button>
+    <button class="footer-link" onclick="openReservation()">Tisch reservieren</button>
+    <button class="footer-link" onclick="scrollSec('about')">Über uns</button>
+    <button class="footer-link" onclick="scrollSec('contact')">Kontakt</button>
+   </div>
+   <!-- TODO: echte Social-Media-Profil-Links einsetzen, sobald der Kunde sie schickt -->
+   <div class="footer-social">
+    <a href="#" target="_blank" rel="noopener" aria-label="Instagram" title="Instagram">
+     <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+    </a>
+    <a href="#" target="_blank" rel="noopener" aria-label="Facebook" title="Facebook">
+     <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M13.5 21v-7.5h2.5l.5-3h-3V8.3c0-.87.24-1.46 1.5-1.46h1.6V3.6c-.28-.04-1.23-.12-2.34-.12-2.32 0-3.91 1.42-3.91 4.02v2.24H8v3h2.35V21h3.15z"/></svg>
+    </a>
+   </div>
+   <div class="footer-copy">© 2026 Restaurant Pizzeria Capri · Burscheid-Hilgen</div>
+   <div class="footer-legal">
+    <a href="#" onclick="event.preventDefault();openLegal('agb')">AGB</a>
+    <a href="#" onclick="event.preventDefault();openLegal('datenschutz')">Datenschutzerklärung</a>
+    <a href="#" onclick="event.preventDefault();openLegal('cookies')">Verwendung von Cookies</a>
+    <a href="#" onclick="event.preventDefault();openLegal('impressum')">Impressum</a>
+   </div>
+  </div>
+ </div>
+</footer>
+
+<!-- ═══ RECHTLICHES MODAL (AGB / Datenschutz / Cookies / Impressum) ═══ -->
+<div id="legal-overlay" onclick="if(event.target===this)closeLegal()">
+ <div id="legal-modal">
+  <div class="co-header"><div class="co-title" id="legal-title">Rechtliches</div><div class="co-close" onclick="closeLegal()">✕</div></div>
+  <div class="co-body legal-body" id="legal-body"></div>
+ </div>
+</div>
+
+<!-- Toast -->
+<div id="toast"><span class="t-icon">🛒</span><span id="toast-msg">Zum Warenkorb hinzugefügt</span></div>
+
+<!-- ═══ CART SIDEBAR ══════════════════════════════════════ -->
+<div id="cart-overlay" onclick="toggleCart()"></div>
+<div id="cart">
+ <div class="cart-header">
+  <div class="cart-title">Warenkorb</div>
+  <div class="cart-close" onclick="toggleCart()">✕</div>
+ </div>
+ <div class="cart-items" id="cart-items">
+  <div class="cart-empty" id="cart-empty">
+   <svg width="48" height="48" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.2"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 002 1.61h9.72a2 2 0 002-1.61L23 6H6"/></svg>
+   <span>Ihr Warenkorb ist leer</span>
+  </div>
+ </div>
+ <div class="cart-footer" id="cart-footer" style="display:none">
+  <div style="display:flex;gap:8px;margin-bottom:14px">
+   <button id="cart-btn-liefern" onclick="setMode('liefern')" style="flex:1;display:flex;align-items:center;justify-content:center;gap:7px;padding:10px;border-radius:10px;font-size:12px;font-weight:700;cursor:pointer;border:1.5px solid var(--brand);background:var(--brand);color:#fff;transition:all .2s">
+    <svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+    Liefern
+   </button>
+   <button id="cart-btn-abholen" onclick="setMode('abholen')" style="flex:1;display:flex;align-items:center;justify-content:center;gap:7px;padding:10px;border-radius:10px;font-size:12px;font-weight:700;cursor:pointer;border:1.5px solid var(--border);background:var(--card);color:var(--t2);transition:all .2s">
+    <svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.2"><path d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"/></svg>
+    Abholen
+   </button>
+  </div>
+  <div id="cart-free-drink-note" class="free-drink-note" style="display:none">🎁 <span>Sie erhalten ein Gratis-Getränk!</span></div>
+  <div class="cart-summary-row"><span>Zwischensumme</span><span id="subtotal">€0.00</span></div>
+  <div class="cart-summary-row" id="discount-row" style="display:none;color:#4CAF7D"><span>✓ Abholrabatt</span><span id="discount-amount">-€0.00</span></div>
+  <div class="cart-summary-row" id="newcust-row" style="display:none;color:#4CAF7D"><span>🎁 Neukundenrabatt</span><span id="newcust-amount">-€0.00</span></div>
+  <div class="cart-summary-row"><span>Lieferung</span><span id="delivery-cost">€0.00</span></div>
+  <div style="font-size:10px;color:var(--t3);padding:2px 0 6px">Mindestbestellwert €15 (ohne Getränke) für Lieferung · Liefergebühr abhängig von Ihrer Zone (im Checkout wählbar)</div>
+  <div class="cart-summary-row total"><span>Gesamt</span><span id="cart-total">€0.00</span></div>
+  <button id="register-hint" onclick="openAccount()" style="display:none;width:100%;margin-top:10px;padding:9px;border-radius:9px;border:1px dashed var(--brand-b);background:var(--brand-bg);color:var(--brand3);font-size:11px;font-weight:700;cursor:pointer">🎁 Jetzt registrieren &amp; 10% auf die erste Bestellung sichern</button>
+  <button class="btn btn-primary cart-order-btn" onclick="placeOrder()">Bestellung aufgeben</button>
+  <div id="order-blocked-hint" style="display:none;margin-top:8px;padding:8px 10px;border-radius:9px;background:var(--brand-bg);color:var(--brand3);font-size:11.5px;font-weight:600;text-align:center"></div>
+ </div>
+</div>
+
+<!-- ═══ KONTO / REGISTRIERUNG MODAL ═════════════════════ -->
+<div id="account-overlay" onclick="if(event.target===this)closeAccount()">
+ <div id="account-modal">
+  <div class="co-header"><div class="co-title" id="account-title">Mein Konto</div><div class="co-close" onclick="closeAccount()">✕</div></div>
+  <div class="co-body" id="account-body"><!-- via JS --></div>
+ </div>
+</div>
+
+<!-- ═══ CHECKOUT MODAL ══════════════════════════════════ -->
+<div id="checkout-overlay" onclick="if(event.target===this)closeCheckout()">
+ <div id="checkout-modal">
+  <div class="co-header"><div class="co-title">Bestellung abschließen</div><div class="co-close" onclick="closeCheckout()">✕</div></div>
+  <div class="co-body">
+   <div class="co-section">
+    <div class="co-section-title">Bestellübersicht</div>
+    <table class="co-table"><thead><tr><th>Artikel</th><th>Menge</th><th>Preis</th></tr></thead><tbody id="co-items"></tbody></table>
+   </div>
+   <div class="co-section">
+    <div class="co-section-title">Kundendaten</div>
+    <div class="co-form-grid">
+     <div class="co-field"><label class="co-label">Vorname *</label><input class="co-input" id="co-fname" placeholder="Max" required></div>
+     <div class="co-field"><label class="co-label">Nachname *</label><input class="co-input" id="co-lname" placeholder="Mustermann" required></div>
+     <div class="co-field full"><label class="co-label">Telefon *</label><input class="co-input" id="co-phone" type="tel" placeholder="+49 123 456789" required></div>
+     <div class="co-field full" id="co-address-wrap">
+      <label class="co-label">Adresse (Lieferung)</label>
+      <input class="co-input" id="co-address" placeholder="Musterstraße 1, 51399 Burscheid">
+     </div>
+     <!-- Liefergebiet-Auswahl, da die Liefergebühr zonenabhängig ist. -->
+     <div class="co-field full" id="co-zone-wrap">
+      <label class="co-label">Liefergebiet</label>
+      <select class="co-select" id="co-zone" onchange="onZoneChange()"></select>
+     </div>
+    </div>
+   </div>
+   <div class="co-section">
+    <div class="co-section-title">Zahlungsart</div>
+    <div class="pay-opts">
+     <label class="pay-opt selected" id="pay-cash" onclick="selectPay('cash')"><input type="radio" name="payment" value="cash" checked><span class="pay-opt-icon">💵</span><span class="pay-opt-label">Bar bei Übergabe</span></label>
+     <label class="pay-opt" id="pay-card" onclick="selectPay('card')"><input type="radio" name="payment" value="card"><span class="pay-opt-icon">💳</span><span class="pay-opt-label">Kartenzahlung</span></label>
+     <label class="pay-opt" id="pay-paypal" onclick="selectPay('paypal')"><input type="radio" name="payment" value="paypal"><span class="pay-opt-icon">🅿️</span><span class="pay-opt-label">PayPal</span></label>
+    </div>
+   </div>
+   <div class="co-section co-time-wrap" id="co-time-section">
+    <div class="co-section-title">Abholzeit</div>
+    <div class="co-field"><label class="co-label">Gewünschte Abholzeit</label><input class="co-input" id="co-time" type="time" value="12:00"></div>
+    <div id="co-time-note" style="font-size:11px;color:var(--t3);margin-top:8px"></div>
+   </div>
+  </div>
+  <div class="co-footer">
+   <button class="btn btn-primary" onclick="submitOrder()">✓ Bestätigen</button>
+  </div>
+ </div>
+</div>
+<!-- ═══ ARTIKEL-OPTIONEN MODAL (Extras / Sauce / Getränk) ═══ -->
+<div id="item-overlay" onclick="if(event.target===this)closeItemOptions()">
+ <div id="item-modal">
+  <div class="co-header"><div class="co-title" id="item-modal-title">Artikel</div><div class="co-close" onclick="closeItemOptions()">✕</div></div>
+  <div class="co-body" id="item-modal-body"><!-- via JS --></div>
+  <div class="co-footer item-modal-footer">
+   <div class="item-modal-qty-stepper">
+    <button onclick="changeModalQty(-1)">−</button>
+    <span id="item-modal-qty">1</span>
+    <button onclick="changeModalQty(1)">+</button>
+   </div>
+   <button class="btn btn-primary" onclick="confirmItemModal()"><span id="item-modal-cta-label">In den Warenkorb</span> · <span id="item-modal-total">€0.00</span></button>
+  </div>
+ </div>
+</div>
+<!-- ═══ TISCHRESERVIERUNG MODAL (neu, kein Bestandteil der Vorlage) ═══
+     Rein clientseitig (localStorage), OHNE Backend/Benachrichtigung an das Lokal.
+     Siehe README, Abschnitt "Tischreservierung". -->
+<div id="reservation-overlay" onclick="if(event.target===this)closeReservation()">
+ <div id="reservation-modal">
+  <div class="co-header"><div class="co-title" id="reservation-title">Tisch reservieren</div><div class="co-close" onclick="closeReservation()">✕</div></div>
+  <div class="co-body" id="reservation-body"><!-- via JS --></div>
+ </div>
+</div>
+<div id="print-receipt" style="display:none"></div>
+
+<script>
+/* ══════════════════════════════════════════════════════════════
+   DATEN — Restaurant Pizzeria Capri Speisekarte
+   Struktur: CATS = Kategorie-Kacheln,
+   ITEMS[catId] = [{sub, note, list:[...]}]
+   Preis-Item: {nr,name,desc,veg,al,price}  ODER  {nr,name,desc,veg,al,sizes:[...],prices:[...]}
+   HINWEIS: Erfasst aus der gedruckten Speisekarte (gültig ab 05/2025), Datei
+   menu-data.md im Projektordner. Dort sind keine Allergen-Buchstaben pro
+   Gericht angegeben — daher bleibt `al` bei allen Artikeln leer. Die
+   Zusatzstoff-/Allergenlegende unten (siehe ADDITIVES/ALLERGENS) entspricht
+   exakt der Legende am Ende der Original-Speisekarte. Feinere Angaben laut
+   Speisekarte telefonisch/vor Ort erfragen.
+   ══════════════════════════════════════════════════════════════ */
+/* Kategorie-Akzentfarben — pro Kategorie individuell vergeben (grün für
+   Pizza/Salate/Baguette/Brötchen, rot-orange für die Nudelgerichte, Orange
+   für Auflauf/Beilagen/Teigtaschen/Nudelgerichte-Auflauf, tiefes Weinrot für
+   Gyros/Fleischgerichte, Blau für Fischgerichte, Braun für Dessert/Getränke,
+   Gold für Reisgerichte). Konfigurierbar als `accent`-Feld je Eintrag in CATS. */
+const CATS = [
+ {id:'pizza',        title:'Pizza',           emoji:'🍕', accent:'#5C8A34', img:'images/pizza.jpg'},
+ {id:'calzone',       title:'Calzone',         emoji:'🥟', accent:'#4F7A2E', img:'images/calzone.jpg'},
+ {id:'salate',        title:'Salate',          emoji:'🥗', accent:'#5C8A34', img:'images/salate.jpg'},
+ {id:'kleinesalate',  title:'Kleine Salate',   emoji:'🥬', accent:'#7FA655', img:'images/salate.jpg'},
+ {id:'baguettes',     title:'Baguettes',       emoji:'🥖', accent:'#6FA23A', img:'images/brote.jpg'},
+ {id:'brotchen',      title:'Pizzabrötchen',   emoji:'🥐', accent:'#6FA23A', img:'images/brote.jpg'},
+ {id:'spaghetti',     title:'Spaghetti',       emoji:'🍝', accent:'#C0392B', img:'images/pasta.jpg'},
+ {id:'tortellini',    title:'Tortellini',      emoji:'🥟', accent:'#C0392B', img:'images/pasta.jpg'},
+ {id:'penne',         title:'Penne Rigate',    emoji:'🍝', accent:'#B8412E', img:'images/pasta.jpg'},
+ {id:'tagliatelle',   title:'Tagliatelle',     emoji:'🍝', accent:'#A83A28', img:'images/pasta.jpg'},
+ {id:'nudelgerichte', title:'Nudelgerichte',   emoji:'🧀', accent:'#D9631E', img:'images/auflauf.jpg'},
+ {id:'auflauf',       title:'Auflauf',         emoji:'🧀', accent:'#D9631E', img:'images/auflauf.jpg'},
+ {id:'teigtaschen',   title:'Teigtaschen',     emoji:'🥙', accent:'#D9631E', img:'images/auflauf.jpg'},
+ {id:'reisgerichte',  title:'Reisgerichte',    emoji:'🍚', accent:'#B8860B', img:'images/pasta.jpg'},
+ {id:'gyros',         title:'Gyros',           emoji:'🥙', accent:'#6B1F1F', img:'images/gyros.jpg'},
+ {id:'fleisch',       title:'Fleischgerichte', emoji:'🥩', accent:'#7A3B1D', img:'images/schnitzel.jpg'},
+ {id:'fisch',         title:'Fischgerichte',   emoji:'🐟', accent:'#2E6F8E', img:'images/pasta.jpg'},
+ {id:'beilagen',      title:'Beilagen',        emoji:'🍟', accent:'#E0651C', img:'images/burger.jpg'},
+ {id:'dessert',       title:'Desserts',        emoji:'🍰', accent:'#5C2A20', img:'images/dessert.jpg'},
+ {id:'getraenke',     title:'Getränke',        emoji:'🥤', accent:'#4A2418', img:'images/getraenke.jpg'},
+];
+
+/* ══════════════════════════════════════════════════════════════
+   Speisekarte (gültig ab 05/2025) — vollständig aus menu-data.md übernommen
+   (Preise, Artikelnummern und Beschreibungen 1:1 von der gedruckten Karte).
+   `al` bleibt leer (siehe Hinweis oben). */
+const ITEMS = {
+ pizza: [
+  {sub:'Pizza', note:'Alle Pizzen mit Tomatensauce, Käse u. Oregano (frischer Knoblauch sowie scharfe Sauce ohne Aufpreis) · Alle Pizzen auch mit Hollandaisesauce erhältlich, Aufpreis 1,00 € · Größen: Klein ca. 24 cm / Groß ca. 28 cm · Pizza auch mit gefülltem Rand erhältlich: Käserand 2,00/3,00 € · Schinkenrand 2,00/3,00 € · 🌱 = ohne Fleisch und Fisch', list:[
+   {nr:'1', name:'Margherita', desc:'Tomaten, Käse', veg:true, al:'', sizes:['Klein','Groß'], prices:[6.00,8.00]},
+   {nr:'2', name:'Salami', desc:'', al:'', sizes:['Klein','Groß'], prices:[7.00,10.00]},
+   {nr:'3', name:'Prosciutto', desc:'Schinken', al:'', sizes:['Klein','Groß'], prices:[7.00,10.00]},
+   {nr:'4', name:'Funghi', desc:'fr. Champignons', veg:true, al:'', sizes:['Klein','Groß'], prices:[7.00,10.00]},
+   {nr:'5', name:'Tonno', desc:'Thunfisch', al:'', sizes:['Klein','Groß'], prices:[8.00,11.00]},
+   {nr:'5a', name:'Tonno II', desc:'Thunfisch, Zwiebeln', al:'', sizes:['Klein','Groß'], prices:[8.50,11.50]},
+   {nr:'6', name:'Bolognese', desc:'Hackfleischsauce (Rindfleisch)', al:'', sizes:['Klein','Groß'], prices:[9.00,12.00]},
+   {nr:'7', name:'Sucuki', desc:'Knoblauchwurst', al:'', sizes:['Klein','Groß'], prices:[9.00,12.00]},
+   {nr:'8', name:'Frutti di mare', desc:'Meeresfrüchte, Knoblauch', al:'', sizes:['Klein','Groß'], prices:[9.50,13.00]},
+   {nr:'9', name:'Scampi', desc:'Scampi, Knoblauch', al:'', sizes:['Klein','Groß'], prices:[10.00,13.00]},
+   {nr:'10', name:'Broccoli', desc:'Broccoli, Knoblauch', veg:true, al:'', sizes:['Klein','Groß'], prices:[8.00,11.00]},
+   {nr:'11', name:'Spinaci A', desc:'Spinat, Knoblauch', veg:true, al:'', sizes:['Klein','Groß'], prices:[7.50,10.50]},
+   {nr:'12', name:'Spinaci B', desc:'Spinat, Zwiebeln, Spiegelei', al:'', sizes:['Klein','Groß'], prices:[8.50,11.50]},
+   {nr:'13', name:'Spinaci Al Feta', desc:'Spinat, Weißkäse*, Knoblauch', veg:true, al:'', sizes:['Klein','Groß'], prices:[8.50,11.50]},
+   {nr:'14', name:'Cipolla', desc:'Zwiebeln, Oliven', veg:true, al:'', sizes:['Klein','Groß'], prices:[7.00,10.00]},
+   {nr:'15', name:'Hawaii', desc:'Schinken, Ananas', al:'', sizes:['Klein','Groß'], prices:[8.00,11.00]},
+   {nr:'16', name:'Aloa', desc:'Thunfisch, Ananas', al:'', sizes:['Klein','Groß'], prices:[9.00,12.00]},
+   {nr:'17', name:'Catania', desc:'Gyros, fr. Paprika', al:'', sizes:['Klein','Groß'], prices:[10.00,13.00]},
+   {nr:'18', name:'Napoletana', desc:'Sardellen, Oliven', al:'', sizes:['Klein','Groß'], prices:[9.50,12.50]},
+   {nr:'19', name:'Inferno', desc:'Salami, milde Peperoni', al:'', sizes:['Klein','Groß'], prices:[8.00,11.00]},
+   {nr:'20', name:'Vesuvio', desc:'fr. Paprika, Salami (scharf)', al:'', sizes:['Klein','Groß'], prices:[8.00,11.00]},
+   {nr:'21', name:'Chili', desc:'Hackfleischsauce, Kidney-Bohnen (scharf)', al:'', sizes:['Klein','Groß'], prices:[9.50,12.50]},
+   {nr:'22', name:'Lachs', desc:'Mozzarella, Lachs, Knoblauch', al:'', sizes:['Klein','Groß'], prices:[9.50,12.50]},
+   {nr:'23', name:'Napolene Tonno', desc:'Thunfisch, Zwiebeln, Spiegelei', al:'', sizes:['Klein','Groß'], prices:[9.00,12.00]},
+   {nr:'24', name:'Vegetaria A', desc:'Spinat, Artischocken, Knoblauch', veg:true, al:'', sizes:['Klein','Groß'], prices:[8.50,11.50]},
+   {nr:'25', name:'Vegetaria B', desc:'Broccoli, fr. Paprika, Mais, Zwiebeln', veg:true, al:'', sizes:['Klein','Groß'], prices:[9.50,12.50]},
+   {nr:'26', name:'Contadina', desc:'Schinken, Spinat, Mais', al:'', sizes:['Klein','Groß'], prices:[8.50,11.50]},
+   {nr:'27', name:'Primavera', desc:'Broccoli, Thunfisch, Weißkäse*', al:'', sizes:['Klein','Groß'], prices:[9.50,12.00]},
+   {nr:'28', name:'Italy', desc:'Schinken, fr. Champignons, Tortellini, Knoblauch', al:'', sizes:['Klein','Groß'], prices:[9.50,12.00]},
+   {nr:'29', name:'Carne', desc:'Hähnchenbruststreifen, fr. Tomaten, Zwiebeln', al:'', sizes:['Klein','Groß'], prices:[9.50,12.00]},
+   {nr:'30', name:'Bella', desc:'fr. Champignons, fr. Paprika, Mozzarella', veg:true, al:'', sizes:['Klein','Groß'], prices:[9.00,12.00]},
+   {nr:'31', name:'Drago', desc:'Schinken, Salami, fr. Paprika (scharf)', al:'', sizes:['Klein','Groß'], prices:[8.50,11.00]},
+   {nr:'32', name:'Jamboni', desc:'Schinken, Broccoli, Zwiebeln', al:'', sizes:['Klein','Groß'], prices:[8.50,11.00]},
+   {nr:'33', name:'Bruno', desc:'Schinken, Spinat, Weißkäse*', al:'', sizes:['Klein','Groß'], prices:[9.00,12.50]},
+   {nr:'34', name:'Taverna', desc:'Salami, Thunfisch, Zwiebeln', al:'', sizes:['Klein','Groß'], prices:[8.50,11.50]},
+   {nr:'35', name:'Mozzarella', desc:'Mozzarella, fr. Tomaten, Basilikum', veg:true, al:'', sizes:['Klein','Groß'], prices:[8.50,11.50]},
+   {nr:'36', name:'Alessia', desc:'Mozzarella, Spinat, Scampi, Knoblauch', al:'', sizes:['Klein','Groß'], prices:[9.50,12.50]},
+   {nr:'37', name:'Pirata', desc:'Thunfisch, Schinken, Salami, milde Peperoni', al:'', sizes:['Klein','Groß'], prices:[8.50,12.00]},
+   {nr:'38', name:'Romana', desc:'Thunfisch, Schinken, fr. Champignons, Zwiebeln', al:'', sizes:['Klein','Groß'], prices:[9.00,12.00]},
+   {nr:'39', name:'Capriciosa', desc:'Salami, Schinken, fr. Champignons, Zwiebeln', al:'', sizes:['Klein','Groß'], prices:[9.00,12.00]},
+   {nr:'40', name:'Quattro Stagioni', desc:'Schinken, Thunfisch, fr. Champignons, Artischocken', al:'', sizes:['Klein','Groß'], prices:[9.00,12.00]},
+   {nr:'41', name:'Quattro Formaggi', desc:'Gorgonzola, Mozzarella, Weißkäse*, Gouda', veg:true, al:'', sizes:['Klein','Groß'], prices:[9.00,12.00]},
+   {nr:'42', name:'Diavolo', desc:'Spinat, fr. Paprika, Peperoni scharf, Zwiebeln, Weißkäse*', veg:true, al:'', sizes:['Klein','Groß'], prices:[10.00,12.50]},
+   {nr:'43', name:'Sicilia', desc:'Scampi, Oliven, Thunfisch, Zwiebeln, Sardellen, Kapern, Knoblauch', al:'', sizes:['Klein','Groß'], prices:[10.50,13.50]},
+   {nr:'44', name:'Capri', desc:'Salami, Schinken, Thunfisch, fr. Paprika, fr. Champignons, Zwiebeln, Knoblauch', al:'', sizes:['Klein','Groß'], prices:[9.50,12.50]},
+   {nr:'45', name:'Roma', desc:'mit gefülltem Rand aus Käse, Schinken, Salami, Thunfisch, fr. Champignons, Gyros, Zwiebeln', al:'', sizes:['Klein','Groß'], prices:[12.00,14.00]},
+   {nr:'46', name:'Aubergine-Pizza', desc:'mit gebratenen Auberginen, frischen Tomaten, milder oder scharfer Peperoni', veg:true, al:'', sizes:['Klein','Groß'], prices:[9.50,12.50]},
+   {nr:'47', name:'Rucola', desc:'mit Rucola, fr. Tomaten, Mozzarella', veg:true, al:'', sizes:['Klein','Groß'], prices:[8.50,11.50]},
+   {nr:'48', name:'Parma', desc:'mit Parmaschinken, Rucola', al:'', sizes:['Klein','Groß'], prices:[9.50,12.50]},
+   {nr:'49', name:'Spaghettipizza', desc:'mit Spaghetti', veg:true, al:'', sizes:['Klein','Groß'], prices:[7.00,10.00]},
+   {nr:'50', name:'Salmone', desc:'mit Lachs, Spinat, Mozzarella, Knoblauch', al:'', sizes:['Klein','Groß'], prices:[10.00,12.50]},
+   {nr:'50a', name:'Mista', desc:'fr. Champignons, fr. Paprika, Rinder-Hackfleisch, Knoblauchwurst', al:'', sizes:['Klein','Groß'], prices:[10.00,12.50]},
+   {nr:'50b', name:'Pollo Delizia', desc:'Hähnchen, Broccoli, Mais, Hollandaise-Sauce', al:'', sizes:['Klein','Groß'], prices:[10.00,12.50]},
+  ]},
+  {sub:'Party- & Familien-Pizza', note:'Nur Margherita-Basis, jede zusätzliche Zutat außer A, B, D, Gyros, Sucuki, Lachs, fr. Tomaten siehe Aufpreis unten', list:[
+   {nr:'P1', name:'Party Pizza Margherita', desc:'ca. 40 × 60 cm · jede weitere Zutat außer A,B,D,Gyros,Sucuki,Lachs,fr.Tomaten +4,50 €', al:'', veg:true, price:26.00},
+   {nr:'P2', name:'Familien Pizza Margherita', desc:'ca. 40 cm · jede weitere Zutat außer A,B,D,Gyros,Sucuki,Lachs,fr.Tomaten +3,00 €', al:'', veg:true, price:16.00},
+  ]},
+  {sub:'Pizza individuell zusammenstellen', note:'Extrazutat-Auswahl direkt im Bestell-Dialog jeder Pizza: A) Scampi/Meeresfrüchte/Sardellen/Lachs 2,50/3,00 € · B) Käse 1,50/2,50 € · C) jede weitere Zutat 1,50/2,50 € · D) Tzatziki 1,50 € (nur Klein) · E) Mayonnaise/Ketchup 0,50 € (nur Klein). Klein/Groß.', list:[]},
+ ],
+ calzone: [
+  {sub:'Calzone (gefüllte Pizza)', note:'🌱 = ohne Fleisch und Fisch', list:[
+   {nr:'51', name:'Toscana', desc:'Schinken, fr. Paprika', al:'', price:11.00},
+   {nr:'52', name:'Greco', desc:'Gyros, fr. Paprika', al:'', price:12.00},
+   {nr:'53', name:'Staggioni', desc:'Schinken, Thunfisch, fr. Champignons, Artischocken', al:'', price:12.00},
+   {nr:'54', name:'Vegetarisch', desc:'gebr. Broccoli, Spinat, Zwiebeln, fr. Champignons', veg:true, al:'', price:12.00},
+   {nr:'55', name:'Capri', desc:'Hähnchenbruststreifen, fr. Champignons, Zwiebeln', al:'', price:12.50},
+   {nr:'56', name:'Aloa', desc:'Schinken, Thunfisch, Ananas', al:'', price:12.00},
+   {nr:'57', name:'Mexicana', desc:'Hackfleischsauce, Kidney-Bohnen (scharf)', al:'', price:11.50},
+   {nr:'58', name:'Mista', desc:'Schinken, fr. Champignons, fr. Paprika, Salami', al:'', price:12.00},
+  ]},
+ ],
+ salate: [
+  {sub:'Salate', note:'Mittel / Groß · 🌱 = ohne Fleisch und Fisch', list:[
+   {nr:'191', name:'Mista', desc:'Salat, Tomaten, Gurken, Mais, Thunfisch, Schinken, Mozzarella, Artischocken, Ei, Zwiebeln', al:'', sizes:['Mittel','Groß'], prices:[10.50,12.00]},
+   {nr:'192', name:'Capriciosa', desc:'Salat, Tomaten, Gurken, Thunfisch, Ei, Schinken, Käse, Zwiebeln, frische Paprika, Mais', al:'', sizes:['Mittel','Groß'], prices:[10.50,12.00]},
+   {nr:'193', name:'Paesana', desc:'Salat, Tomaten, Gurken, Mais, Zwiebeln, frische Paprika, Thunfisch', al:'', sizes:['Mittel','Groß'], prices:[9.50,11.00]},
+   {nr:'194', name:'Capri', desc:'Salat, Tomaten, Gurken, Käse, Hähnchen, Zwiebeln, milde Peperoni, frische Paprika, Artischocken, Ei, Oliven, Möhren', al:'', sizes:['Mittel','Groß'], prices:[10.50,12.00]},
+   {nr:'195', name:'Käsesalat', desc:'Salat, Tomaten, Gurken, Käse, Weißkäse*, Mozzarella', veg:true, al:'', sizes:['Mittel','Groß'], prices:[10.00,11.50]},
+   {nr:'196', name:'Shrimps Royal', desc:'Salat, Tomaten, Gurken, Oliven, Scampi, Sardellen, Kapern, Zwiebeln, Knoblauch', al:'', sizes:['Mittel','Groß'], prices:[11.50,13.00]},
+   {nr:'197', name:'Insalata di broccoli', desc:'Salat, Tomaten, Gurken, Käse, Zwiebeln, Broccoli', veg:true, al:'', sizes:['Mittel','Groß'], prices:[9.50,11.00]},
+   {nr:'198', name:'Bauernsalat', desc:'Salat, Tomaten, Gurken, Möhren, Kidney-Bohnen, Weißkäse*, Zwiebeln, Oliven', veg:true, al:'', sizes:['Mittel','Groß'], prices:[10.50,12.00]},
+   {nr:'199', name:'Caprese', desc:'Tomaten, Mozzarella, fr. Basilikum (nur eine Größe)', veg:true, al:'', price:10.50},
+   {nr:'200', name:'Rucola Salat', desc:'Rucola, Tomaten, Weißkäse (nur eine Größe)', veg:true, al:'', price:10.50},
+  ]},
+ ],
+ kleinesalate: [
+  {sub:'Kleine Salate', note:'Alle mit Eisbergsalat · Dressing: Joghurt, Joghurt mit Kräutern, Essig/Öl mit Kräutern oder Cocktail', list:[
+   {nr:'201', name:'Perschiler', desc:'gewürfelte Gurken, Tomaten, Zwiebeln, mit Petersilie', veg:true, al:'', price:7.00},
+   {nr:'202', name:'Grüner Salat', desc:'', veg:true, al:'', price:5.00},
+   {nr:'203', name:'Tomatensalat', desc:'', veg:true, al:'', price:5.50},
+   {nr:'204', name:'Gurkensalat', desc:'', veg:true, al:'', price:5.50},
+   {nr:'205', name:'Maissalat', desc:'', veg:true, al:'', price:5.50},
+  ]},
+ ],
+ baguettes: [
+  {sub:'Baguettes', note:'Belegt mit Tomaten, Gurken, Eisbergsalat und Remoulade', list:[
+   {nr:'150', name:'Formaggio', desc:'Käse', veg:true, al:'', price:6.50},
+   {nr:'151', name:'Salami', desc:'fr. Paprika, Käse (scharf)', al:'', price:8.00},
+   {nr:'152', name:'Tonno', desc:'Thunfisch, Zwiebeln, Ei', al:'', price:8.50},
+   {nr:'153', name:'Hawaii', desc:'Schinken, Ananas, Käse', al:'', price:8.00},
+   {nr:'154', name:'Bella', desc:'Mozzarella', veg:true, al:'', price:8.00},
+   {nr:'155', name:'Gyros', desc:'Gyros, Zwiebeln', al:'', price:9.00},
+   {nr:'156', name:'Knoblauch Baguette', desc:'Knoblauchbutter', veg:true, al:'', price:7.00},
+   {nr:'157', name:'Ibiza', desc:'Schweineschnitzel mit Zwiebeln', al:'', price:10.00},
+   {nr:'158', name:'Capri', desc:'Hähnchenbruststreifen, Käse, Zwiebeln', al:'', price:10.00},
+   {nr:'159', name:'Prosciutto', desc:'Schinken, Ei, Käse, Zwiebeln', al:'', price:8.50},
+   {nr:'160a', name:'Sucuk', desc:'Knoblauchwurst und Käse', al:'', price:8.50},
+  ]},
+ ],
+ brotchen: [
+  {sub:'Pizzabrötchen & Pizzabrot', note:'🌱 = ohne Fleisch und Fisch', list:[
+   {nr:'941', name:'Pizzabrötchen mit Kräuterbutter', desc:'6 Stück', veg:true, al:'', price:3.00},
+   {nr:'942', name:'Gefüllte Pizzabrötchen mit Käse', desc:'7 Stück', veg:true, al:'', price:5.50},
+   {nr:'943', name:'Gefüllte Pizzabrötchen mit Thunfisch, Käse', desc:'7 Stück', al:'', price:7.00},
+   {nr:'944', name:'Gefüllte Pizzabrötchen mit Schinken, Käse', desc:'7 Stück', al:'', price:6.00},
+   {nr:'945', name:'Gefüllte Pizzabrötchen mit Spinat und Weißkäse*', desc:'7 Stück', veg:true, al:'', price:6.50},
+   {nr:'946', name:'Gefüllte Pizzabrötchen mit Salami', desc:'7 Stück', al:'', price:6.00},
+   {nr:'947', name:'Gefüllte Pizzabrötchen mit Sucuk, Käse', desc:'7 Stück', al:'', price:8.00},
+   {nr:'948', name:'Pizzabrot mit Kräuterbutter', desc:'', veg:true, al:'', price:5.00},
+  ]},
+ ],
+ spaghetti: [
+  {sub:'Spaghetti', note:'Jedes Nudelgericht auf Wunsch mit Käse überbacken, +1,50 € · 🌱 = ohne Fleisch und Fisch', list:[
+   {nr:'61', name:'Spaghetti Napoli', desc:'Tomatensauce, Knoblauch, Basilikum', veg:true, al:'', price:9.00},
+   {nr:'62', name:'Spaghetti Bolognese', desc:'Hackfleischsauce', al:'', price:10.50},
+   {nr:'63', name:'Spaghetti Carbonara', desc:'Schinken, Ei, Sahnesauce', al:'', price:10.50},
+   {nr:'64', name:'Spaghetti di Mare', desc:'Meeresfrüchte, Knoblauch, Tomatensauce oder Sahnesauce', al:'', price:11.50},
+   {nr:'65', name:'Spaghetti All Tonno', desc:'Thunfisch, Zwiebeln, Tomatensauce', al:'', price:11.00},
+   {nr:'66', name:'Spaghetti Aglio e Olio', desc:'Olivenöl, Knoblauch, Basilikum, fr. Tomaten, milde Peperoni', veg:true, al:'', price:11.00},
+   {nr:'67', name:'Spaghetti Spinaci', desc:'Spinat, Knoblauch, Sahnesauce', veg:true, al:'', price:11.00},
+   {nr:'68', name:'Spaghetti Scampi', desc:'Scampi, Sahnesauce, Knoblauch', al:'', price:12.00},
+   {nr:'69', name:'Spaghetti Della Casa', desc:'Schinken, Speck, Ei, Sahnesauce', al:'', price:12.00},
+   {nr:'70', name:'Spaghetti Matriciana', desc:'Speck, Zwiebel, Tomatensauce', al:'', price:11.50},
+   {nr:'71', name:'Spaghetti Broccoli', desc:'Broccoli, Sahnesauce, Knoblauch', veg:true, al:'', price:11.00},
+   {nr:'72', name:'Spaghetti Capri', desc:'Hähnchenbruststreifen, Champignons, Spinat, Broccoli, Sahnesauce und Tomatensauce', al:'', price:12.50},
+  ]},
+ ],
+ tortellini: [
+  {sub:'Tortellini', note:'🌱 = ohne Fleisch und Fisch', list:[
+   {nr:'81', name:'Tortellini Alla Panna', desc:'Schinken, Sahnesauce', al:'', price:10.50},
+   {nr:'82', name:'Tortellini Carbonara', desc:'Schinken, Sahnesauce, Ei', al:'', price:11.00},
+   {nr:'83', name:'Tortellini Capri', desc:'Lachs, Spinat, Sahnesauce, Scampi', al:'', price:13.50},
+   {nr:'84', name:'Tortellini Spinaci', desc:'Spinat, Sahnesauce, Knoblauch', veg:true, al:'', price:11.00},
+   {nr:'85', name:'Tortellini Bolognese', desc:'mit Hackfleischsauce', al:'', price:11.00},
+   {nr:'86', name:'Tortellini Gorgonzola', desc:'Gorgonzola, Sahnesauce', veg:true, al:'', price:11.00},
+   {nr:'87', name:'Tortellini agli Scampi', desc:'Broccoli, Scampi, Knoblauch, Sahnesauce', al:'', price:12.00},
+   {nr:'88', name:'Tortellini Pepu', desc:'Broccoli, Schinken, Sahnesauce, Knoblauch', al:'', price:11.50},
+  ]},
+ ],
+ penne: [
+  {sub:'Penne Rigate', note:'🌱 = ohne Fleisch und Fisch', list:[
+   {nr:'91', name:'Penne Napoli', desc:'Tomatensauce, Knoblauch, frisches Basilikum', veg:true, al:'', price:9.50},
+   {nr:'92', name:'Penne ai porcini', desc:'fr. Champignons, Sahnesauce', veg:true, al:'', price:10.50},
+   {nr:'93', name:'Penne Bolognese', desc:'mit Hackfleischsauce', al:'', price:11.00},
+   {nr:'94', name:'Penne ai Quattro Formaggi', desc:'Gorgonzola, Mozzarella, Gouda, Weißkäse, Sahnesauce', veg:true, al:'', price:12.00},
+   {nr:'95', name:'Penne Primavera Rosé', desc:'fr. Paprika, Erbsen, Tomatensauce und Sahnesauce', veg:true, al:'', price:12.00},
+   {nr:'96', name:'Penne Capri', desc:'Putenfleisch, Spinat, fr. Champignons, Broccoli, Sahnesauce', al:'', price:12.50},
+   {nr:'97', name:'Penne Gorgonzola', desc:'Gorgonzola, Sahnesauce', veg:true, al:'', price:11.00},
+   {nr:'98', name:'Penne del Pescatore', desc:'Lachs, Tomatensauce, Knoblauch', al:'', price:12.00},
+  ]},
+ ],
+ tagliatelle: [
+  {sub:'Tagliatelle', note:'🌱 = ohne Fleisch und Fisch', list:[
+   {nr:'101', name:'Tagliatelle Napoli', desc:'Bandnudeln, Knoblauch, Basilikum, Tomatensauce', veg:true, al:'', price:9.50},
+   {nr:'102', name:'Tagliatelle Bolognese', desc:'Bandnudeln, Hackfleischsauce', al:'', price:10.50},
+   {nr:'103', name:'Tagliatelle Scampi', desc:'Scampi, Sahnesauce, Knoblauch', al:'', price:12.00},
+   {nr:'104', name:'Tagliatelle Alfredo', desc:'Bandnudeln, Schinken, Erbsen, Sahnesauce', al:'', price:12.00},
+   {nr:'105', name:'Tagliatelle Capri', desc:'Bandnudeln, Hähnchenbruststreifen, fr. Champignons, Spinat, Broccoli, Sahnesauce', al:'', price:12.50},
+   {nr:'106', name:'Tagliatelle Boscaiola', desc:'Bandnudeln, Lachs, fr. Champignons, Knoblauch, Sahnesauce', al:'', price:13.00},
+  ]},
+ ],
+ nudelgerichte: [
+  {sub:'Nudelgerichte', note:'Mit Käse überbacken · 🌱 = ohne Fleisch und Fisch', list:[
+   {nr:'111', name:'Cannelloni A', desc:'Hackfleisch, Bolognese', al:'', price:11.50},
+   {nr:'112', name:'Cannelloni B', desc:'Hackfleisch, Sahnesauce', al:'', price:11.50},
+   {nr:'113', name:'Lasagne', desc:'mit Sahnesauce', veg:true, al:'', price:11.50},
+   {nr:'114', name:'Tortellini Al Forno', desc:'Pilze, Spinat, Sahnesauce', veg:true, al:'', price:11.50},
+   {nr:'115', name:'Penne ai Porcini', desc:'fr. Champignons, Sahnesauce', veg:true, al:'', price:11.50},
+   {nr:'116', name:'Penne Scampi', desc:'Maccheroni, Scampi, Sahnesauce und Knoblauch', al:'', price:11.50},
+   {nr:'117', name:'Cannelloni Capri', desc:'Cannelloni, Spinat, Weißkäse, Tomatensauce oder Sahnesauce', veg:true, al:'', price:11.50},
+   {nr:'118', name:'Combinazione al forno', desc:'Cannelloni, Tortellini, Lasagne mit Sahnesauce oder Tomatensauce', al:'', price:12.00},
+  ]},
+ ],
+ auflauf: [
+  {sub:'Auflauf', note:'Alle mit Käse überbacken · 🌱 = ohne Fleisch und Fisch', list:[
+   {nr:'121', name:'Broccoli Auflauf', desc:'Penne, Broccoli, Schinken, Knoblauch, Sahnesauce', al:'', price:11.50},
+   {nr:'122', name:'Blumenkohl', desc:'mit Sahnesauce', veg:true, al:'', price:11.00},
+   {nr:'123', name:'Gemüse Auflauf', desc:'fr. Champignons, Broccoli, Spinat, Blumenkohl, Sahnesauce und Knoblauch', veg:true, al:'', price:12.00},
+   {nr:'124', name:'Spinat Auflauf', desc:'Penne, Spinat, Sahnesauce', veg:true, al:'', price:11.50},
+   {nr:'125', name:'Kartoffel Auflauf', desc:'Schinken oder Speck mit Sahnesauce', al:'', price:11.50},
+   {nr:'126', name:'Capri Auflauf', desc:'Penne, Broccoli, fr. Tomaten, Sahnesauce', veg:true, al:'', price:12.50},
+   {nr:'127', name:'Gyros Auflauf', desc:'Penne, Gyros, fr. Tomaten, Zwiebeln, Sahnesauce oder Tomatensauce', al:'', price:13.50},
+   {nr:'128', name:'Bolognese Auflauf', desc:'Penne, Hackfleischsauce', al:'', price:11.50},
+   {nr:'129', name:'Auberginen Auflauf', desc:'Panierte Auberginen, fr. Tomaten, mit Hackfleisch', al:'', price:11.50},
+   {nr:'131', name:'Salmone Toscana', desc:'Penne, Lachs, Spinat, Sahnesauce', al:'', price:12.50},
+   {nr:'132', name:'Schnitzelauflauf', desc:'panierte Hähnchenbrustfilet oder Schweinschnitzel mit fr. Champ., fr. Paprika, Sahnesauce', al:'', price:13.50},
+  ]},
+ ],
+ teigtaschen: [
+  {sub:'Teigtaschen', note:'Alle mit Potatoes / Käse überbacken', list:[
+   {nr:'230', name:'Mexicana Tasche A', desc:'gebr. Hähnchenbrust, Zwiebeln, Kidney-Bohnen, Mais, fr. Champignons, Crème Fraiche (scharf)', al:'', price:13.00},
+   {nr:'231', name:'Mexicana Tasche B', desc:'gehacktes Rindfleisch, Zwiebeln, Kidney-Bohnen, Mais, fr. Champignons, Crème Fraiche (scharf)', al:'', price:13.00},
+   {nr:'232', name:'Mexicana Tasche C', desc:'gehacktes Rindfleisch, Crème Fraiche, Kartoffeln', al:'', price:12.00},
+  ]},
+ ],
+ reisgerichte: [
+  {sub:'Reisgerichte', note:'🌱 = ohne Fleisch und Fisch', list:[
+   {nr:'141', name:'Reis alla Marinara', desc:'mit Meeresfrüchten, Sahnesauce oder Tomatensauce', al:'', price:12.50},
+   {nr:'142', name:'Reis Bolognese', desc:'mit Hackfleischsauce', al:'', price:12.00},
+   {nr:'143', name:'Reis Capri', desc:'Hähnchenbruststreifen, fr. Champignons in Rahmsauce', al:'', price:12.50},
+   {nr:'144', name:'Reis Gorgonzola', desc:'mit Gorgonzola', veg:true, al:'', price:12.00},
+   {nr:'145', name:'Reis Napoli', desc:'mit Tomatensauce', veg:true, al:'', price:10.00},
+   {nr:'146', name:'Reis ai funghi', desc:'mit frischen Champignons u. Sahnesauce', veg:true, al:'', price:11.50},
+  ]},
+ ],
+ gyros: [
+  {sub:'Gyros', note:'', list:[
+   {nr:'161', name:'Gyros Komplett', desc:'mit Pommes, Tzatziki, Salat, Zwiebeln', al:'', price:13.50},
+   {nr:'162', name:'Gyros A', desc:'mit Zwiebeln und Salat', al:'', price:12.00},
+   {nr:'163', name:'Gyros B', desc:'mit Zwiebeln und Pommes', al:'', price:12.00},
+   {nr:'164', name:'Gyros überbacken', desc:'fr. Champignons, Käse, Pommes, Hollandaise-Sauce', al:'', price:15.00},
+  ]},
+ ],
+ fleisch: [
+  {sub:'Fleischgerichte', note:'', list:[
+   {nr:'171', name:'Schweineschnitzel', desc:'paniert, mit fr. Champignonsauce, Pommes und Salat', al:'', price:13.50},
+   {nr:'172', name:'Hawaii Schnitzel', desc:'paniertes Schweineschnitzel, Ananas, Schinken, Käse, Pommes', al:'', price:13.50},
+   {nr:'173', name:'Hähnchenbrustfilet', desc:'panierte Hähnchenbrust mit Champignonsauce, Pommes und Salat', al:'', price:13.50},
+   {nr:'174', name:'Chicken Nuggets', desc:'10 Stück, mit Pommes, Süß-Sauer-Sauce', al:'', price:11.50},
+  ]},
+ ],
+ fisch: [
+  {sub:'Fischgerichte', note:'', list:[
+   {nr:'181', name:'Aglio Scampi', desc:'Scampi mit fr. Champignons in Knoblauchsauce, mit Bandnudeln oder Spaghetti', al:'', price:13.50},
+   {nr:'182', name:'Calamari fritti', desc:'frittierter Tintenfisch, Cocktailsauce, Salat', al:'', price:12.50},
+   {nr:'183', name:'Scampi al forno', desc:'Scampi mit Bandnudeln, fr. Paprika, fr. Champignons, Tomatensauce und Sahnesauce', al:'', price:13.50},
+  ]},
+ ],
+ beilagen: [
+  {sub:'Beilagen (Pommes Frites)', note:'', list:[
+   {nr:'212', name:'Pommes frites', desc:'mit Ketchup oder Mayo', veg:true, al:'', price:3.50},
+   {nr:'213', name:'Chili Cheese Pommes', desc:'Pommes Frites, Hackfleischsauce, Schmelzkäse, Kidney-Bohnen, mit Käse überbacken (scharf)', al:'', price:8.00},
+   {nr:'214', name:'Jäger Pommes', desc:'Pommes Frites, Champignonsauce', veg:true, al:'', price:8.00},
+   {nr:'215', name:'Pomm Tzaziki', desc:'Pommes Frites, Tzatziki, Jalapeño', veg:true, al:'', price:8.00},
+  ]},
+ ],
+ dessert: [
+  {sub:'Desserts', note:'', list:[
+   {nr:'221', name:'Tiramisu Creme', desc:'', veg:true, al:'', price:5.00},
+   {nr:'222', name:'Mousse au Chocolat', desc:'', veg:true, al:'', price:5.00},
+  ]},
+ ],
+ getraenke: [
+  {sub:'Softdrinks', note:'', list:[
+   {nr:'901', name:'Cola', desc:'1,0 l', veg:true, al:'', price:3.50},
+   {nr:'902', name:'Fanta', desc:'1,0 l', veg:true, al:'', price:3.50},
+   {nr:'903', name:'Sprite', desc:'1,0 l', veg:true, al:'', price:3.50},
+  ]},
+  {sub:'Bier & Wein', note:'', list:[
+   {nr:'904', name:'Reissdorf Kölsch', desc:'0,5 l', al:'', price:2.50},
+   {nr:'905', name:'Italienischer Rotwein', desc:'0,75 l', al:'', price:9.00},
+   {nr:'906', name:'Italienischer Weißwein', desc:'0,75 l', al:'', price:9.00},
+  ]},
+ ],
+};
+
+/* Zusatzstoffe (1–9) und Allergene (10–18) — exakt wie auf der gedruckten
+   Speisekarte von Restaurant Pizzeria Capri angegeben. */
+const ADDITIVES = {1:'mit Farbstoff',2:'Formfleischvorderschinken',3:'mit Konservierungsstoff',4:'mit Antioxidationsmittel',5:'geschwärzt',6:'mit Phosphat',7:'mit Süßungsmitteln',8:'mit Geschmacksverstärker',9:'koffeinhaltig'};
+const ALLERGENS = {10:'Glutenhaltiges Getreide',11:'Krebstiere',12:'Eier',13:'Fisch',14:'Milch/Lactose (Pizzateig)',15:'Weichtiere',16:'Senf',17:'Soja',18:'Sellerie'};
+
+/* ── Extra-Zutaten (nur Pizza & Calzone) ──────────────── */
+const EXTRA_CATEGORIES = ['pizza','calzone'];
+/* Bezahlpflichtige Extras: Preis richtet sich nach der GRÖSSEN-BEZEICHNUNG
+   (Klein/Groß), analog zur Extrazutat-Auswahl A–E auf der Original-Speisekarte.
+   A) Scampi/Meeresfrüchte/Sardellen/Lachs · B) Käse · C) jede weitere Zutat. */
+const EXTRAS_TOPPINGS = [
+  {id:'kaese', name:'Käse, extra', prices:{Klein:1.50,Groß:2.50}},
+  {id:'ananas', name:'Ananas', prices:{Klein:1.50,Groß:2.50}},
+  {id:'artischocken', name:'Artischocken', prices:{Klein:1.50,Groß:2.50}},
+  {id:'broccoli', name:'Broccoli', prices:{Klein:1.50,Groß:2.50}},
+  {id:'champignons', name:'Champignons, frisch', prices:{Klein:1.50,Groß:2.50}},
+  {id:'ei', name:'Ei', prices:{Klein:1.50,Groß:2.50}},
+  {id:'feta', name:'Weißkäse*', prices:{Klein:1.50,Groß:2.50}},
+  {id:'gorgonzola', name:'Gorgonzola', prices:{Klein:1.50,Groß:2.50}},
+  {id:'jalapenos', name:'Jalapeños', prices:{Klein:1.50,Groß:2.50}},
+  {id:'knoblauchwurst', name:'Knoblauchwurst (Sucuk)', prices:{Klein:1.50,Groß:2.50}},
+  {id:'mais', name:'Mais', prices:{Klein:1.50,Groß:2.50}},
+  {id:'mozzarella', name:'Mozzarella', prices:{Klein:1.50,Groß:2.50}},
+  {id:'oliven', name:'Oliven', prices:{Klein:1.50,Groß:2.50}},
+  {id:'paprika', name:'Paprika, frisch', prices:{Klein:1.50,Groß:2.50}},
+  {id:'peperoni', name:'Peperoni', prices:{Klein:1.50,Groß:2.50}},
+  {id:'salami', name:'Salami', prices:{Klein:1.50,Groß:2.50}},
+  {id:'sardellen_c', name:'Sardellen', prices:{Klein:1.50,Groß:2.50}},
+  {id:'schinken', name:'Schinken', prices:{Klein:1.50,Groß:2.50}},
+  {id:'spinat', name:'Spinat', prices:{Klein:1.50,Groß:2.50}},
+  {id:'thunfisch', name:'Thunfisch', prices:{Klein:1.50,Groß:2.50}},
+  {id:'tomaten', name:'Tomaten, frisch', prices:{Klein:1.50,Groß:2.50}},
+  {id:'zwiebeln', name:'Zwiebeln', prices:{Klein:1.50,Groß:2.50}},
+  /* Kategorie A – teurere Meeresfrüchte-Extras laut Speisekarte */
+  {id:'scampi', name:'Scampi', prices:{Klein:2.50,Groß:3.00}},
+  {id:'meeresfruechte', name:'Meeresfrüchte', prices:{Klein:2.50,Groß:3.00}},
+  {id:'sardellen', name:'Sardellen (extra)', prices:{Klein:2.50,Groß:3.00}},
+  {id:'lachs', name:'Lachs', prices:{Klein:2.50,Groß:3.00}},
+  /* Kategorie D/E – laut Speisekarte nur in Klein regulär bepreist; hier zur
+     Vereinfachung mit demselben Preis in beiden Größen hinterlegt (TODO siehe README). */
+  {id:'tzatziki', name:'Tzatziki', prices:{Klein:1.50,Groß:1.50}},
+  {id:'mayo', name:'Mayonnaise', prices:{Klein:0.50,Groß:0.50}},
+  {id:'ketchup_extra', name:'Ketchup', prices:{Klein:0.50,Groß:0.50}},
+];
+/* Kostenlose Extras – bewusst getrennt, damit der Kunde sie sofort als "gratis" erkennt. */
+const FREE_EXTRAS = [
+  {id:'knoblauch', name:'Knoblauch', price:0},
+  {id:'schaerfe', name:'Schärfe', price:0},
+];
+const ALL_EXTRAS = [...EXTRAS_TOPPINGS, ...FREE_EXTRAS];
+/* Preis eines Extras für die gewählte Größen-Bezeichnung ('Klein'/'Groß').
+   Kostenlose Extras haben nur `price` (immer 0). Fällt ohne Größenangabe
+   (z.B. Calzone, das nur eine Größe hat) auf 'Groß' zurück. */
+function extraPriceFor(extra, sizeLabel){
+  if(extra.prices) return extra.prices[sizeLabel] != null ? extra.prices[sizeLabel] : extra.prices['Groß'];
+  return extra.price;
+}
+
+/* ── Extra-Sauce (bei Gyros & Fleischgerichten) ── */
+const SAUCE_CATEGORIES = ['gyros','fleisch'];
+const SAUCE_OPTIONS = [
+  {id:'tzatziki', name:'Tzatziki', price:1.50},
+  {id:'ketchup', name:'Ketchup', price:0.50},
+  {id:'mayo', name:'Mayonnaise', price:0.50},
+  {id:'curry', name:'Currysauce', price:1.50},
+  {id:'zigeuner', name:'Zigeunersauce', price:1.50},
+  {id:'hollandaise', name:'Sauce Hollandaise', price:1.50},
+];
+
+/* ── Getränk dazu? (bei allen Speisen außer der Getränke-Kategorie selbst) ── */
+const QUICK_DRINK_NRS = [901, 902, 903, 904]; // Cola, Fanta, Sprite, Kölsch
+function quickDrinkList(){
+  return QUICK_DRINK_NRS.map(nr => {
+    const found = findItemWithGroup('getraenke', nr);
+    return found ? { nr, name: found.item.name + (found.item.desc ? ` (${found.item.desc})` : ''), price: found.item.price } : null;
+  }).filter(Boolean);
+}
+
+/* ── Liefergebiete & Liefergebühr ─────────────────────────────
+   Restaurant Pizzeria Capri liefert laut Speisekarte pauschal ab €15
+   Mindestbestellwert; ab 6 km Entfernung gilt ein höherer Mindestbestellwert
+   (€20) PLUS eine Liefergebühr. Es gibt (noch) keine detaillierte Zonentabelle
+   wie beim Vorlagenprojekt — daher hier bewusst vereinfacht auf eine einzige
+   Zone mit einer Liefergebühr. TODO (siehe README "Vor Live-Gang klären"):
+   Die "über 6 km"-Unterscheidung (höherer Mindestbestellwert + Gebühr) ist
+   NICHT abgebildet, da unklar ist, wie der Betreiber die Entfernung ermitteln
+   möchte (PLZ-Liste? Kartendienst? manuell?). Aktuell gilt für ALLE
+   Lieferungen der Standard-Mindestbestellwert (€15) und eine feste Gebühr. */
+const DELIVERY_ZONES = [
+  {id:'standard', name:'Lieferung (Kölner Str. Umgebung)', fee:2},
+];
+let deliveryZoneId = DELIVERY_ZONES[0].id;
+function onZoneChange(){
+  const sel = document.getElementById('co-zone');
+  if(sel) deliveryZoneId = sel.value;
+  buildCoTable();
+  updateCart();
+}
+function renderZoneSelect(){
+  const sel = document.getElementById('co-zone');
+  if(!sel) return;
+  sel.innerHTML = DELIVERY_ZONES.map(z => `<option value="${z.id}" ${z.id===deliveryZoneId?'selected':''}>${z.name} — ${z.fee===0?'gratis':'€'+z.fee.toFixed(2)}</option>`).join('');
+}
+
+/* ── Mode state ─────────────────────────────────────── */
+let orderMode = 'liefern';
+function setMode(m, opts){
+  opts = opts || {};
+  // Di–Fr 15–17 Uhr wird nur Abholung angeboten (siehe deliveryWindowStatus).
+  // Ein Wechsel zu 'liefern' wird in diesem Fenster verhindert, außer die Funktion wird intern
+  // (z.B. beim Laden der Seite) mit opts.silent aufgerufen, um nur den Zustand zu setzen.
+  if(m === 'liefern' && !opts.silent){
+    const status = deliveryWindowStatus(new Date().getDay(), nowHHMM());
+    if(!status.deliveryAvailable){
+      showToastMsg(deliveryUnavailableMessage(status));
+      m = 'abholen';
+    }
+  }
+  orderMode = m;
+  document.getElementById('btn-liefern').classList.toggle('active', m==='liefern');
+  document.getElementById('btn-abholen').classList.toggle('active', m==='abholen');
+  const cl = document.getElementById('cart-btn-liefern'), ca = document.getElementById('cart-btn-abholen');
+  if(cl && ca){
+    if(m==='liefern'){ cl.style.background='var(--brand)'; cl.style.borderColor='var(--brand)'; cl.style.color='#fff'; ca.style.background='var(--card)'; ca.style.borderColor='var(--border)'; ca.style.color='var(--t2)'; }
+    else{ ca.style.background='#4CAF7D'; ca.style.borderColor='#4CAF7D'; ca.style.color='#fff'; cl.style.background='var(--card)'; cl.style.borderColor='var(--border)'; cl.style.color='var(--t2)'; }
+  }
+  updateCart();
+  updateDeliveryAvailabilityUI();
+}
+
+/* ── Cart ────────────────────────────────────────────── */
+let cart = [];
+
+function bounceCart(){
+  const btn = document.getElementById('nav-cart-btn');
+  if(!btn) return;
+  btn.classList.remove('cart-bounce'); void btn.offsetWidth; btn.classList.add('cart-bounce');
+}
+
+function findItem(catId, nr){
+  for(const grp of ITEMS[catId]){
+    for(const it of grp.list){
+      if(String(it.nr) === String(nr)) return it;
+    }
+  }
+  return null;
+}
+
+/* Findet Artikel MIT seiner Untergruppe (für Getränke-Erkennung). */
+function findItemWithGroup(catId, nr){
+  for(const grp of ITEMS[catId]){
+    for(const it of grp.list){
+      if(String(it.nr) === String(nr)) return { item: it, group: grp };
+    }
+  }
+  return null;
+}
+
+/* Getränk? = Kategorie 'getraenke'. In dieser Kategorie sind ausschließlich
+   Getränke gelistet (keine Saucen-Untergruppe), daher genügt
+   die Kategorieprüfung. */
+function isDrinkGroup(catId){
+  return catId === 'getraenke';
+}
+
+/* Fügt einen fertigen Warenkorb-Eintrag hinzu (Basis für addToCart & Options-Modal). */
+function addRawToCart(entry, qty){
+  qty = qty || 1;
+  const i = cart.findIndex(c => c.key === entry.key);
+  if(i > -1) cart[i].qty += qty;
+  else cart.push({...entry, qty});
+}
+
+function addToCart(catId, nr, sizeIdx){
+  const found = findItemWithGroup(catId, nr);
+  if(!found) return;
+  const { item } = found;
+  const hasSizes = !!item.sizes;
+  const key = catId + '-' + nr + (hasSizes ? '-' + sizeIdx : '');
+  const price = hasSizes ? item.prices[sizeIdx] : item.price;
+  const name = hasSizes ? `${item.name} (${item.sizes[sizeIdx]})` : item.name;
+  const isDrink = isDrinkGroup(catId);
+  addRawToCart({key, name, price, cat: catId, isDrink, emoji: catEmoji(catId), nr});
+  updateCart();
+  showToast(name);
+  bounceCart();
+}
+
+function catEmoji(catId){
+  const c = CATS.find(c => c.id === catId);
+  return c ? c.emoji : '🍽️';
+}
+
+/* ── Artikel-Optionen-Modal (Extras / Sauce / Getränk) ─── */
+let itemModal = null;
+
+function openItemOptions(catId, nr, sizeIdx){
+  const found = findItemWithGroup(catId, nr);
+  if(!found) return;
+  const { item, group } = found;
+  const hasSizes = !!item.sizes;
+  itemModal = {
+    catId, nr, sizeIdx,
+    editKey: null,
+    baseName: item.name,
+    sizeLabel: hasSizes ? item.sizes[sizeIdx] : null,
+    basePrice: hasSizes ? item.prices[sizeIdx] : item.price,
+    groupSub: group.sub,
+    showExtras: EXTRA_CATEGORIES.includes(catId),
+    showSauce: SAUCE_CATEGORIES.includes(catId),
+    extras: new Set(),
+    sauces: new Set(),
+    drinks: {},
+    qty: 1,
+  };
+  renderItemModal();
+  document.getElementById('item-overlay').classList.add('open');
+}
+
+function closeItemOptions(){
+  document.getElementById('item-overlay').classList.remove('open');
+  itemModal = null;
+}
+
+function toggleModalExtra(id){
+  if(!itemModal) return;
+  itemModal.extras.has(id) ? itemModal.extras.delete(id) : itemModal.extras.add(id);
+  renderItemModal();
+}
+function toggleModalSauce(id){
+  if(!itemModal) return;
+  itemModal.sauces.has(id) ? itemModal.sauces.delete(id) : itemModal.sauces.add(id);
+  renderItemModal();
+}
+function changeModalDrinkQty(nr, d){
+  if(!itemModal) return;
+  const cur = itemModal.drinks[nr] || 0;
+  const next = Math.max(0, cur + d);
+  if(next === 0) delete itemModal.drinks[nr]; else itemModal.drinks[nr] = next;
+  renderItemModal();
+}
+function changeModalQty(d){
+  if(!itemModal) return;
+  itemModal.qty = Math.max(1, itemModal.qty + d);
+  renderItemModal();
+}
+
+function itemModalUnitPrice(){
+  let p = itemModal.basePrice;
+  for(const id of itemModal.extras) p += extraPriceFor(ALL_EXTRAS.find(e => e.id === id), itemModal.sizeLabel);
+  for(const id of itemModal.sauces) p += SAUCE_OPTIONS.find(s => s.id === id).price;
+  return round2(p);
+}
+function itemModalDrinksTotal(){
+  let sum = 0;
+  const list = quickDrinkList();
+  for(const nr in itemModal.drinks) sum += (list.find(d => d.nr == nr)?.price || 0) * itemModal.drinks[nr];
+  return sum;
+}
+function itemModalGrandTotal(){
+  return round2(itemModalUnitPrice() * itemModal.qty + itemModalDrinksTotal());
+}
+
+function renderItemModal(){
+  if(!itemModal) return;
+  const m = itemModal;
+  document.getElementById('item-modal-title').textContent = m.baseName + (m.sizeLabel ? ` (${m.sizeLabel})` : '');
+
+  let html = '';
+  if(m.showExtras){
+    html += `<div class="co-section"><div class="co-section-title">Deine Extras <span class="co-section-hint">Preis richtet sich nach Größe</span></div>`;
+    html += `<div class="extra-free-divider">Kostenlose Extras</div><div class="extra-grid">`;
+    html += FREE_EXTRAS.map(e => `
+      <label class="extra-opt extra-opt-free ${m.extras.has(e.id) ? 'selected' : ''}">
+        <input type="checkbox" ${m.extras.has(e.id) ? 'checked' : ''} onchange="toggleModalExtra('${e.id}')">
+        <span class="extra-opt-name">${e.name}</span>
+        <span class="extra-opt-price extra-opt-gratis">gratis</span>
+      </label>`).join('');
+    html += `</div>
+      <div class="extra-free-divider extra-paid-divider">Extras gegen Aufpreis</div>
+      <div class="extra-grid">`;
+    html += EXTRAS_TOPPINGS.map(e => `
+      <label class="extra-opt ${m.extras.has(e.id) ? 'selected' : ''}">
+        <input type="checkbox" ${m.extras.has(e.id) ? 'checked' : ''} onchange="toggleModalExtra('${e.id}')">
+        <span class="extra-opt-name">${e.name}</span>
+        <span class="extra-opt-price">+€${extraPriceFor(e, m.sizeLabel).toFixed(2)}</span>
+      </label>`).join('');
+    html += `</div></div>`;
+  }
+  if(m.showSauce){
+    html += `<div class="co-section"><div class="co-section-title">Sauce dazu?</div><div class="extra-grid">`;
+    html += SAUCE_OPTIONS.map(s => `
+      <label class="extra-opt ${m.sauces.has(s.id) ? 'selected' : ''}">
+        <input type="checkbox" ${m.sauces.has(s.id) ? 'checked' : ''} onchange="toggleModalSauce('${s.id}')">
+        <span class="extra-opt-name">${s.name}</span>
+        <span class="extra-opt-price">+€${s.price.toFixed(2)}</span>
+      </label>`).join('');
+    html += `</div></div>`;
+  }
+  html += `<div class="co-section"><div class="co-section-title">Getränk dazu?</div><div class="drink-list">`;
+  html += quickDrinkList().map(d => `
+    <div class="drink-row">
+      <span class="drink-row-name">${d.name}</span>
+      <span class="drink-row-price">€${d.price.toFixed(2)}</span>
+      <div class="drink-row-stepper">
+        <button onclick="changeModalDrinkQty(${d.nr},-1)">−</button>
+        <span>${m.drinks[d.nr] || 0}</span>
+        <button onclick="changeModalDrinkQty(${d.nr},1)">+</button>
+      </div>
+    </div>`).join('');
+  html += `</div></div>`;
+
+  document.getElementById('item-modal-body').innerHTML = html;
+  document.getElementById('item-modal-qty').textContent = m.qty;
+  document.getElementById('item-modal-total').textContent = '€' + itemModalGrandTotal().toFixed(2);
+  document.getElementById('item-modal-cta-label').textContent = m.editKey ? 'Aktualisieren' : 'In den Warenkorb';
+}
+
+function confirmItemModal(){
+  const m = itemModal;
+  if(!m) return;
+  const extraNames = [...m.extras].map(id => ALL_EXTRAS.find(e => e.id === id).name);
+  const sauceNames = [...m.sauces].map(id => SAUCE_OPTIONS.find(s => s.id === id).name);
+  const addOnNames = [...extraNames, ...sauceNames];
+  const name = m.baseName + (m.sizeLabel ? ` (${m.sizeLabel})` : '') + (addOnNames.length ? ` + ${addOnNames.join(', ')}` : '');
+  const key = m.catId + '-' + m.nr + (m.sizeIdx != null ? '-' + m.sizeIdx : '') +
+    (m.extras.size ? '-ex:' + [...m.extras].sort().join(',') : '') +
+    (m.sauces.size ? '-sa:' + [...m.sauces].sort().join(',') : '');
+  const isDrink = isDrinkGroup(m.catId);
+
+  if(m.editKey) cart = cart.filter(c => c.key !== m.editKey);
+
+  addRawToCart({
+    key, name, price: itemModalUnitPrice(), cat: m.catId, isDrink, emoji: catEmoji(m.catId),
+    nr: m.nr, sizeIdx: m.sizeIdx, extras: [...m.extras], sauces: [...m.sauces],
+  }, m.qty);
+
+  const drinkList = quickDrinkList();
+  for(const nr in m.drinks){
+    const d = drinkList.find(x => x.nr == nr);
+    if(d) addRawToCart({key: 'getraenke-' + nr, name: d.name, price: d.price, cat: 'getraenke', isDrink: true, emoji: catEmoji('getraenke'), nr}, m.drinks[nr]);
+  }
+
+  updateCart();
+  showToast(name);
+  bounceCart();
+  closeItemOptions();
+}
+
+/* Öffnet das Optionen-Modal erneut mit den bisherigen Auswahlen, um Extras/Sauce nachträglich zu ändern. */
+function editCartItem(key){
+  const entry = cart.find(c => c.key === key);
+  if(!entry || entry.nr == null) return;
+  openItemOptions(entry.cat, entry.nr, entry.sizeIdx);
+  itemModal.extras = new Set(entry.extras || []);
+  itemModal.sauces = new Set(entry.sauces || []);
+  itemModal.qty = entry.qty;
+  itemModal.editKey = key;
+  renderItemModal();
+}
+
+function chgQty(key, d){
+  const i = cart.findIndex(c => c.key === key);
+  if(i < 0) return;
+  cart[i].qty = Math.max(0, cart[i].qty + d);
+  if(cart[i].qty === 0) cart.splice(i, 1);
+  updateCart();
+}
+
+/* ── Kundenkonto (lokal gespeichert, ohne Server) ─────── */
+const PROFILE_KEY = 'pizzeriacapriProfile';
+const GUEST_ORDERED_KEY = 'pizzeriacapriGuestOrdered';
+const ORDERED_PHONES_KEY = 'pizzeriacapriOrderedPhones';
+function hasGuestOrdered(){ return localStorage.getItem(GUEST_ORDERED_KEY) === '1'; }
+function normalizePhone(phone){ return (phone||'').replace(/[^\d+]/g,''); }
+function getOrderedPhones(){ try{ return JSON.parse(localStorage.getItem(ORDERED_PHONES_KEY) || '[]'); }catch(e){ return []; } }
+function phoneHasOrdered(phone){ const n = normalizePhone(phone); return !!n && getOrderedPhones().includes(n); }
+function recordOrderedPhone(phone){
+  const n = normalizePhone(phone); if(!n) return;
+  const list = getOrderedPhones();
+  if(!list.includes(n)){ list.push(n); localStorage.setItem(ORDERED_PHONES_KEY, JSON.stringify(list)); }
+}
+const LAST_PHONE_KEY = 'pizzeriacapriLastPhone';
+function getLastCheckoutPhone(){ return localStorage.getItem(LAST_PHONE_KEY) || ''; }
+function saveLastCheckoutPhone(phone){ if(phone) localStorage.setItem(LAST_PHONE_KEY, phone); }
+function getProfile(){ try{ return JSON.parse(localStorage.getItem(PROFILE_KEY) || 'null'); }catch(e){ return null; } }
+function saveProfile(p){ localStorage.setItem(PROFILE_KEY, JSON.stringify(p)); }
+function firstOrderEligible(){
+  const p = getProfile();
+  if(!p || p.hasOrdered) return false;
+  return !phoneHasOrdered(p.phone);
+}
+function updateNavAccount(){ const p = getProfile(); const el = document.getElementById('nav-account-name'); if(el) el.textContent = (p && p.fname) ? p.fname : 'Konto'; }
+
+/* Begrüßungs-Rabattbanner im Hero — sichtbar für neue Besucher, die noch nie
+   bestellt haben (weder als Gast noch registriert) und noch kein Konto haben.
+   Verschwindet dauerhaft, sobald registriert oder eine Bestellung aufgegeben wurde. */
+function updateHeroPromo(){
+  const el = document.getElementById('hero-promo');
+  if(!el) return;
+  const eligible = NEUKUNDE_RABATT_AKTIV && !getProfile() && !hasGuestOrdered() && !phoneHasOrdered(getLastCheckoutPhone());
+  el.style.display = eligible ? 'flex' : 'none';
+  if(eligible) el.textContent = `🎁 ${(NEUKUNDE_RABATT_PCT*100).toFixed(0)}% Rabatt auf Ihre erste Bestellung — jetzt registrieren`;
+}
+
+/* ═══ Preis-Konfiguration ═══════════════════════════════
+   Geschäftsregeln zentral & anpassbar — bewusst als benannte Konstanten,
+   (MINDESTBESTELLWERT/LIEFERGEBUEHR/STACK_RABATTE/
+   RABATT_AUF_GETRAENKE), damit sie später leicht angepasst werden können.
+   Details siehe README. */
+
+// Mindestbestellwert für Lieferung, nur Speisen (ohne Getränke).
+// Laut Speisekarte: 15,00 € Standard. Bei Lieferungen über 6 km gilt laut Speisekarte
+// ein höherer Mindestbestellwert (20,00 €) PLUS Liefergebühr — das ist hier NICHT
+// abgebildet (siehe DELIVERY_ZONES-Kommentar oben und README, Abschnitt
+// "Vor Live-Gang mit dem Inhaber klären"). Aktuell gilt für alle Lieferungen 15 €.
+const MINDESTBESTELLWERT   = 15;
+
+// Abholrabatt & Neukundenrabatt: Restaurant Pizzeria Capri hat KEIN Rabattprogramm
+// angegeben. Beide bleiben daher bewusst DEAKTIVIERT — die komplette Rechenlogik aus
+// der Vorlage bleibt erhalten (nicht gelöscht), damit der Inhaber sie bei Bedarf später
+// per Umschalten auf `true` aktivieren kann.
+const ABHOL_RABATT_AKTIV   = false;
+const NEUKUNDE_RABATT_AKTIV = false;
+const STACK_RABATTE        = false;  // false = nur der GRÖSSERE Rabatt zählt
+const RABATT_AUF_GETRAENKE = false;  // false = Rabatte gelten NICHT auf Getränke (nur auf Speisen)
+const ABHOL_RABATT_PCT     = 0.15;   // Platzhalter, aktuell inaktiv (siehe ABHOL_RABATT_AKTIV)
+const NEUKUNDE_RABATT_PCT  = 0.10;   // Platzhalter, aktuell inaktiv (siehe NEUKUNDE_RABATT_AKTIV)
+
+// Gratis-Getränk ab Bestellwert: ebenfalls NICHT von der Speisekarte gestützt — daher
+// deaktiviert. FREE_DRINK_AKTIV=false blendet alle Gratis-Getränk-Hinweise aus; der
+// Schwellenwert bleibt als Platzhalter erhalten für den Fall, dass der Inhaber das
+// Feature später doch möchte.
+const FREE_DRINK_AKTIV      = false;
+const FREE_DRINK_THRESHOLD = 48;
+
+/* Rundung NUR für Anzeige/Summen (Cent-genau, gegen Floating-Point-Fehler). */
+function round2(x){ return Math.round((x + Number.EPSILON) * 100) / 100; }
+
+/* Warenkorb getrennt nach Speisen / Getränken (Artikelpreise unverändert). */
+function cartBreakdown(){
+  let food = 0, drinks = 0;
+  for(const i of cart){
+    const line = i.price * i.qty;
+    if(i.isDrink) drinks += line; else food += line;
+  }
+  return { food, drinks, sub: food + drinks };
+}
+
+/* Aktuell gewählte Liefergebühr je nach Zone (siehe DELIVERY_ZONES oben). */
+function currentZoneFee(){
+  const zone = DELIVERY_ZONES.find(z => z.id === deliveryZoneId);
+  return zone ? zone.fee : DELIVERY_ZONES[0].fee;
+}
+
+/* Zentrale Preisberechnung — überall genutzt (Warenkorb, Checkout, Bon). */
+function computeTotals(){
+  const { food, drinks, sub } = cartBreakdown();
+  const base = RABATT_AUF_GETRAENKE ? sub : food;
+  const abholRaw = (ABHOL_RABATT_AKTIV && orderMode === 'abholen' && base > 0) ? base * ABHOL_RABATT_PCT : 0;
+  const neuRaw   = (NEUKUNDE_RABATT_AKTIV && firstOrderEligible() && base > 0) ? base * NEUKUNDE_RABATT_PCT : 0;
+  let abhol, neu;
+  if(STACK_RABATTE){
+    abhol = abholRaw; neu = neuRaw;
+  } else {
+    if(abholRaw >= neuRaw){ abhol = abholRaw; neu = 0; }
+    else { abhol = 0; neu = neuRaw; }
+  }
+  abhol = round2(abhol); neu = round2(neu);
+  const afterDisc = Math.max(0, round2(sub - abhol - neu));
+  // Liefergebühr NACH Rabatt addieren (nur Lieferung, ab Warenkorb > 0), zonenabhängig (NEU).
+  const delivery = (orderMode === 'abholen' || sub === 0) ? 0 : currentZoneFee();
+  // Gratis-Getränk-Feature: aktuell deaktiviert (FREE_DRINK_AKTIV), da nicht auf der Speisekarte gestützt.
+  const freeDrinkEligible = FREE_DRINK_AKTIV && sub >= FREE_DRINK_THRESHOLD;
+  return { food: round2(food), drinks: round2(drinks), sub: round2(sub), abhol, neu, delivery, freeDrinkEligible, grand: round2(afterDisc + delivery) };
+}
+
+/* ── Rechtliches (AGB / Datenschutz / Cookies / Impressum) ──
+   Laut Projektanweisung noch KEINE echten Rechtstexte — nur Platzhalter,
+   bis die Geschäftsdaten des Inhabers (Rechtsform, USt-IdNr. etc.) vorliegen.
+   Die Modal-/Link-Struktur bleibt vollständig erhalten, damit später einfach
+   der echte Text eingefügt werden kann. */
+const LEGAL_PLACEHOLDER = '<p>Diese Seite wird in Kürze vervollständigt.</p>';
+const LEGAL_DOCS = {
+  impressum:   { title: 'Impressum', html: LEGAL_PLACEHOLDER },
+  datenschutz: { title: 'Datenschutzerklärung', html: LEGAL_PLACEHOLDER },
+  cookies:     { title: 'Verwendung von Cookies', html: LEGAL_PLACEHOLDER },
+  agb:         { title: 'Allgemeine Geschäftsbedingungen (AGB)', html: LEGAL_PLACEHOLDER },
+};
+
+function openLegal(id){
+  const doc = LEGAL_DOCS[id];
+  if(!doc) return;
+  document.getElementById('legal-title').textContent = doc.title;
+  document.getElementById('legal-body').innerHTML = doc.html;
+  document.getElementById('legal-overlay').classList.add('open');
+  document.getElementById('legal-modal').scrollTop = 0;
+}
+function closeLegal(){ document.getElementById('legal-overlay').classList.remove('open'); }
+
+/* ── Tischreservierung (neu, kein Bestandteil der Vorlage) ──────────────
+   Rein clientseitig: Anfragen werden als wachsende Liste in localStorage
+   gespeichert (analog zu ORDERED_PHONES_KEY/PROFILE_KEY oben) — es gibt
+   KEIN Backend und KEINE automatische Benachrichtigung an das Restaurant.
+   Die UI macht das an mehreren Stellen explizit klar (siehe
+   renderReservationForm/renderReservationConfirmation), damit Gäste die
+   Anfrage nicht mit einer verbindlichen Tischbestätigung verwechseln. */
+const RESERVATIONS_KEY = 'pizzeriacapriReservations';
+function getReservations(){ try{ return JSON.parse(localStorage.getItem(RESERVATIONS_KEY) || '[]'); }catch(e){ return []; } }
+function saveReservation(r){ const list = getReservations(); list.push(r); localStorage.setItem(RESERVATIONS_KEY, JSON.stringify(list)); }
+
+let resGuestCount = 2;
+function changeResGuests(delta){
+  resGuestCount = Math.min(20, Math.max(1, resGuestCount + delta));
+  const el = document.getElementById('res-guests-val');
+  if(el) el.textContent = resGuestCount;
+}
+
+function openReservation(){ renderReservationForm(); document.getElementById('reservation-overlay').classList.add('open'); }
+function closeReservation(){ document.getElementById('reservation-overlay').classList.remove('open'); }
+
+function renderReservationForm(){
+  resGuestCount = 2;
+  const p = getProfile();
+  const body = document.getElementById('reservation-body');
+  document.getElementById('reservation-title').textContent = 'Tisch reservieren';
+  const minDate = new Date().toISOString().slice(0,10);
+  body.innerHTML = `
+    <div class="res-notice">
+      <b>Wichtiger Hinweis:</b> Diese Anfrage wird nur in Ihrem Browser gespeichert und ist
+      <b>noch keine verbindliche Bestätigung</b> durch das Restaurant. Wir rufen Sie zur
+      Bestätigung Ihrer Reservierung zurück. Bei Gruppen über 20 Personen oder sehr
+      kurzfristigen Wünschen rufen Sie uns bitte direkt an:
+      <a href="tel:+4921747646 80" style="color:var(--brand3)">02174 76 46 80</a>.
+    </div>
+    <div class="co-section">
+      <div class="co-section-title">Ihre Daten</div>
+      <div class="co-form-grid">
+        <div class="co-field"><label class="co-label">Vorname *</label><input class="co-input" id="res-fname" value="${p&&p.fname||''}" placeholder="Max"></div>
+        <div class="co-field"><label class="co-label">Nachname *</label><input class="co-input" id="res-lname" value="${p&&p.lname||''}" placeholder="Mustermann"></div>
+        <div class="co-field full"><label class="co-label">Telefon *</label><input class="co-input" id="res-phone" type="tel" value="${p&&p.phone||''}" placeholder="+49 123 456789"></div>
+        <div class="co-field full"><label class="co-label">E-Mail (optional)</label><input class="co-input" id="res-email" type="email" placeholder="max@beispiel.de"></div>
+      </div>
+    </div>
+    <div class="co-section">
+      <div class="co-section-title">Reservierung</div>
+      <div class="co-form-grid">
+        <div class="co-field"><label class="co-label">Datum *</label><input class="co-input" id="res-date" type="date" min="${minDate}"></div>
+        <div class="co-field"><label class="co-label">Uhrzeit *</label><input class="co-input" id="res-time" type="time"></div>
+        <div class="co-field full">
+          <label class="co-label">Personenzahl * (1–20; größere Gruppen bitte anrufen)</label>
+          <div class="res-guest-stepper">
+            <button type="button" onclick="changeResGuests(-1)">−</button>
+            <span id="res-guests-val">2</span>
+            <button type="button" onclick="changeResGuests(1)">+</button>
+          </div>
+        </div>
+        <div class="co-field full"><label class="co-label">Nachricht (optional)</label><input class="co-input" id="res-note" placeholder="z. B. Fensterplatz, Hochstuhl, Allergien"></div>
+      </div>
+    </div>
+    <div id="res-error" class="res-error"></div>
+    <button class="btn btn-primary" style="width:100%" onclick="submitReservation()">Reservierungsanfrage senden</button>
+  `;
+}
+
+/* Mindestvorlauf für Reservierungsanfragen: mind. 2 Stunden ab jetzt, damit das
+   Personal realistisch noch reagieren/zurückrufen kann. Rein clientseitig geprüft. */
+const RESERVATION_MIN_LEAD_MINUTES = 120;
+
+function submitReservation(){
+  const fname = document.getElementById('res-fname').value.trim();
+  const lname = document.getElementById('res-lname').value.trim();
+  const phone = document.getElementById('res-phone').value.trim();
+  const email = document.getElementById('res-email').value.trim();
+  const date = document.getElementById('res-date').value;
+  const time = document.getElementById('res-time').value;
+  const note = document.getElementById('res-note').value.trim();
+  const guests = resGuestCount;
+  const errEl = document.getElementById('res-error');
+  const showErr = msg => { if(errEl) errEl.textContent = msg; };
+
+  if(!fname || !lname || !phone){ showErr('Bitte Vorname, Nachname und Telefonnummer angeben.'); return; }
+  if(!date || !time){ showErr('Bitte Datum und Uhrzeit wählen.'); return; }
+  if(guests > 20){ showErr('Für Gruppen über 20 Personen bitte direkt anrufen: 02174 76 46 80.'); return; }
+
+  const d = new Date(date + 'T' + time + ':00');
+  if(isNaN(d.getTime())){ showErr('Ungültiges Datum/Uhrzeit.'); return; }
+
+  const day = d.getDay();
+  const oh = openingHours(day);
+  if(oh.closed){ showErr('Am gewählten Tag (Mittwoch) ist Ruhetag — bitte einen anderen Tag wählen.'); return; }
+  const inAnyWindow = oh.windows.some(w => time >= w[0] && time <= w[1]);
+  if(!inAnyWindow){ showErr(`Am gewählten Tag sind wir nur ${openingHoursLabel(day)} geöffnet.`); return; }
+
+  const diffMin = (d.getTime() - Date.now()) / 60000;
+  if(diffMin < RESERVATION_MIN_LEAD_MINUTES){
+    showErr('Bitte mindestens 2 Stunden im Voraus reservieren. Für sehr kurzfristige Anfragen rufen Sie uns bitte direkt an: 02174 76 46 80.');
+    return;
+  }
+
+  const reservation = {
+    id: 'RES-' + Date.now().toString().slice(-6),
+    createdAt: new Date().toISOString(),
+    fname, lname, phone, email, date, time, guests, note,
+    status: 'angefragt', // NICHT vom Restaurant bestätigt — nur lokal gespeichert, siehe Hinweis in der UI
+  };
+  saveReservation(reservation);
+  renderReservationConfirmation(reservation);
+}
+
+function renderReservationConfirmation(r){
+  const body = document.getElementById('reservation-body');
+  document.getElementById('reservation-title').textContent = 'Reservierungsanfrage gesendet';
+  const dateLabel = new Date(r.date + 'T' + r.time + ':00').toLocaleDateString('de-DE', {weekday:'long', day:'2-digit', month:'2-digit', year:'numeric'});
+  body.innerHTML = `
+    <div class="res-confirm-box">
+      <div class="res-confirm-emoji">📞</div>
+      <div class="res-confirm-title">Vielen Dank, ${r.fname}!</div>
+      <p style="font-size:13px;color:var(--t2);line-height:1.7;max-width:420px">
+        Ihre Reservierungsanfrage wurde gespeichert. <b>Dies ist noch keine verbindliche
+        Bestätigung durch das Restaurant</b> — wir melden uns telefonisch bei Ihnen unter
+        ${r.phone}, um Ihre Reservierung zu bestätigen.
+      </p>
+    </div>
+    <div class="acc-rows">
+      <div class="acc-row"><span>Referenz</span><span>${r.id}</span></div>
+      <div class="acc-row"><span>Datum</span><span>${dateLabel}</span></div>
+      <div class="acc-row"><span>Uhrzeit</span><span>${r.time} Uhr</span></div>
+      <div class="acc-row"><span>Personen</span><span>${r.guests}</span></div>
+      ${r.note ? `<div class="acc-row"><span>Notiz</span><span>${r.note}</span></div>` : ''}
+    </div>
+    <button class="btn btn-outline" style="width:100%" onclick="closeReservation()">Schließen</button>
+  `;
+}
+
+/* ── Konto-Modal ─────────────────────────────────────── */
+function openAccount(){ renderAccount(false); document.getElementById('account-overlay').classList.add('open'); }
+function closeAccount(){ document.getElementById('account-overlay').classList.remove('open'); }
+
+function renderAccount(edit){
+  const p = getProfile();
+  const body = document.getElementById('account-body');
+  document.getElementById('account-title').textContent = (p && !edit) ? 'Mein Konto' : 'Registrieren';
+  if(p && !edit){
+    body.innerHTML = `
+      <div style="display:flex;flex-direction:column;gap:16px">
+        <div>
+          <div class="acc-greet">Hallo, ${p.fname}! 👋</div>
+          ${(NEUKUNDE_RABATT_AKTIV && !p.hasOrdered)
+            ? `<span class="acc-badge">🎁 ${(NEUKUNDE_RABATT_PCT*100).toFixed(0)}% Rabatt bei Ihrer ersten Bestellung</span>`
+            : `<span class="acc-badge" style="background:var(--brand-bg);color:var(--brand3);border-color:var(--brand-b)">⭐ Willkommen zurück</span>`}
+        </div>
+        <div class="acc-rows">
+          <div class="acc-row"><span>Name</span><span>${p.fname} ${p.lname||''}</span></div>
+          <div class="acc-row"><span>Telefon</span><span>${p.phone||'—'}</span></div>
+          ${p.email ? `<div class="acc-row"><span>E-Mail</span><span>${p.email}</span></div>` : ''}
+          ${(p.street||p.plz||p.city) ? `<div class="acc-row"><span>Adresse</span><span>${[p.street,[p.plz,p.city].filter(Boolean).join(' ')].filter(Boolean).join(', ')}</span></div>` : ''}
+        </div>
+        <div style="display:flex;gap:10px">
+          <button class="btn btn-print" style="flex:1" onclick="renderAccount(true)">Daten bearbeiten</button>
+          <button class="btn btn-primary" style="flex:1" onclick="closeAccount()">Schließen</button>
+        </div>
+        <button onclick="logoutUser()" style="background:none;border:none;color:var(--t3);font-size:12px;cursor:pointer;text-decoration:underline">Abmelden</button>
+      </div>`;
+  } else {
+    const v = p || {};
+    body.innerHTML = `
+      <div style="display:flex;flex-direction:column;gap:16px">
+        ${NEUKUNDE_RABATT_AKTIV ? `
+        <div class="acc-hero">
+          <span class="acc-hero-emoji">🎁</span>
+          <div>
+            <div class="acc-hero-t">${(NEUKUNDE_RABATT_PCT*100).toFixed(0)}% Rabatt auf Ihre erste Bestellung</div>
+            <div class="acc-hero-s">Kostenlos registrieren und bei der ersten Bestellung über die App sparen.</div>
+          </div>
+        </div>` : `
+        <div class="acc-hero">
+          <span class="acc-hero-emoji">👤</span>
+          <div>
+            <div class="acc-hero-t">Registrieren für schnelleres Bestellen</div>
+            <div class="acc-hero-s">Ihre Daten werden für den nächsten Checkout vorausgefüllt.</div>
+          </div>
+        </div>`}
+        <div class="co-form-grid">
+          <div class="co-field"><label class="co-label">Vorname *</label><input class="co-input" id="rg-fname" value="${v.fname||''}" placeholder="Max"></div>
+          <div class="co-field"><label class="co-label">Nachname</label><input class="co-input" id="rg-lname" value="${v.lname||''}" placeholder="Mustermann"></div>
+          <div class="co-field full"><label class="co-label">Telefon *</label><input class="co-input" id="rg-phone" type="tel" value="${v.phone||''}" placeholder="+49 123 456789"></div>
+          <div class="co-field full"><label class="co-label">E-Mail (optional)</label><input class="co-input" id="rg-email" type="email" value="${v.email||''}" placeholder="ihre@email.de"></div>
+          <div class="co-field full"><label class="co-label">Straße & Hausnr. (optional)</label><input class="co-input" id="rg-street" value="${v.street||''}" placeholder="Musterstraße 1"></div>
+          <div class="co-field"><label class="co-label">PLZ</label><input class="co-input" id="rg-plz" value="${v.plz||''}" placeholder="42929"></div>
+          <div class="co-field"><label class="co-label">Stadt</label><input class="co-input" id="rg-city" value="${v.city||'Burscheid'}" placeholder="Burscheid"></div>
+        </div>
+        <button class="btn btn-primary" style="width:100%" onclick="registerUser()">${p ? 'Speichern' : 'Registrieren'}</button>
+        <div class="acc-note">Ihre Daten werden nur auf diesem Gerät gespeichert (kein Server, DSGVO-freundlich).</div>
+        ${p ? `<button onclick="renderAccount(false)" style="background:none;border:none;color:var(--t3);font-size:12px;cursor:pointer;text-decoration:underline">Abbrechen</button>` : ''}
+      </div>`;
+  }
+}
+
+function registerUser(){
+  const fname = (document.getElementById('rg-fname').value||'').trim();
+  const phone = (document.getElementById('rg-phone').value||'').trim();
+  if(!fname || !phone){ showToast('Bitte Vorname und Telefon ausfüllen'); return; }
+  const existing = getProfile() || {};
+  saveProfile({
+    fname, phone,
+    lname:  (document.getElementById('rg-lname').value||'').trim(),
+    email:  (document.getElementById('rg-email').value||'').trim(),
+    street: (document.getElementById('rg-street').value||'').trim(),
+    plz:    (document.getElementById('rg-plz').value||'').trim(),
+    city:   (document.getElementById('rg-city').value||'').trim(),
+    registeredAt: existing.registeredAt || Date.now(),
+    hasOrdered:   existing.hasOrdered   || false
+  });
+  updateNavAccount(); updateCart(); updateHeroPromo(); renderAccount(false);
+  showToast(existing.fname ? 'Daten gespeichert ✓' : 'Willkommen bei Restaurant Pizzeria Capri!');
+}
+
+function logoutUser(){
+  localStorage.removeItem(PROFILE_KEY);
+  updateNavAccount(); updateCart(); updateHeroPromo(); renderAccount(false);
+  showToast('Abgemeldet');
+}
+
+function updateCart(){
+  const t = computeTotals();
+  const count = cart.reduce((s,i) => s + i.qty, 0);
+  document.getElementById('cart-count').textContent = count;
+  document.getElementById('subtotal').textContent = `€${t.sub.toFixed(2)}`;
+  document.getElementById('cart-total').textContent = `€${t.grand.toFixed(2)}`;
+  document.getElementById('delivery-cost').textContent = orderMode==='abholen' ? '✓ Kostenlos' : (t.delivery===0 ? '✓ Kostenlos' : `€${t.delivery.toFixed(2)}`);
+  const discRow = document.getElementById('discount-row');
+  discRow.style.display = t.abhol > 0 ? 'flex' : 'none';
+  document.getElementById('discount-amount').textContent = `-€${t.abhol.toFixed(2)}`;
+  const ncRow = document.getElementById('newcust-row');
+  ncRow.style.display = t.neu > 0 ? 'flex' : 'none';
+  document.getElementById('newcust-amount').textContent = `-€${t.neu.toFixed(2)}`;
+  const freeDrinkNote = document.getElementById('cart-free-drink-note');
+  if(freeDrinkNote) freeDrinkNote.style.display = t.freeDrinkEligible ? 'flex' : 'none';
+  const registerHint = document.getElementById('register-hint');
+  if(registerHint) registerHint.style.display = (NEUKUNDE_RABATT_AKTIV && !getProfile() && !hasGuestOrdered() && !phoneHasOrdered(getLastCheckoutPhone()) && t.sub > 0) ? 'block' : 'none';
+  updateOrderBtnState(t);
+  const footer = document.getElementById('cart-footer'), itemsEl = document.getElementById('cart-items');
+  itemsEl.innerHTML = '';
+  if(cart.length === 0){
+    footer.style.display = 'none';
+    itemsEl.innerHTML = `<div class="cart-empty" id="cart-empty"><svg width="48" height="48" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.2"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 002 1.61h9.72a2 2 0 002-1.61L23 6H6"/></svg><span>Ihr Warenkorb ist leer</span></div>`;
+  } else {
+    footer.style.display = 'block';
+    cart.forEach(item => {
+      const row = document.createElement('div');
+      row.className = 'cart-item';
+      const isEditable = (item.extras && item.extras.length) || (item.sauces && item.sauces.length);
+      row.innerHTML = `
+        <div class="ci-emoji">${item.emoji}</div>
+        <div class="ci-info">
+          <div class="ci-name-row">
+            <div class="ci-name">${item.name}</div>
+            <div class="ci-name-actions">
+              ${isEditable ? `<button class="ci-edit" title="Extras ändern"><svg width="13" height="13" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M12 20h9M16.5 3.5a2.12 2.12 0 013 3L7 19l-4 1 1-4L16.5 3.5z"/></svg></button>` : ''}
+              <button class="ci-del" title="Entfernen"><svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path d="M18 6L6 18M6 6l12 12"/></svg></button>
+            </div>
+          </div>
+          <div class="ci-price">€${(item.price*item.qty).toFixed(2)}</div>
+          <div class="ci-qty"><div class="cqb" data-d="-1">−</div><div class="cqn">${item.qty}</div><div class="cqb" data-d="1">+</div></div>
+        </div>`;
+      row.querySelector('.ci-del').addEventListener('click', () => { cart = cart.filter(c => c.key !== item.key); updateCart(); });
+      if(isEditable) row.querySelector('.ci-edit').addEventListener('click', () => editCartItem(item.key));
+      row.querySelectorAll('.cqb').forEach(btn => btn.addEventListener('click', () => chgQty(item.key, parseInt(btn.dataset.d))));
+      itemsEl.appendChild(row);
+    });
+  }
+}
+
+function toggleCart(){
+  document.getElementById('cart').classList.toggle('open');
+  document.getElementById('cart-overlay').classList.toggle('open');
+}
+
+let selectedPayment = 'cash';
+function selectPay(method){
+  selectedPayment = method;
+  ['cash','card','paypal'].forEach(m => {
+    document.getElementById('pay-'+m).classList.toggle('selected', m === method);
+    document.getElementById('pay-'+m).querySelector('input').checked = (m === method);
+  });
+}
+
+/* Prüft, ob eine Bestellung gerade aufgegeben werden darf. */
+function orderBlockedReason(totals){
+  if(cart.length === 0) return 'empty';
+  if(orderMode === 'liefern' && totals.food < MINDESTBESTELLWERT) return 'min-order';
+  return null;
+}
+
+function updateOrderBtnState(totals){
+  const btn = document.querySelector('.cart-order-btn');
+  if(!btn) return;
+  const blocked = orderBlockedReason(totals);
+  btn.classList.toggle('btn-disabled', !!blocked);
+  btn.setAttribute('aria-disabled', blocked ? 'true' : 'false');
+
+  const hint = document.getElementById('order-blocked-hint');
+  if(hint){
+    if(blocked === 'min-order'){
+      const missing = (MINDESTBESTELLWERT - totals.food).toFixed(2);
+      hint.textContent = `Noch €${missing} bis zum Mindestbestellwert von €${MINDESTBESTELLWERT.toFixed(2)} für Lieferung`;
+      hint.style.display = 'block';
+    } else {
+      hint.style.display = 'none';
+    }
+  }
+}
+
+function placeOrder(){
+  const totals = computeTotals();
+  const blocked = orderBlockedReason(totals);
+  if(blocked === 'empty') return;
+  if(blocked === 'min-order'){
+    showToastMsg(`Mindestbestellwert €${MINDESTBESTELLWERT.toFixed(2)} (ohne Getränke) für Lieferung`);
+    return;
+  }
+  toggleCart();
+  openCheckout();
+}
+
+/* ── Öffnungszeiten & Lieferfenster ─────────────────────
+   Echte Öffnungszeiten laut Speisekarte (gültig ab 05/2025):
+   - Mo, Di, Do: 11:30–14:00 UND 16:00–22:00 (Mittagslücke 14:00–16:00, kein
+     "nur Abholung"-Modus laut Karte — das Lokal ist in der Lücke schlicht ZU).
+   - Mittwoch: Ruhetag (komplett geschlossen).
+   - Fr, Sa, So, Feiertage: durchgehend 12:00–22:00.
+   `windows` enthält je Tag ein oder zwei [open,close]-Zeitfenster; `open`/`close`
+   bleiben zusätzlich als Gesamtspanne (erstes Fenster-Open bis letztes Fenster-Close)
+   erhalten, damit bestehende UI-Stellen (Abholzeit-Input min/max) weiterhin funktionieren.
+   TODO: Gesetzliche Feiertage werden hier NICHT erkannt (kein Feiertagskalender
+   eingebaut) — an Feiertagen gelten technisch die Mo/Di/Do- bzw. Fr-Zeiten je nach
+   Wochentag, obwohl laut Speisekarte an Feiertagen durchgehend 12–22 Uhr gelten sollte.
+   Personal muss das an Feiertagen ggf. manuell berücksichtigen. */
+function openingHours(day){ // day: 0=So,1=Mo,2=Di,3=Mi,4=Do,5=Fr,6=Sa
+  if(day === 3) return { closed:true, open:null, close:null, windows:[] }; // Mittwoch Ruhetag
+  if(day === 1 || day === 2 || day === 4){ // Mo/Di/Do: Mittagsfenster + Abendfenster
+    return { closed:false, open:'11:30', close:'22:00', windows:[['11:30','14:00'],['16:00','22:00']] };
+  }
+  return { closed:false, open:'12:00', close:'22:00', windows:[['12:00','22:00']] }; // Fr/Sa/So/Feiertage
+}
+function pad2(n){ return String(n).padStart(2,'0'); }
+function nowHHMM(){ const d = new Date(); return pad2(d.getHours())+':'+pad2(d.getMinutes()); }
+function addMinutes(hhmm, mins){
+  const [h,m] = hhmm.split(':').map(Number);
+  const t = h*60 + m + mins;
+  return pad2(Math.floor((t%1440)/60)) + ':' + pad2(t%60);
+}
+/* Menschlich lesbare Öffnungszeiten-Zusammenfassung für einen Tag (für UI-Hinweise
+   der Speisen-Bestellung UND der neuen Tischreservierung). */
+function openingHoursLabel(day){
+  const oh = openingHours(day);
+  if(oh.closed) return 'Ruhetag (geschlossen)';
+  return oh.windows.map(w => `${w[0]}–${w[1]} Uhr`).join(' & ');
+}
+
+/* Prüft, ob Lieferung gerade grundsätzlich möglich ist (unabhängig von einer
+   konkreten Bestellung). Mo/Di/Do gibt es zwei Fenster (Mittag/Abend) mit einer
+   geschlossenen Lücke dazwischen; an allen Öffnungstagen gilt zusätzlich ein
+   15-Minuten-Lieferschluss vor dem jeweiligen Fenster-Ende. */
+function deliveryWindowStatus(day, hhmm){
+  const oh = openingHours(day);
+  if(oh.closed) return { deliveryAvailable:false, reason:'closed', oh };
+  for(const w of oh.windows){
+    const cutoff = addMinutes(w[1], -15);
+    if(hhmm >= w[0] && hhmm <= cutoff) return { deliveryAvailable:true, reason:null, oh };
+  }
+  if(hhmm < oh.open || hhmm > oh.close) return { deliveryAvailable:false, reason:'cutoff', oh };
+  return { deliveryAvailable:false, reason:'midday-gap', oh };
+}
+function deliveryUnavailableMessage(status){
+  if(status.reason === 'closed') return 'Heute (Mittwoch) ist Ruhetag — Bestellungen sind nicht möglich.';
+  if(status.reason === 'midday-gap') return 'Wir haben gerade Mittagspause (14:00–16:00 Uhr) — bitte später erneut versuchen.';
+  if(status.reason === 'cutoff') return `Heute geöffnet: ${status.oh.windows.map(w=>w[0]+'–'+w[1]).join(' & ')} Uhr.`;
+  return '';
+}
+/* Aktualisiert die Hero-Hinweisbox und deaktiviert den "Liefern"-Button, wenn
+   Lieferung gerade nicht angeboten wird (Mittagslücke, Ladenschluss, Ruhetag). */
+function updateDeliveryAvailabilityUI(){
+  const status = deliveryWindowStatus(new Date().getDay(), nowHHMM());
+  const btn = document.getElementById('btn-liefern');
+  const note = document.getElementById('delivery-restricted-note');
+  const noteText = document.getElementById('delivery-restricted-text');
+  if(btn) btn.disabled = !status.deliveryAvailable;
+  if(note){
+    note.style.display = status.deliveryAvailable ? 'none' : 'flex';
+    if(noteText) noteText.textContent = deliveryUnavailableMessage(status);
+  }
+}
+
+/* ── Abholzeit ───────────────────────── */
+function setupPickupTime(){
+  const inp = document.getElementById('co-time'); if(!inp) return;
+  const oh = openingHours(new Date().getDay());
+  const noteEl = document.getElementById('co-time-note');
+  if(oh.closed){
+    if(noteEl) noteEl.textContent = 'Heute (Mittwoch) ist Ruhetag.';
+    return;
+  }
+  inp.min = oh.open; inp.max = oh.close; // Gesamtspanne; Mittagslücke wird zusätzlich in validatePickupTime geprüft
+  let def = addMinutes(nowHHMM(), 30);
+  const inAnyWindow = oh.windows.some(w => def >= w[0] && def <= w[1]);
+  if(!inAnyWindow) def = oh.windows[0][0];
+  inp.value = def;
+  if(noteEl){
+    const closedNow = nowHHMM() > oh.close;
+    noteEl.textContent = closedNow
+      ? `Heute bereits geschlossen (${openingHoursLabel(new Date().getDay())}). Bitte Zeit innerhalb der Öffnungszeiten wählen.`
+      : `Heute geöffnet: ${openingHoursLabel(new Date().getDay())}`;
+  }
+}
+function validatePickupTime(){
+  const inp = document.getElementById('co-time'); if(!inp) return '';
+  const v = inp.value;
+  if(!v) return 'Bitte Abholzeit wählen';
+  const oh = openingHours(new Date().getDay());
+  if(oh.closed) return 'Heute (Mittwoch) ist Ruhetag';
+  const inAnyWindow = oh.windows.some(w => v >= w[0] && v <= w[1]);
+  if(!inAnyWindow) return `Abholung heute nur zwischen ${openingHoursLabel(new Date().getDay())} möglich`;
+  if(v < nowHHMM()) return 'Die gewählte Abholzeit liegt in der Vergangenheit';
+  return '';
+}
+
+function openCheckout(){
+  buildCoTable();
+  autofillCheckout();
+  renderZoneSelect();
+  const isAbhol = orderMode === 'abholen';
+  document.getElementById('co-time-section').classList.toggle('show', isAbhol);
+  document.getElementById('co-address-wrap').style.display = isAbhol ? 'none' : 'block';
+  document.getElementById('co-zone-wrap').style.display = isAbhol ? 'none' : 'block';
+  if(isAbhol) setupPickupTime();
+  document.getElementById('checkout-overlay').classList.add('open');
+}
+function closeCheckout(){ document.getElementById('checkout-overlay').classList.remove('open'); }
+
+function autofillCheckout(){
+  const p = getProfile(); if(!p) return;
+  const set = (id,val) => { const el = document.getElementById(id); if(el && !el.value && val) el.value = val; };
+  set('co-fname', p.fname); set('co-lname', p.lname); set('co-phone', p.phone);
+  const addr = document.getElementById('co-address');
+  if(addr && !addr.value){ const a = [p.street, [p.plz,p.city].filter(Boolean).join(' ')].filter(Boolean).join(', '); if(a) addr.value = a; }
+}
+
+function buildCoTable(){
+  const t = computeTotals();
+  let rows = cart.map(i => `<tr><td>${i.name}</td><td style="text-align:center">${i.qty}×</td><td>€${(i.price*i.qty).toFixed(2)}</td></tr>`).join('');
+  if(t.abhol > 0) rows += `<tr class="co-discount-row"><td colspan="2">✓ Abholrabatt</td><td>-€${t.abhol.toFixed(2)}</td></tr>`;
+  if(t.neu   > 0) rows += `<tr class="co-discount-row"><td colspan="2">🎁 Neukundenrabatt</td><td>-€${t.neu.toFixed(2)}</td></tr>`;
+  if(t.freeDrinkEligible) rows += `<tr class="co-discount-row"><td colspan="2">🎁 Gratis-Getränk (ab €${FREE_DRINK_THRESHOLD})</td><td>€0.00</td></tr>`;
+  rows += `<tr><td colspan="2" style="color:var(--t2);font-size:12px">Lieferung</td><td style="color:var(--t2);font-size:12px">${t.delivery===0?'✓ Kostenlos':'€'+t.delivery.toFixed(2)}</td></tr>`;
+  rows += `<tr class="co-total-row"><td colspan="2">Gesamt</td><td>€${t.grand.toFixed(2)}</td></tr>`;
+  document.getElementById('co-items').innerHTML = rows;
+}
+
+function submitOrder(){
+  const fname = document.getElementById('co-fname').value.trim();
+  const lname = document.getElementById('co-lname').value.trim();
+  const phone = document.getElementById('co-phone').value.trim();
+  if(!fname || !lname || !phone){ showToast('Bitte Pflichtfelder ausfüllen'); return; }
+  saveLastCheckoutPhone(phone);
+  if(orderMode === 'abholen'){
+    const err = validatePickupTime();
+    if(err){ showToast(err); return; }
+  }
+  printOrder();
+}
+
+/* Sammelt alle Bestelldaten an einer Stelle — genutzt vom lokalen Kassenbon (printOrder).
+   HINWEIS: Es gibt hier (noch) KEINEN POST an /api/order, da
+   Restaurant Pizzeria Capri noch keine Backend-/Küchendruck-Infrastruktur hat (kein api/-Ordner in
+   diesem Projekt). Der Kassenbon wird ausschließlich lokal im Browser gedruckt. */
+function buildOrderPayload(){
+  const fname = document.getElementById('co-fname').value.trim() || '—';
+  const lname = document.getElementById('co-lname').value.trim() || '';
+  const phone = document.getElementById('co-phone').value.trim() || '—';
+  const address = document.getElementById('co-address')?.value.trim() || '—';
+  const zone = DELIVERY_ZONES.find(z => z.id === deliveryZoneId);
+  const time = document.getElementById('co-time')?.value || '';
+  const orderNum = 'PC-' + Date.now().toString().slice(-6);
+  const t = computeTotals();
+  const payLabels = {cash:'Bar bei Übergabe', card:'Kartenzahlung', paypal:'PayPal'};
+  return {
+    orderNum,
+    mode: orderMode,
+    modeLabel: orderMode === 'abholen' ? 'ABHOLUNG' : 'LIEFERUNG',
+    customer: { fname, lname, phone, address: orderMode === 'liefern' ? address : null, zone: orderMode === 'liefern' ? (zone ? zone.name : '') : null, pickupTime: orderMode === 'abholen' ? time : null },
+    items: cart.map(i => ({ name: i.name, qty: i.qty, price: i.price, nr: i.nr })),
+    totals: t,
+    payment: payLabels[selectedPayment] || selectedPayment,
+  };
+}
+
+function printOrder(){
+  const payload = buildOrderPayload();
+  const { fname, lname, phone, address, zone, pickupTime: time } = payload.customer;
+  const now = new Date().toLocaleString('de-DE');
+  const orderNum = payload.orderNum;
+  const t = payload.totals;
+  const modeLabel = payload.modeLabel;
+  const itemRows = cart.map(i => `<tr><td>${i.nr ? `Nr. ${i.nr} ` : ''}${i.name}</td><td>${i.qty}×</td><td>€${(i.price*i.qty).toFixed(2)}</td></tr>`).join('');
+  document.getElementById('print-receipt').style.display = 'block';
+  document.getElementById('print-receipt').innerHTML = `
+    <div class="pr-logo">🍕 RESTAURANT PIZZERIA CAPRI</div>
+    <div class="pr-address">Kölner Str. 56, 51399 Burscheid-Hilgen · Tel: 02174 76 46 80</div>
+    <div class="pr-mode">${modeLabel}</div>
+    <div class="pr-meta">Bestell-Nr. ${orderNum} · ${now}</div>
+    <hr class="pr-divider-thin">
+    <table class="pr-table"><thead><tr><th>Artikel</th><th>Menge</th><th>Preis</th></tr></thead><tbody>${itemRows}</tbody></table>
+    <hr class="pr-divider-thin">
+    <div class="pr-summary">
+      <div class="pr-summary-row"><span>Zwischensumme</span><span>€${t.sub.toFixed(2)}</span></div>
+      ${t.abhol > 0 ? `<div class="pr-summary-row"><span>Abholrabatt</span><span>-€${t.abhol.toFixed(2)}</span></div>` : ''}
+      ${t.neu   > 0 ? `<div class="pr-summary-row"><span>🎁 Neukundenrabatt (${(NEUKUNDE_RABATT_PCT*100).toFixed(0)}%, 1. Bestellung)</span><span>-€${t.neu.toFixed(2)}</span></div>` : ''}
+      ${t.freeDrinkEligible ? `<div class="pr-summary-row"><span>Gratis-Getränk (ab €${FREE_DRINK_THRESHOLD})</span><span>€0.00</span></div>` : ''}
+      <div class="pr-summary-row"><span>Lieferung</span><span>${t.delivery===0?'Kostenlos':'€'+t.delivery.toFixed(2)}</span></div>
+      <div class="pr-summary-row total"><span>GESAMT</span><span>€${t.grand.toFixed(2)}</span></div>
+    </div>
+    <hr class="pr-divider">
+    <div class="pr-customer">
+      <h3>Kunde</h3>
+      <p><b>Name:</b> ${fname} ${lname}</p>
+      <p><b>Telefon:</b> ${phone}</p>
+      ${orderMode==='liefern' ? `<p><b>Adresse:</b> ${address}</p><p><b>Liefergebiet:</b> ${zone||'—'}</p>` : `<p><b>Abholzeit:</b> ${time} Uhr</p>`}
+      ${t.neu > 0 ? `<p><b>🎁 Erstbestellung</b> (Neukundenrabatt gewährt)</p>` : ''}
+    </div>
+    <div class="pr-payment">Zahlung: ${payload.payment}</div>
+    <div class="pr-footer">Vielen Dank für Ihre Bestellung!<br>Restaurant Pizzeria Capri · Burscheid-Hilgen</div>`;
+  const prof = getProfile();
+  if(NEUKUNDE_RABATT_AKTIV && prof && !prof.hasOrdered){ prof.hasOrdered = true; saveProfile(prof); updateNavAccount(); }
+  else if(!prof){ localStorage.setItem(GUEST_ORDERED_KEY, '1'); }
+  recordOrderedPhone(phone);
+  updateHeroPromo();
+  setTimeout(() => {
+    window.print();
+    document.getElementById('print-receipt').style.display = 'none';
+    closeCheckout();
+    cart = []; updateCart();
+    showToast('Bestellung aufgegeben! 🎉');
+  }, 100);
+}
+
+/* ── Toast ─────────────────────────────────────────── */
+let toastTimer;
+function showToast(name){
+  showToastMsg(`"${name}" hinzugefügt`);
+}
+function showToastMsg(msg){
+  const t = document.getElementById('toast');
+  document.getElementById('toast-msg').textContent = msg;
+  t.classList.add('show');
+  clearTimeout(toastTimer);
+  toastTimer = setTimeout(() => t.classList.remove('show'), 2500);
+}
+
+/* ── Render: Kategorien-Grid ──────────────────────────── */
+function itemCount(catId){
+  return ITEMS[catId].reduce((s,g) => s + g.list.length, 0);
+}
+function renderCatsGrid(){
+  const grid = document.getElementById('cats-grid');
+  grid.innerHTML = CATS.map(c => `
+    <div class="cat-tile" onclick="openCategory('${c.id}')">
+      <div class="cat-tile-img" style="background:linear-gradient(135deg,${c.accent}22,${c.accent}0d)">
+        ${c.img ? `<img src="${c.img}" alt="${c.title}" loading="lazy" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0">` : `<span style="position:relative;z-index:1">${c.emoji}</span>`}
+        <div class="cat-tile-img-overlay"></div>
+      </div>
+      <div class="cat-tile-body">
+        <div class="cat-tile-name">${c.title}</div>
+        <div class="cat-tile-count">${itemCount(c.id)} Gerichte</div>
+      </div>
+    </div>`).join('');
+}
+
+/* ── Render: Kategorie-Detail (Liste ohne Bild) ─────────── */
+function foodRow(catId, item){
+  const alSup = item.al ? `<sup class="al-codes">${item.al}</sup>` : '';
+  const veg = item.veg ? `<span class="food-row-veg">🌱 Veggie</span>` : '';
+  const addFn = catId === 'getraenke' ? 'addToCart' : 'openItemOptions';
+  let right;
+  if(item.sizes){
+    right = item.sizes.map((s,idx) => `
+      <div class="food-row-size">
+        <span class="size-lbl">${s}</span>
+        <span class="food-row-price">€${item.prices[idx].toFixed(2)}</span>
+        <button class="add-btn" onclick="${addFn}('${catId}','${item.nr}',${idx})" title="Hinzufügen">+</button>
+      </div>`).join('');
+  } else {
+    right = `<span class="food-row-price">€${item.price.toFixed(2)}</span><button class="add-btn" onclick="${addFn}('${catId}','${item.nr}')" title="Hinzufügen">+</button>`;
+  }
+  return `
+    <div class="food-row">
+      <div class="food-row-info">
+        <div class="food-row-name"><span class="food-row-nr">${item.nr}</span>${item.name}${alSup}${veg}</div>
+        ${item.desc ? `<div class="food-row-desc">${item.desc}</div>` : ''}
+      </div>
+      <div class="food-row-right">${right}</div>
+    </div>`;
+}
+
+let scrollBeforeDetail = 0;
+function openCategory(catId){
+  scrollBeforeDetail = window.scrollY;
+  const cat = CATS.find(c => c.id === catId);
+  document.getElementById('categories').style.display = 'none';
+  document.getElementById('hero').style.display = 'none';
+  document.getElementById('category-detail').style.display = 'block';
+  document.getElementById('cd-emoji').textContent = cat.emoji;
+  document.getElementById('cd-title').textContent = cat.title;
+  const content = document.getElementById('cd-content');
+  const banner = `
+    <div class="cat-banner" style="background:linear-gradient(135deg,${cat.accent}22,${cat.accent}0d)">
+      ${cat.img ? `<img src="${cat.img}" alt="${cat.title}" loading="lazy" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0">` : `<span class="cat-banner-emoji">${cat.emoji}</span>`}
+      <div class="cat-banner-overlay"></div>
+    </div>`;
+  content.innerHTML = banner + ITEMS[catId].map(grp => `
+    <div class="subcat-title">${grp.sub}</div>
+    ${grp.note ? `<div class="subcat-note">${grp.note}</div>` : ''}
+    ${grp.list.length ? `<div class="food-list">${grp.list.map(it => foodRow(catId, it)).join('')}</div>` : ''}
+  `).join('');
+  window.scrollTo({top:0, behavior:'smooth'});
+  setActiveNav('categories');
+}
+
+function goHome(){
+  document.getElementById('category-detail').style.display = 'none';
+  document.getElementById('hero').style.display = 'flex';
+  document.getElementById('categories').style.display = 'block';
+  window.scrollTo({top:0, behavior:'smooth'});
+  setActiveNav('hero');
+}
+
+/* Bringt den Kunden von der Kategorie-Detailseite exakt zurück an die Scroll-Position,
+   an der er vorher war (z.B. mitten im Kategorie-Raster), statt immer nach oben zu springen. */
+function backFromCategory(){
+  document.getElementById('category-detail').style.display = 'none';
+  document.getElementById('hero').style.display = 'flex';
+  document.getElementById('categories').style.display = 'block';
+  window.scrollTo({top: scrollBeforeDetail, behavior:'smooth'});
+  setActiveNav('categories');
+}
+
+function setActiveNav(id){
+  document.querySelectorAll('.nav-link').forEach(b => b.classList.remove('active'));
+  const el = document.getElementById('nl-' + id);
+  if(el) el.classList.add('active');
+}
+
+function scrollSec(id){ document.getElementById(id)?.scrollIntoView({behavior:'smooth'}); }
+
+/* ── Allergen-Legende ──────────────────────────────────── */
+function renderLegend(){
+  document.getElementById('al-additives').innerHTML = Object.entries(ADDITIVES).map(([k,v]) => `<span><b>${k}</b> ${v}</span>`).join('');
+  document.getElementById('al-allergens').innerHTML = Object.entries(ALLERGENS).map(([k,v]) => `<span><b>${k}</b> ${v}</span>`).join('');
+}
+
+/* ── Navbar scroll & mobile menu ─────────────────────── */
+window.addEventListener('scroll', () => {
+  document.getElementById('navbar').classList.toggle('scrolled', window.scrollY > 60);
+});
+let mobileOpen = false;
+function toggleMobile(){ mobileOpen = !mobileOpen; document.getElementById('mobile-menu').classList.toggle('open', mobileOpen); }
+function closeMobile(){ mobileOpen=false; document.getElementById('mobile-menu').classList.remove('open'); }
+document.addEventListener('click', e => {
+  if(!mobileOpen) return;
+  const menu = document.getElementById('mobile-menu'), burger = document.getElementById('burger');
+  if(!menu.contains(e.target) && !burger.contains(e.target)) closeMobile();
+});
+
+/* ── Reveal on scroll ─────────────────────────────────
+   Feature-detect IntersectionObserver: falls es fehlt (sehr alte Browser oder
+   Testumgebungen ohne DOM-Layout-Engine), werden die .reveal-Elemente sofort
+   sichtbar gemacht statt beim Scrollen einzublenden, damit die Seite trotzdem
+   nutzbar bleibt und der restliche Init-Code (Kategorien, Warenkorb) sicher läuft. */
+if(typeof IntersectionObserver !== 'undefined'){
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(e => { if(e.isIntersecting) e.target.classList.add('visible'); });
+  }, {threshold: 0.12});
+  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+} else {
+  document.querySelectorAll('.reveal').forEach(el => el.classList.add('visible'));
+}
+
+/* ── Init ────────────────────────────────────────────── */
+renderCatsGrid();
+renderLegend();
+updateNavAccount();
+updateHeroPromo();
+updateCart();
+setTimeout(() => { setMode('liefern', {silent:true}); }, 50);
+
+/* ── PWA Service Worker ──────────────────────────────── */
+if('serviceWorker' in navigator){
+  window.addEventListener('load', () => {
+    navigator.serviceWorker.register('sw.js').catch(()=>{});
+  });
+}
+</script>
+</body>
+</html>
+
+

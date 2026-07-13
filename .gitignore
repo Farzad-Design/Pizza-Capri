@@ -1,0 +1,13 @@
+# OS / Editor
+.DS_Store
+Thumbs.db
+*.log
+.vscode/
+.idea/
+
+# Node (falls später ein Build-Tool dazukommt)
+node_modules/
+
+# Interne Projekt-Quellen (nicht Teil der Website / nicht deployen)
+source/
+*.pdf
