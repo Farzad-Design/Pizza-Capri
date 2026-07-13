@@ -11,3 +11,5 @@ node_modules/
 # Interne Projekt-Quellen (nicht Teil der Website / nicht deployen)
 source/
 *.pdf
+
+.vercel
