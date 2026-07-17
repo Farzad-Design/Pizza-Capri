@@ -583,8 +583,10 @@ footer{background:var(--bg2);border-top:1px solid var(--border);padding:20px 0}
        <svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5" style="flex-shrink:0"><circle cx="12" cy="12" r="10"/><path d="M12 8v4M12 16h.01"/></svg>
        <span id="delivery-restricted-text">Aktuell ist Ruhetag (Mittwoch) oder außerhalb der Öffnungszeiten.</span>
       </div>
-      <button class="btn btn-outline" style="margin-top:8px" onclick="scrollSec('categories')">Speisekarte ansehen ↓</button>
-      <button class="btn btn-outline" style="margin-top:8px" onclick="openReservation()">🍽️ Tisch reservieren</button>
+      <div style="display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin-top:8px">
+       <button class="btn btn-outline" onclick="scrollSec('categories')">Speisekarte ansehen ↓</button>
+       <button class="btn btn-outline" onclick="openReservation()">🍽️ Tisch reservieren</button>
+      </div>
      </div>
     </div>
    </div>
@@ -1620,12 +1622,10 @@ function updateHeroPromo(){
 // "Vor Live-Gang mit dem Inhaber klären"). Aktuell gilt für alle Lieferungen 15 €.
 const MINDESTBESTELLWERT   = 15;
 
-// Abholrabatt & Neukundenrabatt: Restaurant Pizzeria Capri hat KEIN Rabattprogramm
-// angegeben. Beide bleiben daher bewusst DEAKTIVIERT — die komplette Rechenlogik aus
-// der Vorlage bleibt erhalten (nicht gelöscht), damit der Inhaber sie bei Bedarf später
-// per Umschalten auf `true` aktivieren kann.
-const ABHOL_RABATT_AKTIV   = false;
-const NEUKUNDE_RABATT_AKTIV = false;
+// Abholrabatt & Neukundenrabatt: beide aktiv (15% bei Abholung, 10% auf die erste
+// Bestellung), damit die Rabatt-Funktionen sichtbar/testbar sind.
+const ABHOL_RABATT_AKTIV   = true;
+const NEUKUNDE_RABATT_AKTIV = true;
 const STACK_RABATTE        = false;  // false = nur der GRÖSSERE Rabatt zählt
 const RABATT_AUF_GETRAENKE = false;  // false = Rabatte gelten NICHT auf Getränke (nur auf Speisen)
 const ABHOL_RABATT_PCT     = 0.15;   // Platzhalter, aktuell inaktiv (siehe ABHOL_RABATT_AKTIV)
