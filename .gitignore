@@ -16,3 +16,7 @@ images/PG 2 - *.jpg
 images/info.jpg
 
 .vercel
+
+# Server secrets & local data (never commit)
+server/.env
+server/data/

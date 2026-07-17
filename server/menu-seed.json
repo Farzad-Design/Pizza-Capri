@@ -1,0 +1,2666 @@
+{
+  "CATS": [
+    {
+      "id": "pizza",
+      "title": "Pizza",
+      "emoji": "🍕",
+      "accentColor": "#5C8A34",
+      "img": "images/pizza.jpg"
+    },
+    {
+      "id": "calzone",
+      "title": "Calzone",
+      "emoji": "🥟",
+      "accentColor": "#4F7A2E",
+      "img": "images/calzone.jpg"
+    },
+    {
+      "id": "teigtaschen",
+      "title": "Teigtaschen",
+      "emoji": "🥙",
+      "accentColor": "#D9631E",
+      "img": ""
+    },
+    {
+      "id": "brotchen",
+      "title": "Pizzabrötchen",
+      "emoji": "🥐",
+      "accentColor": "#6FA23A",
+      "img": "images/brote.jpg"
+    },
+    {
+      "id": "pasta",
+      "title": "Pasta",
+      "emoji": "🍝",
+      "accentColor": "#C0392B",
+      "img": "images/pasta.jpg"
+    },
+    {
+      "id": "auflauf",
+      "title": "Auflauf",
+      "emoji": "🧀",
+      "accentColor": "#D9631E",
+      "img": "images/auflauf.jpg"
+    },
+    {
+      "id": "reisgerichte",
+      "title": "Reisgerichte",
+      "emoji": "🍚",
+      "accentColor": "#B8860B",
+      "img": ""
+    },
+    {
+      "id": "baguettes",
+      "title": "Baguettes",
+      "emoji": "🥖",
+      "accentColor": "#6FA23A",
+      "img": "images/brote.jpg"
+    },
+    {
+      "id": "gyros",
+      "title": "Gyros",
+      "emoji": "🥙",
+      "accentColor": "#6B1F1F",
+      "img": "images/gyros.jpg"
+    },
+    {
+      "id": "fleisch",
+      "title": "Fleischgerichte",
+      "emoji": "🥩",
+      "accentColor": "#7A3B1D",
+      "img": "images/schnitzel.jpg"
+    },
+    {
+      "id": "fisch",
+      "title": "Fischgerichte",
+      "emoji": "🐟",
+      "accentColor": "#2E6F8E",
+      "img": ""
+    },
+    {
+      "id": "salate",
+      "title": "Salate",
+      "emoji": "🥗",
+      "accentColor": "#5C8A34",
+      "img": "images/salate.jpg"
+    },
+    {
+      "id": "beilagen",
+      "title": "Beilagen",
+      "emoji": "🍟",
+      "accentColor": "#E0651C",
+      "img": ""
+    },
+    {
+      "id": "dessert",
+      "title": "Desserts",
+      "emoji": "🍰",
+      "accentColor": "#5C2A20",
+      "img": "images/dessert.jpg"
+    },
+    {
+      "id": "getraenke",
+      "title": "Getränke",
+      "emoji": "🥤",
+      "accentColor": "#4A2418",
+      "img": "images/getraenke.jpg"
+    }
+  ],
+  "ITEMS": {
+    "pizza": [
+      {
+        "sub": "Pizza",
+        "note": "Alle Pizzen(10,14) mit Tomatensauce(8,10,14,16,17,18), Käse u. Oregano (Frischer Knoblauch sowie scharfe Sauce ohne Aufpreis) · Alle Pizzen(10,14) auch mit Hollandaisesauce(14,17,18) erhältlich, Aufpreis 1,00 € · Größen: Klein ca. 24 cm / Groß ca. 28 cm · Pizza auch mit gefülltem Rand erhältlich: Käserand 1,50/2,50 € · Schinkenrand(2,5) 1,50/2,50 € · 🌱 = ohne Fleisch und Fisch",
+        "list": [
+          {
+            "nr": "1",
+            "name": "Margherita",
+            "desc": "Tomaten, Käse",
+            "veg": true,
+            "allergens": "",
+            "sizes": [
+              "Klein",
+              "Groß"
+            ],
+            "prices": [
+              6,
+              8
+            ],
+            "price": null
+          },
+          {
+            "nr": "2",
+            "name": "Salami",
+            "desc": "Salami",
+            "veg": false,
+            "allergens": "1,3,4",
+            "sizes": [
+              "Klein",
+              "Groß"
+            ],
+            "prices": [
+              7,
+              10
+            ],
+            "price": null
+          },
+          {
+            "nr": "3",
+            "name": "Prosciutto",
+            "desc": "Schinken",
+            "veg": false,
+            "allergens": "1,2,3,4",
+            "sizes": [
+              "Klein",
+              "Groß"
+            ],
+            "prices": [
+              7,
+              10
+            ],
+            "price": null
+          },
+          {
+            "nr": "4",
+            "name": "Funghi",
+            "desc": "fr. Champignons",
+            "veg": true,
+            "allergens": "3,4",
+            "sizes": [
+              "Klein",
+              "Groß"
+            ],
+            "prices": [
+              7,
+              10
+            ],
+            "price": null
+          },
+          {
+            "nr": "5",
+            "name": "Tonno",
+            "desc": "Thunfisch",
+            "veg": false,
+            "allergens": "",
+            "sizes": [
+              "Klein",
+              "Groß"
+            ],
+            "prices": [
+              8,
+              11
+            ],
+            "price": null
+          },
+          {
+            "nr": "5a",
+            "name": "Tonno II",
+            "desc": "Thunfisch, Zwiebeln",
+            "veg": false,
+            "allergens": "",
+            "sizes": [
+              "Klein",
+              "Groß"
+            ],
+            "prices": [
+              8.5,
+              11.5
+            ],
+            "price": null
+          },
+          {
+            "nr": "6",
+            "name": "Bolognese",
+            "desc": "Hackfleischsauce (Rindfleisch)",
+            "veg": false,
+            "allergens": "",
+            "sizes": [
+              "Klein",
+              "Groß"
+            ],
+            "prices": [
+              9,
+              12
+            ],
+            "price": null
+          },
+          {
+            "nr": "7",
+            "name": "Sucuki",
+            "desc": "Knoblauchwurst",
+            "veg": false,
+            "allergens": "3,4,6,8,16,17,18",
+            "sizes": [
+              "Klein",
+              "Groß"
+            ],
+            "prices": [
+              9,
+              12
+            ],
+            "price": null
+          },
+          {
+            "nr": "8",
+            "name": "Frutti di mare",
+            "desc": "Meeresfrüchte, Knoblauch",
+            "veg": false,
+            "allergens": "11,15",
+            "sizes": [
+              "Klein",
+              "Groß"
+            ],
+            "prices": [
+              9.5,
+              13
+            ],
+            "price": null
+          },
+          {
+            "nr": "9",
+            "name": "Scampi",
+            "desc": "Scampi, Knoblauch",
+            "veg": false,
+            "allergens": "11,15",
+            "sizes": [
+              "Klein",
+              "Groß"
+            ],
+            "prices": [
+              10,
+              13
+            ],
+            "price": null
+          },
+          {
+            "nr": "10",
+            "name": "Broccoli",
+            "desc": "Broccoli, Knoblauch",
+            "veg": true,
+            "allergens": "",
+            "sizes": [
+              "Klein",
+              "Groß"
+            ],
+            "prices": [
+              8,
+              11
+            ],
+            "price": null
+          },
+          {
+            "nr": "11",
+            "name": "Spinaci A",
+            "desc": "Spinat, Knoblauch",
+            "veg": true,
+            "allergens": "",
+            "sizes": [
+              "Klein",
+              "Groß"
+            ],
+            "prices": [
+              7.5,
+              10.5
+            ],
+            "price": null
+          },
+          {
+            "nr": "12",
+            "name": "Spinaci B",
+            "desc": "Spinat, Zwiebeln, Spiegelei",
+            "veg": false,
+            "allergens": "",
+            "sizes": [
+              "Klein",
+              "Groß"
+            ],
+            "prices": [
+              8.5,
+              11.5
+            ],
+            "price": null
+          },
+          {
+            "nr": "13",
+            "name": "Spinaci Al Feta",
+            "desc": "Spinat, Weißkäse*, Knoblauch",
+            "veg": true,
+            "allergens": "",
+            "sizes": [
+              "Klein",
+              "Groß"
+            ],
+            "prices": [
+              8.5,
+              11.5
+            ],
+            "price": null
+          },
+          {
+            "nr": "14",
+            "name": "Cipolla",
+            "desc": "Zwiebeln, Oliven",
+            "veg": true,
+            "allergens": "5",
+            "sizes": [
+              "Klein",
+              "Groß"
+            ],
+            "prices": [
+              7,
+              10
+            ],
+            "price": null
+          },
+          {
+            "nr": "15",
+            "name": "Hawaii",
+            "desc": "Schinken, Ananas",
+            "veg": false,
+            "allergens": "1,2,3,4",
+            "sizes": [
+              "Klein",
+              "Groß"
+            ],
+            "prices": [
+              8,
+              11
+            ],
+            "price": null
+          },
+          {
+            "nr": "16",
+            "name": "Aloa",
+            "desc": "Thunfisch, Ananas",
+            "veg": false,
+            "allergens": "",
+            "sizes": [
+              "Klein",
+              "Groß"
+            ],
+            "prices": [
+              9,
+              12
+            ],
+            "price": null
+          },
+          {
+            "nr": "17",
+            "name": "Catania",
+            "desc": "Gyros, fr. Paprika",
+            "veg": false,
+            "allergens": "",
+            "sizes": [
+              "Klein",
+              "Groß"
+            ],
+            "prices": [
+              10,
+              13
+            ],
+            "price": null
+          },
+          {
+            "nr": "18",
+            "name": "Napoletana",
+            "desc": "Sardellen, Oliven",
+            "veg": false,
+            "allergens": "5",
+            "sizes": [
+              "Klein",
+              "Groß"
+            ],
+            "prices": [
+              9.5,
+              12.5
+            ],
+            "price": null
+          },
+          {
+            "nr": "19",
+            "name": "Inferno",
+            "desc": "Salami, milde Peperoni",
+            "veg": false,
+            "allergens": "1,3,4",
+            "sizes": [
+              "Klein",
+              "Groß"
+            ],
+            "prices": [
+              8,
+              11
+            ],
+            "price": null
+          },
+          {
+            "nr": "20",
+            "name": "Vesuvio",
+            "desc": "fr. Paprika, Salami (scharf)",
+            "veg": false,
+            "allergens": "1,3,4",
+            "sizes": [
+              "Klein",
+              "Groß"
+            ],
+            "prices": [
+              8,
+              11
+            ],
+            "price": null
+          },
+          {
+            "nr": "21",
+            "name": "Chili",
+            "desc": "Hackfleischsauce, Kidney-Bohnen (scharf)",
+            "veg": false,
+            "allergens": "",
+            "sizes": [
+              "Klein",
+              "Groß"
+            ],
+            "prices": [
+              9.5,
+              12.5
+            ],
+            "price": null
+          },
+          {
+            "nr": "22",
+            "name": "Lachs",
+            "desc": "Mozzarella, Lachs, Knoblauch",
+            "veg": false,
+            "allergens": "",
+            "sizes": [
+              "Klein",
+              "Groß"
+            ],
+            "prices": [
+              9.5,
+              12.5
+            ],
+            "price": null
+          },
+          {
+            "nr": "23",
+            "name": "Napolene Tonno",
+            "desc": "Thunfisch, Zwiebeln, Spiegelei",
+            "veg": false,
+            "allergens": "",
+            "sizes": [
+              "Klein",
+              "Groß"
+            ],
+            "prices": [
+              9,
+              12
+            ],
+            "price": null
+          },
+          {
+            "nr": "24",
+            "name": "Vegetaria A",
+            "desc": "Spinat, Artischocken, Knoblauch",
+            "veg": true,
+            "allergens": "4",
+            "sizes": [
+              "Klein",
+              "Groß"
+            ],
+            "prices": [
+              8.5,
+              11.5
+            ],
+            "price": null
+          },
+          {
+            "nr": "25",
+            "name": "Vegetaria B",
+            "desc": "Broccoli, fr. Paprika, Spargel, Mais, Zwiebeln",
+            "veg": true,
+            "allergens": "",
+            "sizes": [
+              "Klein",
+              "Groß"
+            ],
+            "prices": [
+              9.5,
+              12.5
+            ],
+            "price": null
+          },
+          {
+            "nr": "26",
+            "name": "Contadina",
+            "desc": "Schinken, Spinat, Mais",
+            "veg": false,
+            "allergens": "1,2,3,4",
+            "sizes": [
+              "Klein",
+              "Groß"
+            ],
+            "prices": [
+              8.5,
+              11.5
+            ],
+            "price": null
+          },
+          {
+            "nr": "27",
+            "name": "Primavera",
+            "desc": "Broccoli, Thunfisch, Weißkäse*",
+            "veg": false,
+            "allergens": "",
+            "sizes": [
+              "Klein",
+              "Groß"
+            ],
+            "prices": [
+              9.5,
+              12
+            ],
+            "price": null
+          },
+          {
+            "nr": "28",
+            "name": "Italy",
+            "desc": "Schinken, fr. Champignons, Tortellini, Knoblauch",
+            "veg": false,
+            "allergens": "1,2,3,4",
+            "sizes": [
+              "Klein",
+              "Groß"
+            ],
+            "prices": [
+              9.5,
+              12
+            ],
+            "price": null
+          },
+          {
+            "nr": "29",
+            "name": "Carne",
+            "desc": "Hähnchenbruststreifen, fr. Tomaten, Zwiebeln",
+            "veg": false,
+            "allergens": "",
+            "sizes": [
+              "Klein",
+              "Groß"
+            ],
+            "prices": [
+              9.5,
+              12
+            ],
+            "price": null
+          },
+          {
+            "nr": "30",
+            "name": "Bella",
+            "desc": "fr. Champignons, fr. Paprika, Mozzarella",
+            "veg": true,
+            "allergens": "3,4",
+            "sizes": [
+              "Klein",
+              "Groß"
+            ],
+            "prices": [
+              9,
+              12
+            ],
+            "price": null
+          },
+          {
+            "nr": "31",
+            "name": "Drago",
+            "desc": "Schinken, Salami, fr. Paprika (scharf)",
+            "veg": false,
+            "allergens": "1,2,3,4",
+            "sizes": [
+              "Klein",
+              "Groß"
+            ],
+            "prices": [
+              8.5,
+              11
+            ],
+            "price": null
+          },
+          {
+            "nr": "32",
+            "name": "Jamboni",
+            "desc": "Schinken, Broccoli, Zwiebeln",
+            "veg": false,
+            "allergens": "1,2,3,4",
+            "sizes": [
+              "Klein",
+              "Groß"
+            ],
+            "prices": [
+              8.5,
+              11
+            ],
+            "price": null
+          },
+          {
+            "nr": "33",
+            "name": "Bruno",
+            "desc": "Schinken, Spinat, Weißkäse*",
+            "veg": false,
+            "allergens": "1,2,3,4",
+            "sizes": [
+              "Klein",
+              "Groß"
+            ],
+            "prices": [
+              9,
+              12.5
+            ],
+            "price": null
+          },
+          {
+            "nr": "34",
+            "name": "Taverna",
+            "desc": "Salami, Thunfisch, Zwiebeln",
+            "veg": false,
+            "allergens": "1,3,4",
+            "sizes": [
+              "Klein",
+              "Groß"
+            ],
+            "prices": [
+              8.5,
+              11.5
+            ],
+            "price": null
+          },
+          {
+            "nr": "35",
+            "name": "Mozzarella",
+            "desc": "Mozzarella, fr. Tomaten, Basilikum",
+            "veg": true,
+            "allergens": "",
+            "sizes": [
+              "Klein",
+              "Groß"
+            ],
+            "prices": [
+              8.5,
+              11.5
+            ],
+            "price": null
+          },
+          {
+            "nr": "36",
+            "name": "Alessia",
+            "desc": "Mozzarella, Spinat, Scampi, Knoblauch",
+            "veg": false,
+            "allergens": "11,15",
+            "sizes": [
+              "Klein",
+              "Groß"
+            ],
+            "prices": [
+              9.5,
+              12.5
+            ],
+            "price": null
+          },
+          {
+            "nr": "37",
+            "name": "Pirata",
+            "desc": "Thunfisch, Schinken, Salami, milde Peperoni",
+            "veg": false,
+            "allergens": "1,2,3,4",
+            "sizes": [
+              "Klein",
+              "Groß"
+            ],
+            "prices": [
+              8.5,
+              12
+            ],
+            "price": null
+          },
+          {
+            "nr": "38",
+            "name": "Romana",
+            "desc": "Thunfisch, Schinken, fr. Champignons, Zwiebeln",
+            "veg": false,
+            "allergens": "1,2,3,4",
+            "sizes": [
+              "Klein",
+              "Groß"
+            ],
+            "prices": [
+              9,
+              12
+            ],
+            "price": null
+          },
+          {
+            "nr": "39",
+            "name": "Capriciosa",
+            "desc": "Salami, Schinken, fr. Champignons, Zwiebeln",
+            "veg": false,
+            "allergens": "1,2,3,4",
+            "sizes": [
+              "Klein",
+              "Groß"
+            ],
+            "prices": [
+              9,
+              12
+            ],
+            "price": null
+          },
+          {
+            "nr": "40",
+            "name": "Quattro Stagioni",
+            "desc": "Schinken, Thunfisch, fr. Champignons, Artischocken",
+            "veg": false,
+            "allergens": "1,2,3,4",
+            "sizes": [
+              "Klein",
+              "Groß"
+            ],
+            "prices": [
+              9,
+              12
+            ],
+            "price": null
+          },
+          {
+            "nr": "41",
+            "name": "Quattro Formaggi",
+            "desc": "Gorgonzola, Mozzarella, Weißkäse*, Gouda",
+            "veg": true,
+            "allergens": "",
+            "sizes": [
+              "Klein",
+              "Groß"
+            ],
+            "prices": [
+              9,
+              12
+            ],
+            "price": null
+          },
+          {
+            "nr": "42",
+            "name": "Diavolo",
+            "desc": "Spinat, fr. Paprika, Peperoni scharf, Zwiebeln, Weißkäse*",
+            "veg": true,
+            "allergens": "",
+            "sizes": [
+              "Klein",
+              "Groß"
+            ],
+            "prices": [
+              10,
+              12.5
+            ],
+            "price": null
+          },
+          {
+            "nr": "43",
+            "name": "Sicilia",
+            "desc": "Scampi, Oliven, Thunfisch, Zwiebeln, Sardellen, Kapern, Knoblauch",
+            "veg": false,
+            "allergens": "5,11,15",
+            "sizes": [
+              "Klein",
+              "Groß"
+            ],
+            "prices": [
+              10.5,
+              13.5
+            ],
+            "price": null
+          },
+          {
+            "nr": "44",
+            "name": "Capri",
+            "desc": "Salami, Schinken, Thunfisch, fr. Paprika, fr. Champignons, Zwiebeln, Knoblauch",
+            "veg": false,
+            "allergens": "1,2,3,4",
+            "sizes": [
+              "Klein",
+              "Groß"
+            ],
+            "prices": [
+              9.5,
+              12.5
+            ],
+            "price": null
+          },
+          {
+            "nr": "45",
+            "name": "Roma",
+            "desc": "mit gefülltem Rand aus Käse, Schinken, Salami, Thunfisch, fr. Champignons, Gyros, Zwiebeln",
+            "veg": false,
+            "allergens": "1,2,3,4",
+            "sizes": [
+              "Klein",
+              "Groß"
+            ],
+            "prices": [
+              12,
+              14
+            ],
+            "price": null
+          },
+          {
+            "nr": "46",
+            "name": "Aubergine-Pizza",
+            "desc": "mit gebratenen Auberginen, frischen Tomaten, milder oder scharfer Peperoni",
+            "veg": true,
+            "allergens": "",
+            "sizes": [
+              "Klein",
+              "Groß"
+            ],
+            "prices": [
+              9.5,
+              12.5
+            ],
+            "price": null
+          },
+          {
+            "nr": "47",
+            "name": "Rucola",
+            "desc": "mit Rucola, fr. Tomaten, Mozzarella",
+            "veg": true,
+            "allergens": "",
+            "sizes": [
+              "Klein",
+              "Groß"
+            ],
+            "prices": [
+              8.5,
+              11.5
+            ],
+            "price": null
+          },
+          {
+            "nr": "48",
+            "name": "Parma",
+            "desc": "mit Parmaschinken, Rucola",
+            "veg": false,
+            "allergens": "",
+            "sizes": [
+              "Klein",
+              "Groß"
+            ],
+            "prices": [
+              9.5,
+              12.5
+            ],
+            "price": null
+          },
+          {
+            "nr": "49",
+            "name": "Spaghettipizza",
+            "desc": "mit Spaghetti",
+            "veg": true,
+            "allergens": "",
+            "sizes": [
+              "Klein",
+              "Groß"
+            ],
+            "prices": [
+              7,
+              10
+            ],
+            "price": null
+          },
+          {
+            "nr": "50",
+            "name": "Salmone",
+            "desc": "mit Lachs, Spinat, Mozzarella, Knoblauch",
+            "veg": false,
+            "allergens": "",
+            "sizes": [
+              "Klein",
+              "Groß"
+            ],
+            "prices": [
+              10,
+              12.5
+            ],
+            "price": null
+          },
+          {
+            "nr": "50a",
+            "name": "Mista",
+            "desc": "fr. Champignons, fr. Paprika, Rinder-Hackfleisch, Knoblauchwurst",
+            "veg": false,
+            "allergens": "3,4",
+            "sizes": [
+              "Klein",
+              "Groß"
+            ],
+            "prices": [
+              10,
+              12.5
+            ],
+            "price": null
+          }
+        ]
+      },
+      {
+        "sub": "Party- & Familien-Pizza",
+        "note": "Nur Margherita-Basis, jede zusätzliche Zutat außer A, B, D, Gyros, Sucuki, Lachs, fr. Tomaten siehe Aufpreis unten",
+        "list": [
+          {
+            "nr": "P1",
+            "name": "Party Pizza Margherita",
+            "desc": "ca. 40 × 60 cm · jede weitere Zutat außer A,B,D,Gyros,Sucuki,Lachs,fr.Tomaten +4,50 €",
+            "veg": true,
+            "allergens": "",
+            "sizes": null,
+            "prices": [
+              26
+            ],
+            "price": 26
+          },
+          {
+            "nr": "P2",
+            "name": "Familien Pizza Margherita",
+            "desc": "ca. 40 cm · jede weitere Zutat außer A,B,D,Gyros,Sucuki,Lachs,fr.Tomaten +3,00 €",
+            "veg": true,
+            "allergens": "",
+            "sizes": null,
+            "prices": [
+              16
+            ],
+            "price": 16
+          }
+        ]
+      },
+      {
+        "sub": "Pizza individuell zusammenstellen",
+        "note": "Extrazutat-Auswahl direkt im Bestell-Dialog jeder Pizza: A) Scampi/Meeresfrüchte(11,15)/Sardellen/Lachs 2,00/2,50 € · B) Käse 1,50/2,50 € · C) jede weitere Zutat 1,00/2,00 € · D) Tzatziki(12,14,16) 1,50 € (nur Groß) · E) Mayonnaise/Ketchup 0,50 € (nur Klein). Klein/Groß.",
+        "list": []
+      }
+    ],
+    "calzone": [
+      {
+        "sub": "Calzone (gefüllte Pizza)",
+        "note": "🌱 = ohne Fleisch und Fisch",
+        "list": [
+          {
+            "nr": "51",
+            "name": "Toscana",
+            "desc": "Schinken, fr. Champignons",
+            "veg": false,
+            "allergens": "1,2,3,4",
+            "sizes": null,
+            "prices": [
+              11
+            ],
+            "price": 11
+          },
+          {
+            "nr": "52",
+            "name": "Greco",
+            "desc": "Gyros, fr. Paprika",
+            "veg": false,
+            "allergens": "",
+            "sizes": null,
+            "prices": [
+              12
+            ],
+            "price": 12
+          },
+          {
+            "nr": "53",
+            "name": "Staggioni",
+            "desc": "Schinken, Thunfisch, fr. Champignons, Artischocken",
+            "veg": false,
+            "allergens": "1,2,3,4",
+            "sizes": null,
+            "prices": [
+              12
+            ],
+            "price": 12
+          },
+          {
+            "nr": "54",
+            "name": "Vegetarisch",
+            "desc": "gebr. Broccoli, Spinat, Zwiebeln, fr. Champignons",
+            "veg": true,
+            "allergens": "3,4",
+            "sizes": null,
+            "prices": [
+              12
+            ],
+            "price": 12
+          },
+          {
+            "nr": "55",
+            "name": "Capri",
+            "desc": "Hähnchenbruststreifen, fr. Champignons, Zwiebeln",
+            "veg": false,
+            "allergens": "3,4",
+            "sizes": null,
+            "prices": [
+              12.5
+            ],
+            "price": 12.5
+          },
+          {
+            "nr": "56",
+            "name": "Aloa",
+            "desc": "Schinken, Thunfisch, Ananas",
+            "veg": false,
+            "allergens": "1,2,3,4",
+            "sizes": null,
+            "prices": [
+              12
+            ],
+            "price": 12
+          },
+          {
+            "nr": "57",
+            "name": "Mexicana",
+            "desc": "Hackfleischsauce, Kidney-Bohnen (scharf)",
+            "veg": false,
+            "allergens": "",
+            "sizes": null,
+            "prices": [
+              11.5
+            ],
+            "price": 11.5
+          },
+          {
+            "nr": "58",
+            "name": "Mista",
+            "desc": "Schinken, fr. Champignons, Salami",
+            "veg": false,
+            "allergens": "1,2,3,4",
+            "sizes": null,
+            "prices": [
+              12
+            ],
+            "price": 12
+          }
+        ]
+      }
+    ],
+    "salate": [
+      {
+        "sub": "Salate (Mittel / Groß)",
+        "note": "🌱 = ohne Fleisch und Fisch",
+        "list": [
+          {
+            "nr": "191",
+            "name": "Mista",
+            "desc": "Salat, Tomaten, Gurken, Mais, Thunfisch, Schinken, Mozzarella, Artischocken, Ei, Zwiebeln",
+            "veg": false,
+            "allergens": "1,2,3,4,12",
+            "sizes": [
+              "Mittel",
+              "Groß"
+            ],
+            "prices": [
+              10.5,
+              12
+            ],
+            "price": null
+          },
+          {
+            "nr": "192",
+            "name": "Capriciosa",
+            "desc": "Salat, Tomaten, Gurken, Thunfisch, Ei, Schinken, Käse, Zwiebeln, frische Paprika, Mais",
+            "veg": false,
+            "allergens": "1,2,3,4,12",
+            "sizes": [
+              "Mittel",
+              "Groß"
+            ],
+            "prices": [
+              10.5,
+              12
+            ],
+            "price": null
+          },
+          {
+            "nr": "193",
+            "name": "Paesana",
+            "desc": "Salat, Tomaten, Gurken, Mais, Zwiebeln, frische Paprika, Thunfisch",
+            "veg": false,
+            "allergens": "",
+            "sizes": [
+              "Mittel",
+              "Groß"
+            ],
+            "prices": [
+              9.5,
+              11
+            ],
+            "price": null
+          },
+          {
+            "nr": "194",
+            "name": "Capri",
+            "desc": "Salat, Tomaten, Gurken, Käse, Mais, Hähnchenbruststreifen, Zwiebeln, milde Peperoni, frische Paprika, Artischocken, Ei, Oliven, Möhren",
+            "veg": false,
+            "allergens": "4,5,12",
+            "sizes": [
+              "Mittel",
+              "Groß"
+            ],
+            "prices": [
+              10.5,
+              12
+            ],
+            "price": null
+          },
+          {
+            "nr": "195",
+            "name": "Käsesalat",
+            "desc": "Salat, Tomaten, Gurken, Käse, Weißkäse*, Mozzarella",
+            "veg": true,
+            "allergens": "",
+            "sizes": [
+              "Mittel",
+              "Groß"
+            ],
+            "prices": [
+              10,
+              11.5
+            ],
+            "price": null
+          },
+          {
+            "nr": "196",
+            "name": "Shrimps Royal",
+            "desc": "Salat, Tomaten, Gurken, Oliven, Scampi, Sardellen, Kapern, Zwiebeln, Knoblauch",
+            "veg": false,
+            "allergens": "5,11,15",
+            "sizes": [
+              "Mittel",
+              "Groß"
+            ],
+            "prices": [
+              11.5,
+              13
+            ],
+            "price": null
+          },
+          {
+            "nr": "197",
+            "name": "Pollo",
+            "desc": "Salat, Tomaten, Gurken, Mais, Käse, Zwiebeln, Broccoli",
+            "veg": true,
+            "allergens": "",
+            "sizes": [
+              "Mittel",
+              "Groß"
+            ],
+            "prices": [
+              9.5,
+              11
+            ],
+            "price": null
+          },
+          {
+            "nr": "198",
+            "name": "Bauernsalat",
+            "desc": "Salat, Tomaten, Gurken, Möhren, Kidney-Bohnen, Weißkäse*, Zwiebeln, Oliven",
+            "veg": true,
+            "allergens": "5",
+            "sizes": [
+              "Mittel",
+              "Groß"
+            ],
+            "prices": [
+              10.5,
+              12
+            ],
+            "price": null
+          },
+          {
+            "nr": "199",
+            "name": "Caprese",
+            "desc": "Tomaten, Mozzarella, fr. Basilikum (nur eine Größe)",
+            "veg": true,
+            "allergens": "",
+            "sizes": null,
+            "prices": [
+              10.5
+            ],
+            "price": 10.5
+          }
+        ]
+      },
+      {
+        "sub": "Kleine Salate",
+        "note": "Alle mit Eisbergsalat · Dressing: Joghurt, Joghurt mit Kräutern, Essig/Öl mit Kräutern oder Cocktail",
+        "list": [
+          {
+            "nr": "201",
+            "name": "Perschiler",
+            "desc": "gewürfelte Gurken, Tomaten, Zwiebeln, mit Petersilie",
+            "veg": true,
+            "allergens": "",
+            "sizes": null,
+            "prices": [
+              7
+            ],
+            "price": 7
+          },
+          {
+            "nr": "202",
+            "name": "Grüner Salat",
+            "desc": "",
+            "veg": true,
+            "allergens": "",
+            "sizes": null,
+            "prices": [
+              5
+            ],
+            "price": 5
+          },
+          {
+            "nr": "203",
+            "name": "Tomatensalat",
+            "desc": "",
+            "veg": true,
+            "allergens": "",
+            "sizes": null,
+            "prices": [
+              5.5
+            ],
+            "price": 5.5
+          },
+          {
+            "nr": "204",
+            "name": "Gurkensalat",
+            "desc": "",
+            "veg": true,
+            "allergens": "",
+            "sizes": null,
+            "prices": [
+              5.5
+            ],
+            "price": 5.5
+          },
+          {
+            "nr": "205",
+            "name": "Maissalat",
+            "desc": "",
+            "veg": true,
+            "allergens": "",
+            "sizes": null,
+            "prices": [
+              5.5
+            ],
+            "price": 5.5
+          }
+        ]
+      }
+    ],
+    "baguettes": [
+      {
+        "sub": "Baguettes",
+        "note": "Alle Baguettes belegt mit Tomaten, Gurken, Eisbergsalat und Remoulade",
+        "list": [
+          {
+            "nr": "150",
+            "name": "Formaggio",
+            "desc": "Käse",
+            "veg": true,
+            "allergens": "",
+            "sizes": null,
+            "prices": [
+              6.5
+            ],
+            "price": 6.5
+          },
+          {
+            "nr": "151",
+            "name": "Salami",
+            "desc": "Salami, fr. Paprika, Käse (scharf)",
+            "veg": false,
+            "allergens": "1,2,3,4",
+            "sizes": null,
+            "prices": [
+              8
+            ],
+            "price": 8
+          },
+          {
+            "nr": "152",
+            "name": "Tonno",
+            "desc": "Thunfisch, Zwiebeln, Ei",
+            "veg": false,
+            "allergens": "",
+            "sizes": null,
+            "prices": [
+              8.5
+            ],
+            "price": 8.5
+          },
+          {
+            "nr": "153",
+            "name": "Hawaii",
+            "desc": "Schinken, Ananas, Käse",
+            "veg": false,
+            "allergens": "1,2,3,4",
+            "sizes": null,
+            "prices": [
+              8
+            ],
+            "price": 8
+          },
+          {
+            "nr": "154",
+            "name": "Bella",
+            "desc": "Mozzarella",
+            "veg": true,
+            "allergens": "",
+            "sizes": null,
+            "prices": [
+              8
+            ],
+            "price": 8
+          },
+          {
+            "nr": "155",
+            "name": "Gyros",
+            "desc": "Gyros, Zwiebeln",
+            "veg": false,
+            "allergens": "",
+            "sizes": null,
+            "prices": [
+              9
+            ],
+            "price": 9
+          },
+          {
+            "nr": "156",
+            "name": "Knoblauch Baguette",
+            "desc": "Knoblauchbutter",
+            "veg": true,
+            "allergens": "",
+            "sizes": null,
+            "prices": [
+              7
+            ],
+            "price": 7
+          },
+          {
+            "nr": "157",
+            "name": "Ibiza",
+            "desc": "Schweineschnitzel mit Zwiebeln",
+            "veg": false,
+            "allergens": "",
+            "sizes": null,
+            "prices": [
+              10
+            ],
+            "price": 10
+          },
+          {
+            "nr": "158",
+            "name": "Capri",
+            "desc": "Hähnchenbruststreifen, Käse, Zwiebeln",
+            "veg": false,
+            "allergens": "",
+            "sizes": null,
+            "prices": [
+              10
+            ],
+            "price": 10
+          },
+          {
+            "nr": "159",
+            "name": "Prosciutto",
+            "desc": "Schinken, Ei, Käse, Zwiebeln",
+            "veg": false,
+            "allergens": "1,2,3,4",
+            "sizes": null,
+            "prices": [
+              8.5
+            ],
+            "price": 8.5
+          },
+          {
+            "nr": "160a",
+            "name": "Sucuk",
+            "desc": "Knoblauchwurst und Käse",
+            "veg": false,
+            "allergens": "3,4,6,8,16,17,18",
+            "sizes": null,
+            "prices": [
+              8.5
+            ],
+            "price": 8.5
+          }
+        ]
+      }
+    ],
+    "brotchen": [
+      {
+        "sub": "Pizzabrötchen & Pizzabrot",
+        "note": "🌱 = ohne Fleisch und Fisch",
+        "list": [
+          {
+            "nr": "941",
+            "name": "Pizzabrötchen mit Kräuterbutter",
+            "desc": "6 Stück",
+            "veg": true,
+            "allergens": "",
+            "sizes": null,
+            "prices": [
+              3
+            ],
+            "price": 3
+          },
+          {
+            "nr": "942",
+            "name": "Gefüllte Pizzabrötchen mit Käse",
+            "desc": "7 Stück",
+            "veg": true,
+            "allergens": "",
+            "sizes": null,
+            "prices": [
+              5.5
+            ],
+            "price": 5.5
+          },
+          {
+            "nr": "943",
+            "name": "Gefüllte Pizzabrötchen mit Thunfisch, Käse",
+            "desc": "7 Stück",
+            "veg": false,
+            "allergens": "",
+            "sizes": null,
+            "prices": [
+              7
+            ],
+            "price": 7
+          },
+          {
+            "nr": "944",
+            "name": "Gefüllte Pizzabrötchen mit Schinken, Käse",
+            "desc": "7 Stück",
+            "veg": false,
+            "allergens": "1,2,3,4",
+            "sizes": null,
+            "prices": [
+              6
+            ],
+            "price": 6
+          },
+          {
+            "nr": "945",
+            "name": "Gefüllte Pizzabrötchen mit Spinat und Weißkäse*",
+            "desc": "7 Stück",
+            "veg": true,
+            "allergens": "",
+            "sizes": null,
+            "prices": [
+              6.5
+            ],
+            "price": 6.5
+          },
+          {
+            "nr": "946",
+            "name": "Gefüllte Pizzabrötchen mit Salami",
+            "desc": "7 Stück",
+            "veg": false,
+            "allergens": "1,3,4",
+            "sizes": null,
+            "prices": [
+              6
+            ],
+            "price": 6
+          },
+          {
+            "nr": "947",
+            "name": "Gefüllte Pizzabrötchen mit Sucuk, Käse",
+            "desc": "7 Stück",
+            "veg": false,
+            "allergens": "3,4,6,8,16,17,18",
+            "sizes": null,
+            "prices": [
+              8
+            ],
+            "price": 8
+          },
+          {
+            "nr": "948",
+            "name": "Pizzabrot mit Kräuterbutter",
+            "desc": "",
+            "veg": true,
+            "allergens": "",
+            "sizes": null,
+            "prices": [
+              5
+            ],
+            "price": 5
+          }
+        ]
+      }
+    ],
+    "pasta": [
+      {
+        "sub": "Spaghetti",
+        "note": "Jedes Nudelgericht auf Wunsch mit Käse überbacken, +1,50 € · 🌱 = ohne Fleisch und Fisch",
+        "list": [
+          {
+            "nr": "61",
+            "name": "Spaghetti Napoli",
+            "desc": "Tomatensauce, Knoblauch, Basilikum",
+            "veg": true,
+            "allergens": "",
+            "sizes": null,
+            "prices": [
+              9
+            ],
+            "price": 9
+          },
+          {
+            "nr": "62",
+            "name": "Spaghetti Bolognese",
+            "desc": "Hackfleischsauce",
+            "veg": false,
+            "allergens": "",
+            "sizes": null,
+            "prices": [
+              10.5
+            ],
+            "price": 10.5
+          },
+          {
+            "nr": "63",
+            "name": "Spaghetti Carbonara",
+            "desc": "Schinken, Ei, Sahnesauce",
+            "veg": false,
+            "allergens": "1,2,3,4",
+            "sizes": null,
+            "prices": [
+              10.5
+            ],
+            "price": 10.5
+          },
+          {
+            "nr": "64",
+            "name": "Spaghetti di Mare",
+            "desc": "Meeresfrüchte, Knoblauch, Tomatensauce oder Sahnesauce",
+            "veg": false,
+            "allergens": "11,15",
+            "sizes": null,
+            "prices": [
+              11.5
+            ],
+            "price": 11.5
+          },
+          {
+            "nr": "65",
+            "name": "Spaghetti All Tonno",
+            "desc": "Thunfisch, Zwiebeln, Tomatensauce",
+            "veg": false,
+            "allergens": "",
+            "sizes": null,
+            "prices": [
+              11
+            ],
+            "price": 11
+          },
+          {
+            "nr": "66",
+            "name": "Spaghetti Aglio e Olio",
+            "desc": "Olivenöl, Knoblauch, Basilikum, fr. Tomaten, milde Peperoni",
+            "veg": true,
+            "allergens": "",
+            "sizes": null,
+            "prices": [
+              11
+            ],
+            "price": 11
+          },
+          {
+            "nr": "67",
+            "name": "Spaghetti Spinaci",
+            "desc": "Spinat, Knoblauch, Sahnesauce",
+            "veg": true,
+            "allergens": "",
+            "sizes": null,
+            "prices": [
+              11
+            ],
+            "price": 11
+          },
+          {
+            "nr": "68",
+            "name": "Spaghetti Scampi",
+            "desc": "Scampi, Sahnesauce, Knoblauch",
+            "veg": false,
+            "allergens": "11,15",
+            "sizes": null,
+            "prices": [
+              12
+            ],
+            "price": 12
+          },
+          {
+            "nr": "69",
+            "name": "Spaghetti Della Casa",
+            "desc": "Schinken, Speck, Ei, Sahnesauce",
+            "veg": false,
+            "allergens": "1,2,3,4",
+            "sizes": null,
+            "prices": [
+              12
+            ],
+            "price": 12
+          },
+          {
+            "nr": "70",
+            "name": "Spaghetti Matriciana",
+            "desc": "Speck, Zwiebel, Tomatensauce",
+            "veg": false,
+            "allergens": "",
+            "sizes": null,
+            "prices": [
+              11.5
+            ],
+            "price": 11.5
+          },
+          {
+            "nr": "71",
+            "name": "Spaghetti Broccoli",
+            "desc": "Broccoli, Sahnesauce, Knoblauch",
+            "veg": true,
+            "allergens": "",
+            "sizes": null,
+            "prices": [
+              11
+            ],
+            "price": 11
+          },
+          {
+            "nr": "72",
+            "name": "Spaghetti Capri",
+            "desc": "Hähnchenbruststreifen, Champignons, Spinat, Broccoli, Sahnesauce und Tomatensauce",
+            "veg": false,
+            "allergens": "3,4",
+            "sizes": null,
+            "prices": [
+              12.5
+            ],
+            "price": 12.5
+          }
+        ]
+      },
+      {
+        "sub": "Tortellini",
+        "note": "🌱 = ohne Fleisch und Fisch",
+        "list": [
+          {
+            "nr": "81",
+            "name": "Tortellini Alla Panna",
+            "desc": "Schinken, Sahnesauce",
+            "veg": false,
+            "allergens": "1,2,3,4",
+            "sizes": null,
+            "prices": [
+              10.5
+            ],
+            "price": 10.5
+          },
+          {
+            "nr": "82",
+            "name": "Tortellini Carbonara",
+            "desc": "Schinken, Sahnesauce, Ei",
+            "veg": false,
+            "allergens": "1,2,3,4",
+            "sizes": null,
+            "prices": [
+              11
+            ],
+            "price": 11
+          },
+          {
+            "nr": "83",
+            "name": "Tortellini Capri",
+            "desc": "Lachs, Spinat, Sahnesauce, Knoblauch, Krabben",
+            "veg": false,
+            "allergens": "11,15",
+            "sizes": null,
+            "prices": [
+              13.5
+            ],
+            "price": 13.5
+          },
+          {
+            "nr": "84",
+            "name": "Tortellini Spinaci",
+            "desc": "Spinat, Sahnesauce, Knoblauch",
+            "veg": true,
+            "allergens": "",
+            "sizes": null,
+            "prices": [
+              11
+            ],
+            "price": 11
+          },
+          {
+            "nr": "85",
+            "name": "Tortellini Bolognese",
+            "desc": "mit Hackfleischsauce",
+            "veg": false,
+            "allergens": "",
+            "sizes": null,
+            "prices": [
+              11
+            ],
+            "price": 11
+          },
+          {
+            "nr": "86",
+            "name": "Tortellini Gorgonzola",
+            "desc": "Gorgonzola, Sahnesauce",
+            "veg": true,
+            "allergens": "",
+            "sizes": null,
+            "prices": [
+              11
+            ],
+            "price": 11
+          },
+          {
+            "nr": "87",
+            "name": "Tortellini agli Scampi",
+            "desc": "Broccoli, Scampi, Knoblauch, Sahnesauce",
+            "veg": false,
+            "allergens": "11,15",
+            "sizes": null,
+            "prices": [
+              12
+            ],
+            "price": 12
+          },
+          {
+            "nr": "88",
+            "name": "Tortellini Pepu",
+            "desc": "Broccoli, Schinken, Sahnesauce, Knoblauch",
+            "veg": false,
+            "allergens": "1,2,3,4",
+            "sizes": null,
+            "prices": [
+              11.5
+            ],
+            "price": 11.5
+          }
+        ]
+      },
+      {
+        "sub": "Penne Rigate",
+        "note": "🌱 = ohne Fleisch und Fisch",
+        "list": [
+          {
+            "nr": "91",
+            "name": "Penne Napoli",
+            "desc": "Tomatensauce, Knoblauch, frisches Basilikum",
+            "veg": true,
+            "allergens": "",
+            "sizes": null,
+            "prices": [
+              9.5
+            ],
+            "price": 9.5
+          },
+          {
+            "nr": "92",
+            "name": "Penne ai porcini",
+            "desc": "fr. Champignons, Sahnesauce",
+            "veg": true,
+            "allergens": "3,4",
+            "sizes": null,
+            "prices": [
+              10.5
+            ],
+            "price": 10.5
+          },
+          {
+            "nr": "93",
+            "name": "Penne Bolognese",
+            "desc": "mit Hackfleischsauce",
+            "veg": false,
+            "allergens": "",
+            "sizes": null,
+            "prices": [
+              11
+            ],
+            "price": 11
+          },
+          {
+            "nr": "94",
+            "name": "Penne ai Quattro Formaggi",
+            "desc": "Gorgonzola, Mozzarella, Gouda, Weißkäse, Sahnesauce",
+            "veg": true,
+            "allergens": "",
+            "sizes": null,
+            "prices": [
+              12
+            ],
+            "price": 12
+          },
+          {
+            "nr": "95",
+            "name": "Penne Al Forno",
+            "desc": "fr. Champignons, fr. Paprika, Erbsen, Tomatensauce und Sahnesauce",
+            "veg": true,
+            "allergens": "3,4",
+            "sizes": null,
+            "prices": [
+              12
+            ],
+            "price": 12
+          },
+          {
+            "nr": "96",
+            "name": "Penne Capri",
+            "desc": "Putenfleisch, Spinat, fr. Champignons, Broccoli, Sahnesauce",
+            "veg": false,
+            "allergens": "3,4",
+            "sizes": null,
+            "prices": [
+              12.5
+            ],
+            "price": 12.5
+          },
+          {
+            "nr": "97",
+            "name": "Penne Gorgonzola",
+            "desc": "Gorgonzola, Sahnesauce",
+            "veg": true,
+            "allergens": "",
+            "sizes": null,
+            "prices": [
+              11
+            ],
+            "price": 11
+          },
+          {
+            "nr": "98",
+            "name": "Penne del Pescatore",
+            "desc": "Lachs, Tomatensauce, Knoblauch",
+            "veg": false,
+            "allergens": "",
+            "sizes": null,
+            "prices": [
+              12
+            ],
+            "price": 12
+          }
+        ]
+      },
+      {
+        "sub": "Tagliatelle",
+        "note": "🌱 = ohne Fleisch und Fisch",
+        "list": [
+          {
+            "nr": "101",
+            "name": "Tagliatelle Napoli",
+            "desc": "Bandnudeln, Knoblauch, Basilikum, Tomatensauce",
+            "veg": true,
+            "allergens": "",
+            "sizes": null,
+            "prices": [
+              9.5
+            ],
+            "price": 9.5
+          },
+          {
+            "nr": "102",
+            "name": "Tagliatelle Bolognese",
+            "desc": "Bandnudeln, Hackfleischsauce",
+            "veg": false,
+            "allergens": "",
+            "sizes": null,
+            "prices": [
+              10.5
+            ],
+            "price": 10.5
+          },
+          {
+            "nr": "103",
+            "name": "Tagliatelle Scampi",
+            "desc": "Bandnudeln, Scampi, Sahnesauce, Knoblauch",
+            "veg": false,
+            "allergens": "11,15",
+            "sizes": null,
+            "prices": [
+              12
+            ],
+            "price": 12
+          },
+          {
+            "nr": "104",
+            "name": "Tagliatelle Alfredo",
+            "desc": "Bandnudeln, Schinken, Erbsen, Sahnesauce",
+            "veg": false,
+            "allergens": "1,2,3,4",
+            "sizes": null,
+            "prices": [
+              12
+            ],
+            "price": 12
+          },
+          {
+            "nr": "105",
+            "name": "Tagliatelle Capri",
+            "desc": "Bandnudeln, Hähnchenbruststreifen, fr. Champignons, Spinat, Broccoli, Sahnesauce",
+            "veg": false,
+            "allergens": "3,4",
+            "sizes": null,
+            "prices": [
+              12.5
+            ],
+            "price": 12.5
+          },
+          {
+            "nr": "106",
+            "name": "Tagliatelle Boscaiola",
+            "desc": "Bandnudeln, Lachs, fr. Champignons, Knoblauch, Sahnesauce",
+            "veg": false,
+            "allergens": "3,4",
+            "sizes": null,
+            "prices": [
+              13
+            ],
+            "price": 13
+          }
+        ]
+      },
+      {
+        "sub": "Nudelgerichte",
+        "note": "Mit Käse überbacken · 🌱 = ohne Fleisch und Fisch",
+        "list": [
+          {
+            "nr": "111",
+            "name": "Cannelloni A",
+            "desc": "Hackfleisch, Bolognese",
+            "veg": false,
+            "allergens": "",
+            "sizes": null,
+            "prices": [
+              11.5
+            ],
+            "price": 11.5
+          },
+          {
+            "nr": "112",
+            "name": "Cannelloni B",
+            "desc": "Hackfleisch, Sahnesauce",
+            "veg": false,
+            "allergens": "",
+            "sizes": null,
+            "prices": [
+              11.5
+            ],
+            "price": 11.5
+          },
+          {
+            "nr": "113",
+            "name": "Lasagne",
+            "desc": "mit Sahnesauce",
+            "veg": true,
+            "allergens": "10,12",
+            "sizes": null,
+            "prices": [
+              11.5
+            ],
+            "price": 11.5
+          },
+          {
+            "nr": "114",
+            "name": "Tortellini Al Forno",
+            "desc": "Pilze, Spinat, Sahnesauce",
+            "veg": true,
+            "allergens": "",
+            "sizes": null,
+            "prices": [
+              11.5
+            ],
+            "price": 11.5
+          },
+          {
+            "nr": "115",
+            "name": "Penne ai Porcini",
+            "desc": "fr. Champignons, Sahnesauce",
+            "veg": true,
+            "allergens": "3,4",
+            "sizes": null,
+            "prices": [
+              11.5
+            ],
+            "price": 11.5
+          },
+          {
+            "nr": "116",
+            "name": "Penne Scampi",
+            "desc": "Maccheroni, Scampi, Sahnesauce und Knoblauch",
+            "veg": false,
+            "allergens": "10,11,12,15",
+            "sizes": null,
+            "prices": [
+              11.5
+            ],
+            "price": 11.5
+          },
+          {
+            "nr": "117",
+            "name": "Cannelloni Capri",
+            "desc": "Cannelloni, Spinat, Weißkäse, Tomatensauce oder Sahnesauce",
+            "veg": true,
+            "allergens": "",
+            "sizes": null,
+            "prices": [
+              11.5
+            ],
+            "price": 11.5
+          },
+          {
+            "nr": "118",
+            "name": "Combinazione al forno",
+            "desc": "Cannelloni, Tortellini, Lasagne mit Sahnesauce oder Tomatensauce",
+            "veg": false,
+            "allergens": "10,12",
+            "sizes": null,
+            "prices": [
+              12
+            ],
+            "price": 12
+          }
+        ]
+      }
+    ],
+    "auflauf": [
+      {
+        "sub": "Auflauf",
+        "note": "Alle mit Käse überbacken · 🌱 = ohne Fleisch und Fisch",
+        "list": [
+          {
+            "nr": "121",
+            "name": "Broccoli Auflauf",
+            "desc": "Penne, Broccoli, Schinken, Knoblauch, Sahnesauce",
+            "veg": false,
+            "allergens": "1,2,3,4,10,12",
+            "sizes": null,
+            "prices": [
+              11.5
+            ],
+            "price": 11.5
+          },
+          {
+            "nr": "122",
+            "name": "Blumenkohl",
+            "desc": "mit Sahnesauce",
+            "veg": true,
+            "allergens": "",
+            "sizes": null,
+            "prices": [
+              11
+            ],
+            "price": 11
+          },
+          {
+            "nr": "123",
+            "name": "Gemüse Auflauf",
+            "desc": "fr. Champignons, Broccoli, Spinat, Blumenkohl, Sahnesauce und Knoblauch",
+            "veg": true,
+            "allergens": "3,4",
+            "sizes": null,
+            "prices": [
+              12
+            ],
+            "price": 12
+          },
+          {
+            "nr": "124",
+            "name": "Spinat Auflauf",
+            "desc": "Penne, Spinat, Sahnesauce",
+            "veg": true,
+            "allergens": "10,12",
+            "sizes": null,
+            "prices": [
+              11.5
+            ],
+            "price": 11.5
+          },
+          {
+            "nr": "125",
+            "name": "Kartoffel Auflauf",
+            "desc": "Schinken oder Speck mit Sahnesauce",
+            "veg": false,
+            "allergens": "1,2,3,4",
+            "sizes": null,
+            "prices": [
+              11.5
+            ],
+            "price": 11.5
+          },
+          {
+            "nr": "126",
+            "name": "Capri Auflauf",
+            "desc": "Hähnchenbruststreifen, Penne, Broccoli, fr. Tomaten, Sahnesauce",
+            "veg": false,
+            "allergens": "10,12",
+            "sizes": null,
+            "prices": [
+              12.5
+            ],
+            "price": 12.5
+          },
+          {
+            "nr": "127",
+            "name": "Gyros Auflauf",
+            "desc": "Penne, Gyros, fr. Tomaten, Zwiebeln, Sahnesauce oder Tomatensauce",
+            "veg": false,
+            "allergens": "10,12",
+            "sizes": null,
+            "prices": [
+              13.5
+            ],
+            "price": 13.5
+          },
+          {
+            "nr": "128",
+            "name": "Bolognese Auflauf",
+            "desc": "Penne, Hackfleischsauce",
+            "veg": false,
+            "allergens": "10,12",
+            "sizes": null,
+            "prices": [
+              11.5
+            ],
+            "price": 11.5
+          },
+          {
+            "nr": "129",
+            "name": "Auberginen Auflauf",
+            "desc": "Panierte Auberginen, fr. Tomaten, mit Hackfleisch",
+            "veg": false,
+            "allergens": "10",
+            "sizes": null,
+            "prices": [
+              11.5
+            ],
+            "price": 11.5
+          },
+          {
+            "nr": "131",
+            "name": "Salmone Toscana",
+            "desc": "Penne, Lachs, Spinat, Sahnesauce",
+            "veg": false,
+            "allergens": "10,12",
+            "sizes": null,
+            "prices": [
+              12.5
+            ],
+            "price": 12.5
+          },
+          {
+            "nr": "132",
+            "name": "Schnitzelauflauf",
+            "desc": "panierte Hähnchenbrustfilet oder Schweineschnitzel mit fr. Champ., fr. Paprika, Sahnesauce",
+            "veg": false,
+            "allergens": "3,4,10",
+            "sizes": null,
+            "prices": [
+              13.5
+            ],
+            "price": 13.5
+          }
+        ]
+      }
+    ],
+    "teigtaschen": [
+      {
+        "sub": "Teigtaschen",
+        "note": "Alle mit Potatoes / Käse überbacken",
+        "list": [
+          {
+            "nr": "230",
+            "name": "Mexicana Tasche A",
+            "desc": "gebr. Hähnchenbrust, Zwiebeln, fr. Paprika, Kidney-Bohnen, Mais, fr. Champignons, Crème Fraiche (scharf)",
+            "veg": false,
+            "allergens": "3,4,14",
+            "sizes": null,
+            "prices": [
+              13
+            ],
+            "price": 13
+          },
+          {
+            "nr": "231",
+            "name": "Mexicana Tasche B",
+            "desc": "gehacktes Rindfleisch, Zwiebeln, fr. Paprika, Kidney-Bohnen, Mais, fr. Champignons, Crème Fraiche (scharf)",
+            "veg": false,
+            "allergens": "3,4,14",
+            "sizes": null,
+            "prices": [
+              13
+            ],
+            "price": 13
+          },
+          {
+            "nr": "232",
+            "name": "Mexicana Tasche C",
+            "desc": "gehacktes Rindfleisch, Crème Fraiche, Kartoffeln",
+            "veg": false,
+            "allergens": "14",
+            "sizes": null,
+            "prices": [
+              12
+            ],
+            "price": 12
+          }
+        ]
+      }
+    ],
+    "reisgerichte": [
+      {
+        "sub": "Reisgerichte",
+        "note": "🌱 = ohne Fleisch und Fisch",
+        "list": [
+          {
+            "nr": "141",
+            "name": "Reis alla Marinara",
+            "desc": "mit Meeresfrüchten, Sahnesauce oder Tomatensauce",
+            "veg": false,
+            "allergens": "10,14,15",
+            "sizes": null,
+            "prices": [
+              12.5
+            ],
+            "price": 12.5
+          },
+          {
+            "nr": "142",
+            "name": "Reis Bolognese",
+            "desc": "mit Hackfleischsauce",
+            "veg": false,
+            "allergens": "",
+            "sizes": null,
+            "prices": [
+              12
+            ],
+            "price": 12
+          },
+          {
+            "nr": "143",
+            "name": "Reis Capri",
+            "desc": "Hähnchenbruststreifen, fr. Champignons in Rahmsauce",
+            "veg": false,
+            "allergens": "3,4,14",
+            "sizes": null,
+            "prices": [
+              12.5
+            ],
+            "price": 12.5
+          },
+          {
+            "nr": "144",
+            "name": "Reis Gorgonzola",
+            "desc": "mit Gorgonzola",
+            "veg": true,
+            "allergens": "",
+            "sizes": null,
+            "prices": [
+              12
+            ],
+            "price": 12
+          },
+          {
+            "nr": "145",
+            "name": "Reis Napoli",
+            "desc": "mit Tomatensauce",
+            "veg": true,
+            "allergens": "",
+            "sizes": null,
+            "prices": [
+              10
+            ],
+            "price": 10
+          },
+          {
+            "nr": "146",
+            "name": "Reis ai funghi",
+            "desc": "mit frischen Champignons u. Sahnesauce",
+            "veg": true,
+            "allergens": "3,4,14",
+            "sizes": null,
+            "prices": [
+              11.5
+            ],
+            "price": 11.5
+          }
+        ]
+      }
+    ],
+    "gyros": [
+      {
+        "sub": "Gyros",
+        "note": "",
+        "list": [
+          {
+            "nr": "161",
+            "name": "Gyros Komplett",
+            "desc": "mit Pommes, Tzatziki, Salat, Zwiebeln",
+            "veg": false,
+            "allergens": "12,14,16",
+            "sizes": null,
+            "prices": [
+              13.5
+            ],
+            "price": 13.5
+          },
+          {
+            "nr": "162",
+            "name": "Gyros A",
+            "desc": "mit Zwiebeln und Salat",
+            "veg": false,
+            "allergens": "",
+            "sizes": null,
+            "prices": [
+              12
+            ],
+            "price": 12
+          },
+          {
+            "nr": "163",
+            "name": "Gyros B",
+            "desc": "mit Zwiebeln und Pommes",
+            "veg": false,
+            "allergens": "",
+            "sizes": null,
+            "prices": [
+              12
+            ],
+            "price": 12
+          }
+        ]
+      }
+    ],
+    "fleisch": [
+      {
+        "sub": "Fleischgerichte",
+        "note": "",
+        "list": [
+          {
+            "nr": "171",
+            "name": "Schweineschnitzel",
+            "desc": "paniert, mit fr. Champignonsauce, Pommes und Salat",
+            "veg": false,
+            "allergens": "10",
+            "sizes": null,
+            "prices": [
+              13.5
+            ],
+            "price": 13.5
+          },
+          {
+            "nr": "172",
+            "name": "Hawaii Schnitzel",
+            "desc": "paniertes Schweineschnitzel, Ananas, Schinken, Käse, Pommes",
+            "veg": false,
+            "allergens": "1,2,3,4,10",
+            "sizes": null,
+            "prices": [
+              13.5
+            ],
+            "price": 13.5
+          },
+          {
+            "nr": "173",
+            "name": "Hähnchenbrustfilet",
+            "desc": "panierte Hähnchenbrust mit Champignonsauce, Pommes und Salat",
+            "veg": false,
+            "allergens": "10",
+            "sizes": null,
+            "prices": [
+              13.5
+            ],
+            "price": 13.5
+          },
+          {
+            "nr": "174",
+            "name": "Chicken Nuggets",
+            "desc": "10 Stück, mit Pommes, Süß-Sauersauce",
+            "veg": false,
+            "allergens": "",
+            "sizes": null,
+            "prices": [
+              11.5
+            ],
+            "price": 11.5
+          }
+        ]
+      }
+    ],
+    "fisch": [
+      {
+        "sub": "Fischgerichte",
+        "note": "",
+        "list": [
+          {
+            "nr": "181",
+            "name": "Aglio Scampi",
+            "desc": "Scampi mit fr. Champignons in Knoblauchsauce, mit Bandnudeln oder Spaghetti",
+            "veg": false,
+            "allergens": "10,11,12,15,17",
+            "sizes": null,
+            "prices": [
+              13.5
+            ],
+            "price": 13.5
+          },
+          {
+            "nr": "182",
+            "name": "Calamari fritti",
+            "desc": "frittierter Tintenfisch, Cocktailsauce, Salat",
+            "veg": false,
+            "allergens": "1,4,6,10",
+            "sizes": null,
+            "prices": [
+              12.5
+            ],
+            "price": 12.5
+          },
+          {
+            "nr": "183",
+            "name": "Scampi al forno",
+            "desc": "Scampi mit Bandnudeln, fr. Paprika, fr. Champignons, Tomatensauce und Sahnesauce",
+            "veg": false,
+            "allergens": "3,4,11,14,15",
+            "sizes": null,
+            "prices": [
+              13.5
+            ],
+            "price": 13.5
+          }
+        ]
+      }
+    ],
+    "beilagen": [
+      {
+        "sub": "Beilagen (Pommes Frites)",
+        "note": "",
+        "list": [
+          {
+            "nr": "212",
+            "name": "Pommes frites",
+            "desc": "mit Ketchup oder Mayo",
+            "veg": true,
+            "allergens": "",
+            "sizes": null,
+            "prices": [
+              3.5
+            ],
+            "price": 3.5
+          },
+          {
+            "nr": "213",
+            "name": "Chili Cheese Pommes",
+            "desc": "Pommes Frites, Hackfleischsauce, Kidney-Bohnen, mit Käse überbacken (scharf)",
+            "veg": false,
+            "allergens": "",
+            "sizes": null,
+            "prices": [
+              8
+            ],
+            "price": 8
+          },
+          {
+            "nr": "214",
+            "name": "Jäger Pommes",
+            "desc": "Pommes Frites, Champignonsauce",
+            "veg": true,
+            "allergens": "",
+            "sizes": null,
+            "prices": [
+              8
+            ],
+            "price": 8
+          },
+          {
+            "nr": "215",
+            "name": "Pomm Tzaziki",
+            "desc": "Pommes Frites, Tzatziki, Jalapeño",
+            "veg": true,
+            "allergens": "12,14,16",
+            "sizes": null,
+            "prices": [
+              8
+            ],
+            "price": 8
+          }
+        ]
+      }
+    ],
+    "dessert": [
+      {
+        "sub": "Desserts",
+        "note": "",
+        "list": [
+          {
+            "nr": "221",
+            "name": "Tiramisu Creme",
+            "desc": "",
+            "veg": true,
+            "allergens": "14",
+            "sizes": null,
+            "prices": [
+              5
+            ],
+            "price": 5
+          },
+          {
+            "nr": "222",
+            "name": "Mousse au Chocolat",
+            "desc": "",
+            "veg": true,
+            "allergens": "14",
+            "sizes": null,
+            "prices": [
+              5
+            ],
+            "price": 5
+          }
+        ]
+      }
+    ],
+    "getraenke": [
+      {
+        "sub": "Softdrinks",
+        "note": "Außer Haus alle Getränke inkl. Pfand",
+        "list": [
+          {
+            "nr": "901",
+            "name": "Cola",
+            "desc": "1,0 l",
+            "veg": true,
+            "allergens": "",
+            "sizes": null,
+            "prices": [
+              3.5
+            ],
+            "price": 3.5
+          },
+          {
+            "nr": "902",
+            "name": "Fanta",
+            "desc": "1,0 l",
+            "veg": true,
+            "allergens": "",
+            "sizes": null,
+            "prices": [
+              3.5
+            ],
+            "price": 3.5
+          },
+          {
+            "nr": "903",
+            "name": "Sprite",
+            "desc": "1,0 l",
+            "veg": true,
+            "allergens": "",
+            "sizes": null,
+            "prices": [
+              3.5
+            ],
+            "price": 3.5
+          }
+        ]
+      },
+      {
+        "sub": "Bier & Wein",
+        "note": "",
+        "list": [
+          {
+            "nr": "904",
+            "name": "Reissdorf Kölsch",
+            "desc": "0,5 l",
+            "veg": false,
+            "allergens": "",
+            "sizes": null,
+            "prices": [
+              2.5
+            ],
+            "price": 2.5
+          },
+          {
+            "nr": "905",
+            "name": "Italienischer Rotwein",
+            "desc": "0,75 l",
+            "veg": false,
+            "allergens": "",
+            "sizes": null,
+            "prices": [
+              9
+            ],
+            "price": 9
+          },
+          {
+            "nr": "906",
+            "name": "Italienischer Weißwein",
+            "desc": "0,75 l",
+            "veg": false,
+            "allergens": "",
+            "sizes": null,
+            "prices": [
+              9
+            ],
+            "price": 9
+          }
+        ]
+      }
+    ]
+  }
+}

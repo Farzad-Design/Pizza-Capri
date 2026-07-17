@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Admin · Restaurant Pizzeria Capri</title>
+<style>
+:root{
+  --bg:       #F6EFE1;
+  --bg2:      #EFE6D3;
+  --card:     #FFFFFF;
+  --card2:    #F4ECDA;
+  --brand:    #C8102E;
+  --brand2:   #A50D24;
+  --ink:      #2A1E16;
+  --t1:       #3A2A1E;
+  --t2:       #6E5C48;
+  --t3:       #9A876E;
+  --border:   rgba(70,45,20,.14);
+  --shadow:   0 6px 24px rgba(90,60,30,.12);
+  --r:        12px;
+  --rs:       8px;
+  --ok:       #3F7A4E;
+  --warn:     #C96A00;
+  --err:      #B23A2E;
+}
+*{box-sizing:border-box}
+body{margin:0;font-family:system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;background:var(--bg);color:var(--ink)}
+a{color:inherit}
+button{font-family:inherit;cursor:pointer}
+input,select,textarea{font-family:inherit;font-size:14px;padding:9px 11px;border:1px solid var(--border);border-radius:var(--rs);background:#fff;color:var(--ink)}
+input:focus,select:focus,textarea:focus{outline:2px solid var(--brand);outline-offset:1px}
+label{font-size:12px;color:var(--t2);font-weight:600;display:block;margin-bottom:4px}
+.btn{display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:600;padding:9px 16px;border-radius:var(--rs);border:none;background:var(--brand);color:#fff}
+.btn:hover{background:var(--brand2)}
+.btn.secondary{background:var(--card2);color:var(--ink);border:1px solid var(--border)}
+.btn.danger{background:var(--err);color:#fff}
+.btn:disabled{opacity:.5;cursor:not-allowed}
+.card{background:var(--card);border:1px solid var(--border);border-radius:var(--r);padding:18px;box-shadow:var(--shadow)}
+table{width:100%;border-collapse:collapse;font-size:13.5px}
+th,td{text-align:left;padding:9px 10px;border-bottom:1px solid var(--border)}
+th{color:var(--t2);font-weight:600;font-size:11.5px;letter-spacing:.04em;text-transform:uppercase}
+.badge{display:inline-block;padding:2px 9px;border-radius:20px;font-size:11px;font-weight:700;text-transform:uppercase}
+.badge.pending{background:#FFF4E2;color:var(--warn)}
+.badge.confirmed,.badge.preparing{background:#EAF2FF;color:#2B5FA8}
+.badge.ready,.badge.completed,.badge.delivered{background:#E9F5EC;color:var(--ok)}
+.badge.cancelled{background:#FBE9E7;color:var(--err)}
+.grid{display:grid;gap:16px}
+.grid.cols-2{grid-template-columns:1fr 1fr}
+.grid.cols-3{grid-template-columns:repeat(3,1fr)}
+.grid.cols-4{grid-template-columns:repeat(4,1fr)}
+@media(max-width:900px){.grid.cols-2,.grid.cols-3,.grid.cols-4{grid-template-columns:1fr}}
+.toast{position:fixed;bottom:20px;left:50%;transform:translateX(-50%);background:var(--ink);color:#fff;padding:11px 20px;border-radius:8px;font-size:13.5px;z-index:999;opacity:0;transition:opacity .25s;pointer-events:none}
+.toast.show{opacity:1}
+.stat{padding:16px;border-radius:var(--r);background:var(--card2);border:1px solid var(--border)}
+.stat .n{font-size:26px;font-weight:800;color:var(--brand2)}
+.stat .l{font-size:12px;color:var(--t2);margin-top:2px}
+.section{display:none}
+.section.active{display:block}
+.hint{font-size:12px;color:var(--t3);margin-top:6px}
+.pill-row{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:14px}
+.pill{padding:5px 12px;border-radius:20px;background:var(--card2);font-size:12px;font-weight:600;cursor:pointer;border:1px solid transparent}
+.pill.active{background:var(--brand);color:#fff}
+.field{margin-bottom:12px}
+.row{display:flex;gap:10px;align-items:end;flex-wrap:wrap}
+.muted{color:var(--t3)}
+.top-toolbar{display:flex;justify-content:space-between;align-items:center;margin-bottom:18px}
+.h1{font-size:20px;font-weight:800;margin:0}
+.unconfigured{background:#FFF4E2;border:1px solid #F0D9AE;color:#8A5300;border-radius:8px;padding:10px 14px;font-size:12.5px;margin-bottom:14px}
+</style>
+</head>
+<body>
+
+<!-- ══════════════ LOGIN ══════════════ -->
+<div id="login-screen" style="min-height:100vh;display:flex;align-items:center;justify-content:center;padding:20px">
+  <div class="card" style="width:100%;max-width:380px">
+    <div style="text-align:center;margin-bottom:18px">
+      <img src="/images/logo.png" alt="Logo" style="width:64px;height:64px;border-radius:50%;object-fit:cover" onerror="this.style.display='none'">
+      <h1 style="font-size:18px;margin:10px 0 2px">Restaurant Pizzeria Capri</h1>
+      <div class="muted" style="font-size:12.5px">Admin-Bereich</div>
+    </div>
+    <div class="field"><label>E-Mail</label><input id="li-email" type="email" style="width:100%" value="admin@pizza-capri-demo.de"></div>
+    <div class="field"><label>Passwort</label><input id="li-pass" type="password" style="width:100%" placeholder="••••••••"></div>
+    <button class="btn" style="width:100%;justify-content:center" onclick="doLogin()">Anmelden</button>
+    <div id="login-error" class="hint" style="color:var(--err)"></div>
+  </div>
+</div>
+
+<!-- ══════════════ APP SHELL ══════════════ -->
+<div id="app" style="display:none">
+  <div style="display:flex;min-height:100vh">
+    <!-- Sidebar -->
+    <div style="width:220px;flex-shrink:0;background:var(--ink);color:#fff;padding:20px 0;position:sticky;top:0;height:100vh;overflow-y:auto">
+      <div style="padding:0 20px 18px;font-weight:800;font-size:15px;display:flex;align-items:center;gap:8px">
+        <img src="/images/logo.png" style="width:28px;height:28px;border-radius:50%;object-fit:cover" onerror="this.style.display='none'">
+        Capri Admin
+      </div>
+      <nav id="sidebar-nav"></nav>
+      <div style="padding:14px 20px;margin-top:16px;border-top:1px solid rgba(255,255,255,.12)">
+        <div id="whoami" class="muted" style="font-size:11.5px;color:rgba(255,255,255,.6);margin-bottom:8px"></div>
+        <button class="btn secondary" style="width:100%;justify-content:center" onclick="doLogout()">Abmelden</button>
+      </div>
+    </div>
+
+    <!-- Main -->
+    <div style="flex:1;padding:26px 30px;max-width:1200px">
+
+      <div id="sec-orders" class="section">
+        <div class="top-toolbar"><h1 class="h1">Bestellungen</h1><button class="btn secondary" onclick="loadOrderLookup()">Aktualisieren</button></div>
+        <div class="card" style="margin-bottom:16px">
+          <div class="row">
+            <div class="field" style="margin-bottom:0;flex:1"><label>Bestellnummer suchen</label><input id="order-search" style="width:100%" placeholder="z. B. PC-999999"></div>
+            <button class="btn" onclick="loadOrderLookup()">Suchen</button>
+          </div>
+        </div>
+        <div id="order-detail" class="card" style="display:none;margin-bottom:16px"></div>
+        <div class="card muted" style="font-size:12.5px">Hinweis: Es gibt keine Endpoint-Liste "alle Bestellungen" im Backend — Bestellungen werden per Bestellnummer nachgeschlagen (z. B. aus einer Benachrichtigung oder Kassenbon). Zuletzt eingegangene Bestellnummern erscheinen unter „Benachrichtigungen“.</div>
+      </div>
+
+      <div id="sec-menu" class="section">
+        <div class="top-toolbar"><h1 class="h1">Speisekarte</h1><button class="btn" onclick="openItemForm()">+ Neuer Artikel</button></div>
+        <div class="pill-row" id="menu-cat-pills"></div>
+        <div class="card">
+          <table id="menu-table"><thead><tr><th>Nr.</th><th>Name</th><th>Preis</th><th>Verfügbar</th><th></th></tr></thead><tbody></tbody></table>
+        </div>
+        <div id="item-form-card" class="card" style="margin-top:16px;display:none"></div>
+      </div>
+
+      <div id="sec-settings" class="section">
+        <h1 class="h1">Einstellungen</h1>
+        <div class="card grid cols-2" style="margin-top:14px">
+          <div class="field"><label>Restaurantname</label><input id="s-name" style="width:100%"></div>
+          <div class="field"><label>Telefon</label><input id="s-phone" style="width:100%"></div>
+          <div class="field"><label>Adresse</label><input id="s-address" style="width:100%"></div>
+          <div class="field"><label>E-Mail (Bestellbenachrichtigungen)</label><input id="s-email" style="width:100%"></div>
+          <div class="field"><label>Mindestbestellwert Lieferung (€)</label><input id="s-minorder" type="number" step="0.5" style="width:100%"></div>
+          <div class="field"><label>Währung</label><input id="s-currency" style="width:100%"></div>
+        </div>
+        <div class="card" style="margin-top:16px">
+          <div style="font-weight:700;margin-bottom:10px">Design / Theme</div>
+          <div class="grid cols-4">
+            <div class="field"><label>Primärfarbe</label><input id="s-primary" type="color" style="width:100%"></div>
+            <div class="field"><label>Sekundärfarbe</label><input id="s-secondary" type="color" style="width:100%"></div>
+            <div class="field"><label>Akzentfarbe</label><input id="s-accent" type="color" style="width:100%"></div>
+            <div class="field"><label>Logo-URL</label><input id="s-logo" style="width:100%"></div>
+          </div>
+        </div>
+        <div class="card" style="margin-top:16px">
+          <div style="font-weight:700;margin-bottom:10px">Öffnungszeiten</div>
+          <div id="hours-grid" class="grid cols-2"></div>
+        </div>
+        <div style="margin-top:16px"><button class="btn" onclick="saveSettings()">Einstellungen speichern</button></div>
+      </div>
+
+      <div id="sec-zones" class="section">
+        <div class="top-toolbar"><h1 class="h1">Liefergebiete</h1><button class="btn" onclick="openZoneForm()">+ Neues Gebiet</button></div>
+        <div class="card"><table id="zones-table"><thead><tr><th>Name</th><th>Gebühr</th><th>Mindestbestellwert</th><th>Aktiv</th><th></th></tr></thead><tbody></tbody></table></div>
+        <div id="zone-form-card" class="card" style="margin-top:16px;display:none"></div>
+      </div>
+
+      <div id="sec-coupons" class="section">
+        <div class="top-toolbar"><h1 class="h1">Gutscheine</h1><button class="btn" onclick="openCouponForm()">+ Neuer Gutschein</button></div>
+        <div class="card"><table id="coupons-table"><thead><tr><th>Code</th><th>Typ</th><th>Wert</th><th>Genutzt</th><th>Aktiv</th><th></th></tr></thead><tbody></tbody></table></div>
+        <div id="coupon-form-card" class="card" style="margin-top:16px;display:none"></div>
+      </div>
+
+      <div id="sec-analytics" class="section">
+        <h1 class="h1">Analytics</h1>
+        <div id="analytics-stats" class="grid cols-4" style="margin-top:14px"></div>
+        <div class="card" style="margin-top:16px">
+          <div style="font-weight:700;margin-bottom:10px">Bestellungen pro Tag</div>
+          <table id="analytics-daily"><thead><tr><th>Datum</th><th>Bestellungen</th><th>Umsatz</th></tr></thead><tbody></tbody></table>
+        </div>
+        <div class="grid cols-2" style="margin-top:16px">
+          <div class="card">
+            <div style="font-weight:700;margin-bottom:10px">Beliebteste Artikel</div>
+            <table id="analytics-popular"><thead><tr><th>Artikel</th><th>Menge</th></tr></thead><tbody></tbody></table>
+          </div>
+          <div class="card">
+            <div style="font-weight:700;margin-bottom:10px">Abholung vs. Lieferung</div>
+            <table id="analytics-mode"><thead><tr><th>Typ</th><th>Anzahl</th></tr></thead><tbody></tbody></table>
+          </div>
+        </div>
+      </div>
+
+      <div id="sec-printqueue" class="section">
+        <div class="top-toolbar"><h1 class="h1">Druckwarteschlange</h1><button class="btn secondary" onclick="loadPrintQueue()">Aktualisieren</button></div>
+        <div class="unconfigured">PrintNode ist im Demo-Modus nicht konfiguriert. Fehlgeschlagene Druckaufträge landen hier zur automatischen Wiederholung — sobald ein echter Drucker unter „PrintNode“ hinterlegt ist, werden sie automatisch verarbeitet.</div>
+        <div class="card"><table id="printqueue-table"><thead><tr><th>Bestell-Nr.</th><th>Versuche</th><th>Letzter Fehler</th><th></th></tr></thead><tbody></tbody></table></div>
+      </div>
+
+      <div id="sec-notifications" class="section">
+        <div class="top-toolbar"><h1 class="h1">Benachrichtigungen</h1><button class="btn secondary" onclick="loadNotifications()">Aktualisieren</button></div>
+        <div class="card"><table id="notifications-table"><thead><tr><th>Typ</th><th>Nachricht</th><th>Zeit</th><th></th></tr></thead><tbody></tbody></table></div>
+      </div>
+
+      <div id="sec-printnode" class="section">
+        <h1 class="h1">PrintNode (Küchendrucker)</h1>
+        <div class="unconfigured">Noch kein echtes PrintNode-Konto vorhanden — dieser Bildschirm zeigt, wo die Zugangsdaten später eingetragen werden. Bestellungen funktionieren auch ohne Konfiguration (Belege werden nur nicht automatisch gedruckt, sondern in der Warteschlange gesammelt).</div>
+        <div class="card grid cols-2">
+          <div class="field"><label>PrintNode API-Key</label><input id="pn-key" style="width:100%" placeholder="wird verschlüsselt/lokal gespeichert"></div>
+          <div class="field"><label>Drucker-ID</label><input id="pn-printer" style="width:100%" placeholder="z. B. 123456"></div>
+        </div>
+        <button class="btn" onclick="savePrintNode()">Speichern</button>
+        <div id="pn-status" class="hint"></div>
+      </div>
+
+      <div id="sec-payment" class="section">
+        <h1 class="h1">Zahlungen (PayPal / Bank)</h1>
+        <div class="unconfigured">Noch kein echtes PayPal-Konto vorhanden — dieser Bildschirm zeigt, wo die Zugangsdaten später eingetragen werden. Der Bestellvorgang läuft im Demo-Modus unabhängig davon (Zahlungsart wird nur als Text auf dem Bon vermerkt).</div>
+        <div class="card grid cols-2">
+          <div class="field"><label>PayPal Client-ID</label><input id="pp-client" style="width:100%"></div>
+          <div class="field"><label>PayPal Secret</label><input id="pp-secret" type="password" style="width:100%"></div>
+          <div class="field"><label>Kontoinhaber (Überweisung)</label><input id="pp-holder" style="width:100%"></div>
+          <div class="field"><label>IBAN</label><input id="pp-iban" style="width:100%"></div>
+          <div class="field"><label>BIC</label><input id="pp-bic" style="width:100%"></div>
+        </div>
+        <button class="btn" onclick="savePayment()">Speichern</button>
+        <div id="pp-status" class="hint"></div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<div id="toast" class="toast"></div>
+
+<script>
+const SECTIONS = [
+  { id:'orders', label:'Bestellungen', icon:'🧾' },
+  { id:'menu', label:'Speisekarte', icon:'🍕' },
+  { id:'settings', label:'Einstellungen', icon:'⚙️' },
+  { id:'zones', label:'Liefergebiete', icon:'🚗' },
+  { id:'coupons', label:'Gutscheine', icon:'🏷️' },
+  { id:'analytics', label:'Analytics', icon:'📊' },
+  { id:'printqueue', label:'Druckwarteschlange', icon:'🖨️' },
+  { id:'notifications', label:'Benachrichtigungen', icon:'🔔' },
+  { id:'printnode', label:'PrintNode', icon:'🔌' },
+  { id:'payment', label:'Zahlungen', icon:'💳' },
+];
+
+function toast(msg){
+  const t = document.getElementById('toast');
+  t.textContent = msg; t.classList.add('show');
+  setTimeout(() => t.classList.remove('show'), 2600);
+}
+
+async function api(path, opts={}){
+  const res = await fetch(path, { credentials:'same-origin', headers:{'Content-Type':'application/json'}, ...opts });
+  let data = null;
+  try { data = await res.json(); } catch { data = { ok:false, error:'Ungültige Serverantwort' }; }
+  if(!res.ok && !data.error) data.error = 'Fehler ' + res.status;
+  return data;
+}
+
+/* ── Auth ── */
+async function doLogin(){
+  const email = document.getElementById('li-email').value.trim();
+  const password = document.getElementById('li-pass').value;
+  const errEl = document.getElementById('login-error');
+  errEl.textContent = '';
+  const data = await api('/api/auth/login', { method:'POST', body: JSON.stringify({ email, password }) });
+  if(!data.ok){ errEl.textContent = data.error || 'Anmeldung fehlgeschlagen'; return; }
+  if(!['staff','admin'].includes(data.user.role)){ errEl.textContent = 'Dieses Konto hat keinen Admin-/Mitarbeiterzugriff.'; return; }
+  boot(data.user);
+}
+
+async function doLogout(){
+  await api('/api/auth/logout', { method:'POST' });
+  location.reload();
+}
+
+async function checkSession(){
+  const data = await api('/api/auth/me');
+  if(data.ok && data.user && ['staff','admin'].includes(data.user.role)) boot(data.user);
+}
+
+function boot(user){
+  document.getElementById('login-screen').style.display = 'none';
+  document.getElementById('app').style.display = 'block';
+  document.getElementById('whoami').textContent = `${user.email} (${user.role})`;
+  renderSidebar();
+  showSection('orders');
+  loadNotifications();
+}
+
+function renderSidebar(){
+  const nav = document.getElementById('sidebar-nav');
+  nav.innerHTML = SECTIONS.map(s => `
+    <a href="#" data-sec="${s.id}" onclick="showSection('${s.id}');return false;"
+       style="display:flex;align-items:center;gap:10px;padding:10px 20px;font-size:13.5px;color:rgba(255,255,255,.85);text-decoration:none;border-left:3px solid transparent"
+       id="nav-${s.id}">
+      <span>${s.icon}</span><span>${s.label}</span>
+    </a>`).join('');
+}
+
+function showSection(id){
+  SECTIONS.forEach(s => {
+    document.getElementById('sec-'+s.id).classList.toggle('active', s.id===id);
+    const navEl = document.getElementById('nav-'+s.id);
+    if(navEl){
+      navEl.style.borderLeftColor = s.id===id ? 'var(--brand)' : 'transparent';
+      navEl.style.background = s.id===id ? 'rgba(255,255,255,.08)' : 'transparent';
+    }
+  });
+  const loaders = {
+    menu: loadMenu, settings: loadSettings, zones: loadZones, coupons: loadCoupons,
+    analytics: loadAnalytics, printqueue: loadPrintQueue, notifications: loadNotifications,
+    printnode: loadPrintNode, payment: loadPayment,
+  };
+  if(loaders[id]) loaders[id]();
+}
+
+/* ── Orders ── */
+async function loadOrderLookup(){
+  const num = document.getElementById('order-search').value.trim();
+  if(!num) return;
+  const data = await api('/api/admin/order?orderNum=' + encodeURIComponent(num));
+  const box = document.getElementById('order-detail');
+  box.style.display = 'block';
+  if(!data.ok){ box.innerHTML = `<div class="hint" style="color:var(--err)">${data.error}</div>`; return; }
+  const o = data.order;
+  const itemRows = o.items.map(i => `<tr><td>${i.nr?('#'+i.nr+' '):''}${i.name}</td><td>${i.qty}×</td><td>€${(i.price*i.qty).toFixed(2)}</td></tr>`).join('');
+  box.innerHTML = `
+    <div class="row" style="justify-content:space-between;margin-bottom:10px">
+      <div><b>Bestellung #${o.orderNum}</b> <span class="badge ${o.status}">${o.status}</span></div>
+      <div class="muted" style="font-size:12px">${new Date(o.createdAt).toLocaleString('de-DE')}</div>
+    </div>
+    <div class="muted" style="font-size:13px;margin-bottom:10px">${o.customer.fname} ${o.customer.lname} · ${o.customer.phone} ${o.mode==='delivery' ? '· '+o.customer.address : '· Abholung '+(o.customer.pickupTime||'')}</div>
+    <table>${itemRows}</table>
+    <div style="margin-top:10px;font-weight:700">Gesamt: €${(o.totals.grand||0).toFixed(2)} (${o.payment})</div>
+    <div class="row" style="margin-top:14px">
+      <label style="margin:0">Status ändern:</label>
+      <select id="order-status-select">${data.statuses.map(s => `<option ${s===o.status?'selected':''}>${s}</option>`).join('')}</select>
+      <button class="btn" onclick="updateOrderStatus('${o.orderNum}')">Aktualisieren</button>
+    </div>`;
+}
+
+async function updateOrderStatus(orderNum){
+  const status = document.getElementById('order-status-select').value;
+  const data = await api(`/api/admin/order/${encodeURIComponent(orderNum)}/status`, { method:'POST', body: JSON.stringify({ status }) });
+  if(data.ok){ toast('Status aktualisiert'); loadOrderLookup(); } else toast(data.error || 'Fehler');
+}
+
+/* ── Menu ── */
+let menuCache = null, activeMenuCat = null;
+async function loadMenu(){
+  const data = await api('/api/admin/menu');
+  if(!data.ok) return toast('Speisekarte konnte nicht geladen werden');
+  menuCache = data;
+  activeMenuCat = activeMenuCat || (data.categories[0] && data.categories[0].id);
+  document.getElementById('menu-cat-pills').innerHTML = data.categories.map(c => `
+    <div class="pill ${c.id===activeMenuCat?'active':''}" onclick="selectMenuCat('${c.id}')">${c.title}</div>`).join('');
+  renderMenuTable();
+}
+function selectMenuCat(id){ activeMenuCat = id; renderMenuTable(); document.querySelectorAll('#menu-cat-pills .pill').forEach(p=>p.classList.remove('active')); loadMenu(); }
+function renderMenuTable(){
+  const tbody = document.querySelector('#menu-table tbody');
+  const groups = (menuCache.ITEMS[activeMenuCat] || []);
+  const rows = [];
+  groups.forEach(g => {
+    if(g.sub) rows.push(`<tr><td colspan="5" style="font-weight:700;background:var(--card2)">${g.sub}</td></tr>`);
+    g.list.forEach(it => {
+      const price = it.prices ? it.prices.map(p=>'€'+p.toFixed(2)).join(' / ') : '€'+(it.price||0).toFixed(2);
+      rows.push(`<tr>
+        <td>${it.nr||''}</td><td>${it.name}${it.veg?' 🌱':''}</td><td>${price}</td>
+        <td>${it.available?'✓':'—'}</td>
+        <td><button class="btn secondary" style="padding:5px 10px;font-size:12px" onclick='toggleItemAvailable(${it.id}, ${!it.available})'>${it.available?'Deaktivieren':'Aktivieren'}</button>
+            <button class="btn danger" style="padding:5px 10px;font-size:12px" onclick="deleteMenuItem(${it.id})">Löschen</button></td>
+      </tr>`);
+    });
+  });
+  tbody.innerHTML = rows.join('') || '<tr><td colspan="5" class="muted">Keine Artikel in dieser Kategorie.</td></tr>';
+}
+async function toggleItemAvailable(id, available){
+  const data = await api(`/api/admin/menu/${id}`, { method:'PATCH', body: JSON.stringify({ available }) });
+  if(data.ok){ toast('Aktualisiert'); loadMenu(); } else toast(data.error||'Fehler');
+}
+async function deleteMenuItem(id){
+  if(!confirm('Artikel wirklich löschen (in Papierkorb verschieben)?')) return;
+  const data = await api(`/api/admin/menu/${id}`, { method:'DELETE' });
+  if(data.ok){ toast('Gelöscht'); loadMenu(); } else toast(data.error||'Fehler');
+}
+function openItemForm(){
+  const cats = (menuCache?.categories || []).map(c => `<option value="${c.id}">${c.title}</option>`).join('');
+  const card = document.getElementById('item-form-card');
+  card.style.display = 'block';
+  card.innerHTML = `
+    <div style="font-weight:700;margin-bottom:10px">Neuer Artikel</div>
+    <div class="grid cols-2">
+      <div class="field"><label>Kategorie</label><select id="ni-cat" style="width:100%">${cats}</select></div>
+      <div class="field"><label>Artikelnummer</label><input id="ni-nr" style="width:100%"></div>
+      <div class="field"><label>Name</label><input id="ni-name" style="width:100%"></div>
+      <div class="field"><label>Beschreibung</label><input id="ni-desc" style="width:100%"></div>
+      <div class="field"><label>Preis (€)</label><input id="ni-price" type="number" step="0.10" style="width:100%"></div>
+      <div class="field"><label>Neue Gruppe (optional)</label><input id="ni-group" style="width:100%" placeholder="z. B. Pizza"></div>
+    </div>
+    <button class="btn" onclick="createMenuItem()">Speichern</button>
+    <button class="btn secondary" onclick="document.getElementById('item-form-card').style.display='none'">Abbrechen</button>`;
+}
+async function createMenuItem(){
+  const body = {
+    category: document.getElementById('ni-cat').value,
+    newGroupSub: document.getElementById('ni-group').value,
+    nr: document.getElementById('ni-nr').value,
+    name: document.getElementById('ni-name').value,
+    desc: document.getElementById('ni-desc').value,
+    prices: [Number(document.getElementById('ni-price').value || 0)],
+  };
+  if(!body.name || !body.prices[0]){ toast('Name und Preis sind erforderlich'); return; }
+  const data = await api('/api/admin/menu/item', { method:'POST', body: JSON.stringify(body) });
+  if(data.ok){ toast('Artikel erstellt'); document.getElementById('item-form-card').style.display='none'; loadMenu(); } else toast(data.error||'Fehler');
+}
+
+/* ── Settings ── */
+async function loadSettings(){
+  const data = await api('/api/admin/settings');
+  if(!data.ok) return toast('Einstellungen konnten nicht geladen werden');
+  const s = data.settings;
+  document.getElementById('s-name').value = s.restaurant_name || '';
+  document.getElementById('s-phone').value = s.restaurant_phone || '';
+  document.getElementById('s-address').value = s.restaurant_address || '';
+  document.getElementById('s-email').value = s.restaurant_email || '';
+  document.getElementById('s-minorder').value = s.min_order_delivery || 0;
+  document.getElementById('s-currency').value = s.currency || 'EUR';
+  document.getElementById('s-primary').value = (s.theme && s.theme.primaryColor) || '#C8102E';
+  document.getElementById('s-secondary').value = (s.theme && s.theme.secondaryColor) || '#2A1E16';
+  document.getElementById('s-accent').value = (s.theme && s.theme.accentColor) || '#B0122A';
+  document.getElementById('s-logo').value = (s.theme && s.theme.logo) || '';
+  const days = [['mon','Montag'],['tue','Dienstag'],['wed','Mittwoch'],['thu','Donnerstag'],['fri','Freitag'],['sat','Samstag'],['sun','Sonntag']];
+  document.getElementById('hours-grid').innerHTML = days.map(([k,label]) => {
+    const h = (s.opening_hours && s.opening_hours[k]) || {open:'',close:''};
+    return `<div class="field"><label>${label}</label>
+      <div style="display:flex;gap:6px">
+        <input id="h-${k}-open" value="${h.open||''}" placeholder="11:30" style="width:70px">
+        <span style="align-self:center">–</span>
+        <input id="h-${k}-close" value="${h.close||''}" placeholder="22:00" style="width:70px">
+      </div></div>`;
+  }).join('');
+}
+async function saveSettings(){
+  const days = ['mon','tue','wed','thu','fri','sat','sun'];
+  const opening_hours = {};
+  days.forEach(k => { opening_hours[k] = { open: document.getElementById(`h-${k}-open`).value, close: document.getElementById(`h-${k}-close`).value }; });
+  const body = {
+    restaurant_name: document.getElementById('s-name').value,
+    restaurant_phone: document.getElementById('s-phone').value,
+    restaurant_address: document.getElementById('s-address').value,
+    restaurant_email: document.getElementById('s-email').value,
+    min_order_delivery: Number(document.getElementById('s-minorder').value || 0),
+    currency: document.getElementById('s-currency').value,
+    opening_hours,
+    theme: {
+      primaryColor: document.getElementById('s-primary').value,
+      secondaryColor: document.getElementById('s-secondary').value,
+      accentColor: document.getElementById('s-accent').value,
+      logo: document.getElementById('s-logo').value,
+    },
+  };
+  const data = await api('/api/admin/settings', { method:'POST', body: JSON.stringify(body) });
+  if(data.ok) toast('Einstellungen gespeichert'); else toast(data.error||'Fehler');
+}
+
+/* ── Delivery zones ── */
+async function loadZones(){
+  const data = await api('/api/admin/delivery-zones');
+  if(!data.ok) return toast('Fehler beim Laden der Liefergebiete');
+  document.querySelector('#zones-table tbody').innerHTML = data.zones.map(z => `
+    <tr><td>${z.name}</td><td>€${Number(z.fee).toFixed(2)}</td><td>${z.min_order?('€'+Number(z.min_order).toFixed(2)):'—'}</td><td>${z.active?'✓':'—'}</td>
+    <td><button class="btn danger" style="padding:5px 10px;font-size:12px" onclick="deleteZone(${z.id})">Löschen</button></td></tr>`).join('') || '<tr><td colspan="5" class="muted">Keine Liefergebiete.</td></tr>';
+}
+function openZoneForm(){
+  const card = document.getElementById('zone-form-card');
+  card.style.display = 'block';
+  card.innerHTML = `
+    <div style="font-weight:700;margin-bottom:10px">Neues Liefergebiet</div>
+    <div class="grid cols-3">
+      <div class="field"><label>Name</label><input id="nz-name" style="width:100%"></div>
+      <div class="field"><label>Liefergebühr (€)</label><input id="nz-fee" type="number" step="0.5" style="width:100%"></div>
+      <div class="field"><label>Mindestbestellwert (€)</label><input id="nz-min" type="number" step="0.5" style="width:100%"></div>
+    </div>
+    <button class="btn" onclick="createZone()">Speichern</button>
+    <button class="btn secondary" onclick="document.getElementById('zone-form-card').style.display='none'">Abbrechen</button>`;
+}
+async function createZone(){
+  const body = { name: document.getElementById('nz-name').value, fee: Number(document.getElementById('nz-fee').value||0), minOrder: Number(document.getElementById('nz-min').value||0), active: true };
+  if(!body.name){ toast('Name erforderlich'); return; }
+  const data = await api('/api/admin/delivery-zones', { method:'POST', body: JSON.stringify(body) });
+  if(data.ok){ toast('Gespeichert'); document.getElementById('zone-form-card').style.display='none'; loadZones(); } else toast(data.error||'Fehler');
+}
+async function deleteZone(id){
+  if(!confirm('Liefergebiet löschen?')) return;
+  const data = await api(`/api/admin/delivery-zones/${id}`, { method:'DELETE' });
+  if(data.ok){ toast('Gelöscht'); loadZones(); } else toast(data.error||'Fehler');
+}
+
+/* ── Coupons ── */
+async function loadCoupons(){
+  const data = await api('/api/admin/coupons');
+  if(!data.ok) return toast('Fehler beim Laden der Gutscheine');
+  document.querySelector('#coupons-table tbody').innerHTML = data.coupons.map(c => `
+    <tr><td>${c.code}</td><td>${c.type==='percent'?'Prozent':'Fest'}</td><td>${c.type==='percent'?c.value+'%':'€'+c.value}</td><td>${c.used_count}${c.usage_limit?('/'+c.usage_limit):''}</td><td>${c.active?'✓':'—'}</td>
+    <td><button class="btn danger" style="padding:5px 10px;font-size:12px" onclick="deleteCoupon(${c.id})">Löschen</button></td></tr>`).join('') || '<tr><td colspan="6" class="muted">Keine Gutscheine.</td></tr>';
+}
+function openCouponForm(){
+  const card = document.getElementById('coupon-form-card');
+  card.style.display = 'block';
+  card.innerHTML = `
+    <div style="font-weight:700;margin-bottom:10px">Neuer Gutschein</div>
+    <div class="grid cols-4">
+      <div class="field"><label>Code</label><input id="nc-code" style="width:100%" placeholder="CAPRI10"></div>
+      <div class="field"><label>Typ</label><select id="nc-type" style="width:100%"><option value="percent">Prozent</option><option value="fixed">Fester Betrag</option></select></div>
+      <div class="field"><label>Wert</label><input id="nc-value" type="number" style="width:100%"></div>
+      <div class="field"><label>Mindestbestellwert (€)</label><input id="nc-min" type="number" style="width:100%"></div>
+    </div>
+    <button class="btn" onclick="createCoupon()">Speichern</button>
+    <button class="btn secondary" onclick="document.getElementById('coupon-form-card').style.display='none'">Abbrechen</button>`;
+}
+async function createCoupon(){
+  const body = { code: document.getElementById('nc-code').value, type: document.getElementById('nc-type').value, value: Number(document.getElementById('nc-value').value||0), minOrder: Number(document.getElementById('nc-min').value||0), active: true };
+  if(!body.code){ toast('Code erforderlich'); return; }
+  const data = await api('/api/admin/coupons', { method:'POST', body: JSON.stringify(body) });
+  if(data.ok){ toast('Gespeichert'); document.getElementById('coupon-form-card').style.display='none'; loadCoupons(); } else toast(data.error||'Fehler');
+}
+async function deleteCoupon(id){
+  if(!confirm('Gutschein löschen?')) return;
+  const data = await api(`/api/admin/coupons/${id}`, { method:'DELETE' });
+  if(data.ok){ toast('Gelöscht'); loadCoupons(); } else toast(data.error||'Fehler');
+}
+
+/* ── Analytics ── */
+async function loadAnalytics(){
+  const data = await api('/api/admin/analytics?days=30');
+  if(!data.ok) return toast('Analytics konnten nicht geladen werden');
+  document.getElementById('analytics-stats').innerHTML = `
+    <div class="stat"><div class="n">${data.totals.orders}</div><div class="l">Bestellungen (30 Tage)</div></div>
+    <div class="stat"><div class="n">€${data.totals.revenue.toFixed(2)}</div><div class="l">Umsatz (30 Tage)</div></div>
+    <div class="stat"><div class="n">€${data.totals.avgOrderValue.toFixed(2)}</div><div class="l">Ø Bestellwert</div></div>
+    <div class="stat"><div class="n">${data.newCustomers}</div><div class="l">Neue Kunden</div></div>`;
+  document.querySelector('#analytics-daily tbody').innerHTML = data.dailyOrders.map(d => `<tr><td>${d.day}</td><td>${d.orders}</td><td>€${(d.revenue||0).toFixed(2)}</td></tr>`).join('') || '<tr><td colspan="3" class="muted">Noch keine Daten.</td></tr>';
+  document.querySelector('#analytics-popular tbody').innerHTML = data.popularItems.map(i => `<tr><td>${i.name}</td><td>${i.qty}</td></tr>`).join('') || '<tr><td colspan="2" class="muted">Noch keine Daten.</td></tr>';
+  document.querySelector('#analytics-mode tbody').innerHTML = data.modeSplit.map(m => `<tr><td>${m.mode}</td><td>${m.n}</td></tr>`).join('') || '<tr><td colspan="2" class="muted">Noch keine Daten.</td></tr>';
+}
+
+/* ── Print queue ── */
+async function loadPrintQueue(){
+  const data = await api('/api/admin/print-queue');
+  if(!data.ok) return toast('Fehler beim Laden der Druckwarteschlange');
+  document.querySelector('#printqueue-table tbody').innerHTML = data.jobs.map(j => `
+    <tr><td>#${j.order_num}</td><td>${j.attempts}</td><td class="muted" style="font-size:11.5px">${(j.last_error||'').slice(0,60)}</td>
+    <td><button class="btn secondary" style="padding:5px 10px;font-size:12px" onclick="retryPrintJob(${j.id})">Erneut versuchen</button></td></tr>`).join('') || '<tr><td colspan="4" class="muted">Warteschlange leer.</td></tr>';
+}
+async function retryPrintJob(id){
+  const data = await api(`/api/admin/print-queue/${id}/retry`, { method:'POST' });
+  toast(data.resolved ? 'Erfolgreich gedruckt' : ('Fehlgeschlagen: ' + (data.error||'')));
+  loadPrintQueue();
+}
+
+/* ── Notifications ── */
+async function loadNotifications(){
+  const data = await api('/api/admin/notifications');
+  if(!data.ok) return;
+  document.querySelector('#notifications-table tbody').innerHTML = data.notifications.map(n => `
+    <tr><td>${n.type}</td><td>${n.message}</td><td class="muted" style="font-size:11.5px">${new Date(n.created_at).toLocaleString('de-DE')}</td>
+    <td>${n.read_at ? '<span class="muted">gelesen</span>' : `<button class="btn secondary" style="padding:5px 10px;font-size:12px" onclick="markNotifRead(${n.id})">Als gelesen markieren</button>`}</td></tr>`).join('') || '<tr><td colspan="4" class="muted">Keine Benachrichtigungen.</td></tr>';
+}
+async function markNotifRead(id){
+  await api(`/api/admin/notifications/${id}/read`, { method:'POST' });
+  loadNotifications();
+}
+
+/* ── PrintNode ── */
+async function loadPrintNode(){
+  const data = await api('/api/admin/printnode-config');
+  document.getElementById('pn-status').textContent = data.ok
+    ? `Status: API-Key ${data.apiKeySet?'hinterlegt':'nicht hinterlegt'}, Drucker-ID ${data.printerIdSet?'hinterlegt':'nicht hinterlegt'}.`
+    : '';
+}
+async function savePrintNode(){
+  const body = { apiKey: document.getElementById('pn-key').value, printerId: document.getElementById('pn-printer').value };
+  const data = await api('/api/admin/printnode-config', { method:'POST', body: JSON.stringify(body) });
+  if(data.ok){ toast('Gespeichert'); loadPrintNode(); } else toast(data.error||'Fehler');
+}
+
+/* ── Payment ── */
+async function loadPayment(){
+  const data = await api('/api/admin/payment-config');
+  if(!data.ok) return;
+  document.getElementById('pp-client').value = data.paypalClientId || '';
+  document.getElementById('pp-holder').value = data.bankHolder || '';
+  document.getElementById('pp-iban').value = data.ibanMasked || '';
+  document.getElementById('pp-bic').value = data.bic || '';
+  document.getElementById('pp-status').textContent = data.paypalConfigured
+    ? (data.paypalVerified ? 'PayPal verifiziert.' : 'PayPal hinterlegt, aber nicht verifiziert: ' + (data.paypalError||''))
+    : 'PayPal noch nicht konfiguriert (Demo-Modus).';
+}
+async function savePayment(){
+  const body = {
+    paypalClientId: document.getElementById('pp-client').value || undefined,
+    paypalSecret: document.getElementById('pp-secret').value || undefined,
+    bankHolder: document.getElementById('pp-holder').value,
+    iban: document.getElementById('pp-iban').value,
+    bic: document.getElementById('pp-bic').value,
+  };
+  const data = await api('/api/admin/payment-config', { method:'POST', body: JSON.stringify(body) });
+  if(data.ok){ toast('Gespeichert'); loadPayment(); } else toast(data.error||'Fehler');
+}
+
+checkSession();
+</script>
+</body>
+</html>

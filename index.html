@@ -415,6 +415,8 @@ a{text-decoration:none;color:inherit}
 .pay-opt-icon{font-size:20px}
 .co-time-wrap{display:none}
 .co-time-wrap.show{display:block}
+.cart-time-wrap{display:none}
+.cart-time-wrap.show{display:block}
 .co-footer{padding:16px 24px 20px;border-top:1px solid var(--border);display:flex;gap:10px;position:sticky;bottom:0;background:var(--bg2);border-radius:0 0 20px 20px}
 .co-footer .btn{flex:1}
 .btn-print{background:var(--card);border:1px solid var(--border);color:var(--ink)}
@@ -765,6 +767,11 @@ footer{background:var(--bg2);border-top:1px solid var(--border);padding:20px 0}
     <svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.2"><path d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"/></svg>
     Abholen
    </button>
+  </div>
+  <div class="cart-time-wrap" id="cart-time-wrap">
+   <label class="co-label" for="cart-time" style="display:block;margin-bottom:4px">Gewünschte Abholzeit</label>
+   <input class="co-input" id="cart-time" type="time" value="12:00" style="width:100%;margin-bottom:4px" oninput="onCartTimeChange()">
+   <div id="cart-time-note" style="font-size:11px;color:var(--t3);margin-bottom:12px"></div>
   </div>
   <div id="cart-free-drink-note" class="free-drink-note" style="display:none">🎁 <span>Sie erhalten ein Gratis-Getränk!</span></div>
   <div class="cart-summary-row"><span>Zwischensumme</span><span id="subtotal">€0.00</span></div>
@@ -1282,8 +1289,20 @@ function setMode(m, opts){
     if(m==='liefern'){ cl.style.background='var(--brand)'; cl.style.borderColor='var(--brand)'; cl.style.color='#fff'; ca.style.background='var(--card)'; ca.style.borderColor='var(--border)'; ca.style.color='var(--t2)'; }
     else{ ca.style.background='#4CAF7D'; ca.style.borderColor='#4CAF7D'; ca.style.color='#fff'; cl.style.background='var(--card)'; cl.style.borderColor='var(--border)'; cl.style.color='var(--t2)'; }
   }
+  const ctw = document.getElementById('cart-time-wrap');
+  if(ctw){
+    ctw.classList.toggle('show', m === 'abholen');
+    if(m === 'abholen') setupPickupTime('cart-time', 'cart-time-note');
+  }
   updateCart();
   updateDeliveryAvailabilityUI();
+}
+/* Hält das Abholzeit-Feld im Warenkorb und im Checkout-Modal synchron,
+   falls beide sichtbar sind (Warenkorb ist die primäre Eingabe). */
+function onCartTimeChange(){
+  const cartInp = document.getElementById('cart-time');
+  const coInp = document.getElementById('co-time');
+  if(cartInp && coInp) coInp.value = cartInp.value;
 }
 
 /* ── Cart ────────────────────────────────────────────── */
@@ -2117,11 +2136,15 @@ function updateDeliveryAvailabilityUI(){
   }
 }
 
-/* ── Abholzeit ───────────────────────── */
-function setupPickupTime(){
-  const inp = document.getElementById('co-time'); if(!inp) return;
+/* ── Abholzeit ─────────────────────────
+   Wird sowohl für das Warenkorb-Feld (#cart-time) als auch für das
+   Checkout-Modal-Feld (#co-time) genutzt — daher mit Id-Parametern statt
+   fest verdrahteter Element-Ids. */
+function setupPickupTime(inputId, noteId){
+  inputId = inputId || 'co-time'; noteId = noteId || 'co-time-note';
+  const inp = document.getElementById(inputId); if(!inp) return;
   const oh = openingHours(new Date().getDay());
-  const noteEl = document.getElementById('co-time-note');
+  const noteEl = document.getElementById(noteId);
   if(oh.closed){
     if(noteEl) noteEl.textContent = 'Heute (Mittwoch) ist Ruhetag.';
     return;
@@ -2138,8 +2161,8 @@ function setupPickupTime(){
       : `Heute geöffnet: ${openingHoursLabel(new Date().getDay())}`;
   }
 }
-function validatePickupTime(){
-  const inp = document.getElementById('co-time'); if(!inp) return '';
+function validatePickupTime(inputId){
+  const inp = document.getElementById(inputId || 'co-time'); if(!inp) return '';
   const v = inp.value;
   if(!v) return 'Bitte Abholzeit wählen';
   const oh = openingHours(new Date().getDay());
@@ -2158,7 +2181,11 @@ function openCheckout(){
   document.getElementById('co-time-section').classList.toggle('show', isAbhol);
   document.getElementById('co-address-wrap').style.display = isAbhol ? 'none' : 'block';
   document.getElementById('co-zone-wrap').style.display = isAbhol ? 'none' : 'block';
-  if(isAbhol) setupPickupTime();
+  if(isAbhol){
+    setupPickupTime('co-time', 'co-time-note');
+    const cartInp = document.getElementById('cart-time');
+    if(cartInp && cartInp.value) document.getElementById('co-time').value = cartInp.value;
+  }
   document.getElementById('checkout-overlay').classList.add('open');
 }
 function closeCheckout(){ document.getElementById('checkout-overlay').classList.remove('open'); }

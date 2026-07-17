@@ -1,0 +1,18 @@
+{
+  "name": "pizza-capri-server",
+  "version": "1.0.0",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "start": "node --env-file=.env server.js",
+    "dev": "node --env-file=.env server.js",
+    "migrate:down": "node -e \"import('better-sqlite3').then(async ({default:Database})=>{const {rollbackLastMigration}=await import('./migrate.js');const db=new Database(process.env.DATA_DIR? process.env.DATA_DIR+'/restaurant.db':'./data/restaurant.db');const r=await rollbackLastMigration(db);console.log(r?('rolled back '+r.name):'nothing to roll back');})\"",
+    "test": "node --test test/"
+  },
+  "dependencies": {
+    "express": "^4.19.2",
+    "axios": "^1.7.7",
+    "better-sqlite3": "^11.3.0",
+    "multer": "^2.0.0"
+  }
+}

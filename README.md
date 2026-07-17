@@ -1,10 +1,8 @@
 # Restaurant Pizzeria Capri — Bestell- & Reservierungs-App
 
-Web-App für **Restaurant Pizzeria Capri**, Kölner Str. 56, 51399 Burscheid-Hilgen.
-Basis: `E:\Web-App\Restaurant-App-Template` (wiederverwendbares Grundgerüst).
-Branding, Speisekarte und Geschäftsregeln wurden vollständig auf Restaurant
-Pizzeria Capri umgestellt; dieses Projekt ist eigenständig und unabhängig
-vom Ursprungskunden der Vorlage.
+Eigenständige Web-App für **Restaurant Pizzeria Capri**, Kölner Str. 56, 51399
+Burscheid-Hilgen — Storefront (`index.html`), Admin-Panel (`admin.html`) und
+Node/Express-Backend mit SQLite (`server/`) in einem Projekt.
 
 ## Architektur
 
