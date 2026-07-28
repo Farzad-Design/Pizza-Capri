@@ -246,11 +246,180 @@ function toast(msg){
 }
 
 async function api(path, opts={}){
+  if (typeof DEMO_NO_LOGIN !== 'undefined' && DEMO_NO_LOGIN) {
+    const demo = await demoApi(path, opts);
+    if (demo !== undefined) return demo;
+  }
   const res = await fetch(path, { credentials:'same-origin', headers:{'Content-Type':'application/json'}, ...opts });
   let data = null;
   try { data = await res.json(); } catch { data = { ok:false, error:'Ungültige Serverantwort' }; }
   if(!res.ok && !data.error) data.error = 'Fehler ' + res.status;
   return data;
+}
+
+/* ── Demo-Daten (kein echtes Backend online) ──
+   Realistische Beispiele, damit sich das Admin-Panel vorführen lässt, solange
+   der Node-/SQLite-Server nicht separat gehostet wird. Die Speisekarte kommt
+   1:1 aus der echten, gepflegten Datei server/menu-seed.json. */
+let DEMO_MENU_CACHE = null;
+const DEMO_ORDER_STATUSES = ['pending','confirmed','preparing','ready','completed','cancelled'];
+const DEMO_DB = {
+  settings: {
+    restaurant_name: 'Restaurant Pizzeria Capri',
+    restaurant_phone: '02174 76 46 80',
+    restaurant_address: 'Kölner Str. 56, 51399 Burscheid-Hilgen',
+    restaurant_email: '',
+    min_order_delivery: 15,
+    currency: 'EUR',
+    theme: { primaryColor:'#C8102E', secondaryColor:'#2A1E16', accentColor:'#B0122A', logo:'/images/logo.png' },
+    opening_hours: {
+      mon:{open:'11:30',close:'22:00'}, tue:{open:'11:30',close:'22:00'}, wed:{open:'',close:''},
+      thu:{open:'11:30',close:'22:00'}, fri:{open:'11:30',close:'22:00'}, sat:{open:'11:30',close:'22:00'},
+      sun:{open:'12:00',close:'22:00'},
+    },
+  },
+  zones: [
+    { id:1, name:'Burscheid-Hilgen (Standardzone)', fee:2, min_order:15, active:true },
+  ],
+  coupons: [
+    { id:1, code:'CAPRI10', type:'percent', value:10, used_count:6, usage_limit:null, active:true },
+  ],
+  notifications: [
+    { id:1, type:'Neue Bestellung', message:'Neue Bestellung PC-100238 (Abholung, €24,50)', created_at:new Date(Date.now()-12*60000).toISOString(), read_at:null },
+    { id:2, type:'Neue Bestellung', message:'Neue Bestellung PC-100237 (Lieferung, €41,00)', created_at:new Date(Date.now()-70*60000).toISOString(), read_at:null },
+    { id:3, type:'Neue Bestellung', message:'Neue Bestellung PC-100236 (Abholung, €18,00)', created_at:new Date(Date.now()-3*3600000).toISOString(), read_at:new Date(Date.now()-3*3600000+60000).toISOString() },
+  ],
+  printQueue: [
+    { id:1, order_num:'PC-100234', attempts:2, last_error:'PrintNode nicht konfiguriert (Demo-Modus)' },
+  ],
+  orders: {
+    'PC-100238': { orderNum:'PC-100238', status:'pending', createdAt:new Date(Date.now()-12*60000).toISOString(),
+      customer:{ fname:'Lukas', lname:'Weber', phone:'0176 5544332', pickupTime:'19:15' }, mode:'pickup', payment:'Bar bei Abholung',
+      items:[ {nr:'44', name:'Capri', qty:1, price:12.5}, {nr:'6', name:'Bolognese', qty:1, price:12} ],
+      totals:{ grand: 24.5 * 0.85 } },
+    'PC-100237': { orderNum:'PC-100237', status:'confirmed', createdAt:new Date(Date.now()-70*60000).toISOString(),
+      customer:{ fname:'Sabine', lname:'Krüger', phone:'0151 2233445', address:'Hauptstraße 12, 51399 Burscheid' }, mode:'delivery', payment:'PayPal',
+      items:[ {nr:'45', name:'Roma', qty:1, price:14}, {nr:'39', name:'Capriciosa', qty:1, price:12}, {nr:'', name:'Cola 0,5l', qty:2, price:2.5} ],
+      totals:{ grand: 41.0 } },
+    'PC-100236': { orderNum:'PC-100236', status:'completed', createdAt:new Date(Date.now()-3*3600000).toISOString(),
+      customer:{ fname:'Ali', lname:'Yıldız', phone:'0163 9876543', pickupTime:'13:00' }, mode:'pickup', payment:'Bar bei Abholung',
+      items:[ {nr:'1', name:'Margherita', qty:1, price:8}, {nr:'20', name:'Vesuvio', qty:1, price:11} ],
+      totals:{ grand: 19 * 0.85 } },
+    'PC-100234': { orderNum:'PC-100234', status:'cancelled', createdAt:new Date(Date.now()-26*3600000).toISOString(),
+      customer:{ fname:'Nina', lname:'Fischer', phone:'0170 1122334', pickupTime:'20:00' }, mode:'pickup', payment:'Bar bei Abholung',
+      items:[ {nr:'44', name:'Capri', qty:2, price:12.5} ],
+      totals:{ grand: 25 * 0.85 } },
+  },
+};
+
+async function demoApi(path, opts={}){
+  const method = (opts.method || 'GET').toUpperCase();
+  const body = opts.body ? JSON.parse(opts.body) : {};
+  const url = new URL(path, 'https://demo.local');
+  const p = url.pathname;
+
+  if (p === '/api/admin/order' && method === 'GET') {
+    const num = url.searchParams.get('orderNum');
+    const o = DEMO_DB.orders[num];
+    if (!o) return { ok:false, error:'Keine Bestellung mit dieser Nummer gefunden (Demo-Daten: versuchen Sie z. B. PC-100238).' };
+    return { ok:true, order:o, statuses:DEMO_ORDER_STATUSES };
+  }
+  let m = p.match(/^\/api\/admin\/order\/([^/]+)\/status$/);
+  if (m && method === 'POST') {
+    const o = DEMO_DB.orders[decodeURIComponent(m[1])];
+    if (!o) return { ok:false, error:'Bestellung nicht gefunden' };
+    o.status = body.status; return { ok:true };
+  }
+
+  if (p === '/api/admin/menu' && method === 'GET') {
+    if (!DEMO_MENU_CACHE) {
+      try {
+        const res = await fetch('/server/menu-seed.json');
+        const seed = await res.json();
+        let nextId = 1;
+        Object.values(seed.ITEMS).forEach(groups => groups.forEach(g => g.list.forEach(it => { it.id = nextId++; it.available = it.available !== false; })));
+        DEMO_MENU_CACHE = { ok:true, categories:seed.CATS, ITEMS:seed.ITEMS };
+      } catch { DEMO_MENU_CACHE = { ok:false, error:'Speisekarte (Demo) konnte nicht geladen werden' }; }
+    }
+    return DEMO_MENU_CACHE;
+  }
+  m = p.match(/^\/api\/admin\/menu\/(\d+)$/);
+  if (m && DEMO_MENU_CACHE && DEMO_MENU_CACHE.ok) {
+    const id = Number(m[1]);
+    let found = null;
+    Object.values(DEMO_MENU_CACHE.ITEMS).forEach(groups => groups.forEach(g => g.list.forEach(it => { if (it.id === id) found = { group:g, it }; })));
+    if (method === 'PATCH' && found) { Object.assign(found.it, body); return { ok:true }; }
+    if (method === 'DELETE' && found) { found.group.list = found.group.list.filter(x => x.id !== id); return { ok:true }; }
+    return { ok:false, error:'Artikel nicht gefunden' };
+  }
+  if (p === '/api/admin/menu/item' && method === 'POST' && DEMO_MENU_CACHE && DEMO_MENU_CACHE.ok) {
+    const groups = DEMO_MENU_CACHE.ITEMS[body.category] || [];
+    let target = groups.find(g => g.sub === body.newGroupSub) || groups[0];
+    if (!target) { target = { sub: body.newGroupSub || '', list: [] }; groups.push(target); DEMO_MENU_CACHE.ITEMS[body.category] = groups; }
+    let nextId = 1;
+    Object.values(DEMO_MENU_CACHE.ITEMS).forEach(gs => gs.forEach(g => g.list.forEach(it => { nextId = Math.max(nextId, it.id + 1); })));
+    target.list.push({ id:nextId, nr:body.nr||'', name:body.name, desc:body.desc||'', veg:false, allergens:'', prices:body.prices, price:body.prices?.[0] ?? null, available:true });
+    return { ok:true };
+  }
+
+  if (p === '/api/admin/settings') {
+    if (method === 'GET') return { ok:true, settings:DEMO_DB.settings };
+    if (method === 'POST') { Object.assign(DEMO_DB.settings, body); return { ok:true }; }
+  }
+
+  if (p === '/api/admin/delivery-zones') {
+    if (method === 'GET') return { ok:true, zones:DEMO_DB.zones };
+    if (method === 'POST') {
+      const id = Math.max(0, ...DEMO_DB.zones.map(z=>z.id)) + 1;
+      DEMO_DB.zones.push({ id, name:body.name, fee:body.fee, min_order:body.minOrder, active:true });
+      return { ok:true };
+    }
+  }
+  m = p.match(/^\/api\/admin\/delivery-zones\/(\d+)$/);
+  if (m && method === 'DELETE') { DEMO_DB.zones = DEMO_DB.zones.filter(z => z.id !== Number(m[1])); return { ok:true }; }
+
+  if (p === '/api/admin/coupons') {
+    if (method === 'GET') return { ok:true, coupons:DEMO_DB.coupons };
+    if (method === 'POST') {
+      const id = Math.max(0, ...DEMO_DB.coupons.map(c=>c.id)) + 1;
+      DEMO_DB.coupons.push({ id, code:body.code, type:body.type, value:body.value, used_count:0, usage_limit:null, active:true });
+      return { ok:true };
+    }
+  }
+  m = p.match(/^\/api\/admin\/coupons\/(\d+)$/);
+  if (m && method === 'DELETE') { DEMO_DB.coupons = DEMO_DB.coupons.filter(c => c.id !== Number(m[1])); return { ok:true }; }
+
+  if (p === '/api/admin/analytics' && method === 'GET') {
+    return { ok:true,
+      totals:{ orders:47, revenue:1042.30, avgOrderValue:22.18 },
+      newCustomers: 9,
+      dailyOrders:[
+        { day:'24.07.', orders:6, revenue:132.40 }, { day:'25.07.', orders:8, revenue:176.90 },
+        { day:'26.07.', orders:5, revenue:98.50 }, { day:'27.07.', orders:9, revenue:201.10 },
+        { day:'28.07.', orders:4, revenue:88.00 },
+      ],
+      popularItems:[ {name:'Capri', qty:14}, {name:'Margherita', qty:12}, {name:'Roma', qty:9}, {name:'Capriciosa', qty:8} ],
+      modeSplit:[ {mode:'Abholung', n:29}, {mode:'Lieferung', n:18} ],
+    };
+  }
+
+  if (p === '/api/admin/print-queue') {
+    if (method === 'GET') return { ok:true, jobs:DEMO_DB.printQueue };
+  }
+  m = p.match(/^\/api\/admin\/print-queue\/(\d+)\/retry$/);
+  if (m && method === 'POST') return { resolved:false, error:'PrintNode nicht konfiguriert (Demo-Modus)' };
+
+  if (p === '/api/admin/notifications') {
+    if (method === 'GET') return { ok:true, notifications:DEMO_DB.notifications };
+  }
+  m = p.match(/^\/api\/admin\/notifications\/(\d+)\/read$/);
+  if (m && method === 'POST') {
+    const n = DEMO_DB.notifications.find(x => x.id === Number(m[1]));
+    if (n) n.read_at = new Date().toISOString();
+    return { ok:true };
+  }
+
+  return undefined; // nicht abgedeckt -> normaler fetch() greift
 }
 
 /* ── Auth ── */
