@@ -606,7 +606,12 @@ async function savePayment(){
   if(data.ok){ toast('Gespeichert'); loadPayment(); } else toast(data.error||'Fehler');
 }
 
-checkSession();
+const DEMO_NO_LOGIN = true; // set to false once the customer confirms and real admin accounts are set up
+if (DEMO_NO_LOGIN) {
+  boot({ email: 'demo@pizza-capri.de', role: 'admin' });
+} else {
+  checkSession();
+}
 </script>
 </body>
 </html>
