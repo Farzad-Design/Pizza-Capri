@@ -19,7 +19,7 @@
       "title": "Teigtaschen",
       "emoji": "🥙",
       "accentColor": "#D9631E",
-      "img": ""
+      "img": "images/teigtaschen.jpg"
     },
     {
       "id": "brotchen",
@@ -47,7 +47,7 @@
       "title": "Reisgerichte",
       "emoji": "🍚",
       "accentColor": "#B8860B",
-      "img": ""
+      "img": "images/reisgerichte.jpg"
     },
     {
       "id": "baguettes",
@@ -75,7 +75,7 @@
       "title": "Fischgerichte",
       "emoji": "🐟",
       "accentColor": "#2E6F8E",
-      "img": ""
+      "img": "images/fischgerichte.jpg"
     },
     {
       "id": "salate",
@@ -89,7 +89,7 @@
       "title": "Beilagen",
       "emoji": "🍟",
       "accentColor": "#E0651C",
-      "img": ""
+      "img": "images/beilagen.jpg"
     },
     {
       "id": "dessert",
