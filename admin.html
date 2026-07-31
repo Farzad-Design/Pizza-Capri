@@ -71,6 +71,35 @@ th{color:var(--t2);font-weight:600;font-size:11.5px;letter-spacing:.04em;text-tr
 </head>
 <body>
 
+<!-- ═══ ZUGANGSSPERRE (Vorschau-Passwortschutz) ══════════════════════════════════════════ -->
+<div id="gate" style="position:fixed;inset:0;z-index:99999;display:flex;align-items:center;justify-content:center;padding:20px;background:var(--bg);font-family:system-ui,-apple-system,'Segoe UI',Roboto,Arial,sans-serif">
+ <div style="width:100%;max-width:360px;background:#fff;border:1px solid var(--border);border-radius:14px;padding:28px 26px;box-shadow:var(--shadow);text-align:center">
+  <img src="/images/logo.png" alt="Restaurant Pizzeria Capri" style="width:64px;height:64px;object-fit:cover;border-radius:50%;margin-bottom:12px">
+  <div style="font-size:16px;font-weight:800;color:var(--ink);margin-bottom:4px">Capri Admin</div>
+  <div style="font-size:12.5px;color:var(--t2);margin-bottom:18px">Diese Vorschau ist passwortgeschützt.</div>
+  <input id="gate-pass" type="password" placeholder="Passwort" style="width:100%;box-sizing:border-box;margin-bottom:10px">
+  <button class="btn" style="width:100%;justify-content:center" onclick="gateCheck()">Zugang</button>
+  <div id="gate-error" style="color:var(--err);font-size:12px;margin-top:8px;min-height:14px"></div>
+ </div>
+</div>
+<script>
+(function(){
+  var GATE_KEY = 'capriGateOk_v1'; // Version erhöhen, um alle bestehenden Freigaben zurückzusetzen
+  var GATE_PASS = 'Capri2026!';
+  function unlock(){ document.getElementById('gate').style.display = 'none'; }
+  if (sessionStorage.getItem(GATE_KEY) === '1') { unlock(); }
+  window.gateCheck = function(){
+    var val = document.getElementById('gate-pass').value;
+    if (val === GATE_PASS) { sessionStorage.setItem(GATE_KEY, '1'); unlock(); }
+    else { document.getElementById('gate-error').textContent = 'Falsches Passwort.'; }
+  };
+  document.addEventListener('DOMContentLoaded', function(){
+    var input = document.getElementById('gate-pass');
+    if (input) input.addEventListener('keydown', function(e){ if (e.key === 'Enter') gateCheck(); });
+  });
+})();
+</script>
+
 <!-- ══════════════ LOGIN ══════════════ -->
 <div id="login-screen" style="min-height:100vh;display:flex;align-items:center;justify-content:center;padding:20px">
   <div class="card" style="width:100%;max-width:380px">

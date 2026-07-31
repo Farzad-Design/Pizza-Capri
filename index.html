@@ -503,6 +503,36 @@ footer{background:var(--bg2);border-top:1px solid var(--border);padding:20px 0}
 </head>
 <body>
 
+<!-- ═══ ZUGANGSSPERRE (Vorschau-Passwortschutz) ══════════════════════════════════════════ -->
+<div id="gate" style="position:fixed;inset:0;z-index:99999;display:flex;align-items:center;justify-content:center;padding:20px;background:#F6EFE1;font-family:system-ui,-apple-system,'Segoe UI',Roboto,Arial,sans-serif">
+ <div style="width:100%;max-width:360px;background:#FFFFFF;border:1px solid rgba(70,45,20,.14);border-radius:14px;padding:28px 26px;box-shadow:0 6px 24px rgba(90,60,30,.12);text-align:center">
+  <img src="images/logo.png" alt="Restaurant Pizzeria Capri" style="width:64px;height:64px;object-fit:cover;border-radius:50%;margin-bottom:12px">
+  <div style="font-size:16px;font-weight:800;color:#2A1E16;margin-bottom:4px">Restaurant Pizzeria Capri</div>
+  <div style="font-size:12.5px;color:#6E5C48;margin-bottom:18px">Diese Vorschau ist passwortgeschützt.</div>
+  <input id="gate-pass" type="password" placeholder="Passwort" style="width:100%;box-sizing:border-box;padding:10px 12px;border:1px solid rgba(70,45,20,.14);border-radius:8px;font-size:14px;margin-bottom:10px">
+  <button onclick="gateCheck()" style="width:100%;padding:10px 12px;border:none;border-radius:8px;background:#C8102E;color:#fff;font-weight:700;font-size:14px;cursor:pointer">Zugang</button>
+  <div id="gate-error" style="color:#B23A2E;font-size:12px;margin-top:8px;min-height:14px"></div>
+ </div>
+</div>
+<script>
+(function(){
+  var GATE_KEY = 'capriGateOk_v1'; // Version erhöhen, um alle bestehenden Freigaben zurückzusetzen
+  var GATE_PASS = 'Capri2026!';
+  function unlock(){ document.getElementById('gate').style.display = 'none'; document.documentElement.style.overflow = ''; }
+  if (sessionStorage.getItem(GATE_KEY) === '1') { unlock(); }
+  else { document.documentElement.style.overflow = 'hidden'; }
+  window.gateCheck = function(){
+    var val = document.getElementById('gate-pass').value;
+    if (val === GATE_PASS) { sessionStorage.setItem(GATE_KEY, '1'); unlock(); }
+    else { document.getElementById('gate-error').textContent = 'Falsches Passwort.'; }
+  };
+  document.addEventListener('DOMContentLoaded', function(){
+    var input = document.getElementById('gate-pass');
+    if (input) input.addEventListener('keydown', function(e){ if (e.key === 'Enter') gateCheck(); });
+  });
+})();
+</script>
+
 <!-- ═══ NAVBAR ══════════════════════════════════════════ -->
 <header id="navbar">
  <div class="container">
